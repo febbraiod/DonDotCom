@@ -1,0 +1,485 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@font-face {
+    font-family: avenir;
+    src: local(avenir), url('avenir.ttc') format('opentype');
+}
+
+@font-face {
+    font-family: anonymous pro;
+    src: local('anonymous pro'), url('anonymous pro.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: dejavuserif;
+    src: local('dejavuserif'), url('dejavuSerif.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: droidserif;
+    src: local('droidserif-regular'), url('adroidserif-regular.ttf') format('opentype');
+}
+
+
+/*////////// GLOBAL //////////*/
+
+body {
+  font-size: 100%;
+  cursor: crosshair;
+}
+
+h1 {
+  font-family: avenir, helvetica, arial, sans-serif;
+  color: #7a7a7a;
+  font-size: 570%;
+}
+
+h2 {
+  font-family: avenir, helvetica, arial, sans-serif;
+  font-size: 1.5em;
+}
+
+
+h3 {
+  font-family: avenir, helvetica, arial, sans-serif;
+  font-size: 1.7em;
+}
+
+h4 {
+  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+  font-size: .95em;
+}
+
+.title_icon {
+    position: relative;
+    top: 11px;
+    width: 40px;
+    margin : 0 0 0 7px;
+  }
+
+#headline_icon {
+  display: inline-block;
+
+}
+
+.border-right {
+  border-right: 1px dotted #ccc;
+  padding-right: 30px;
+}
+
+
+/*////////// BACKGROUNDS //////////*/
+
+
+/*/////// MEDIA ////////*/
+
+img, video, audio, iframe, table, form {
+  width: 100%; /* IE */
+  max-width: 100%; /* FF, Safari, Chrome */
+}
+
+
+/*////////// FIXES //////////*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fixer {
+  position: fixed;
+  width: 100%;
+  z-index : 1;
+}
+
+.wrapper_blocker {
+  position: fixed;
+  top: 0;
+  background: white;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+
+}
+
+/*/////// LAYOUT ////////*/
+
+.wrapper {
+  position: relative;
+  top: 100px;
+  width: 550px;
+  margin: 50px auto;
+}
+
+.wrapper p {
+  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+  font-size: .90em;
+  line-height: 1.55em;
+}
+
+
+#donpic {
+  position: fixed;
+  top: 32px;
+  left: 38px;
+  width: 120px;
+  z-index: 2;
+
+}
+
+/*/////// SOCIAL ////////*/
+
+#social {
+  position: fixed;
+  top: 163px;
+  right: 20px;
+  width: 40px;
+  z-index: 2;
+}
+
+.social_links {
+    width: 20px;
+    height: 18px;
+    margin: 5px 15px -4px 0;
+}
+
+
+/*////////// NAVBAR //////////*/
+
+#navbar nav a {
+  display: inline-block;
+  width: 10%;
+  text-transform: lowercase;
+  font: .95em avenir, helvetica, Arial, sans-serif;
+  color: #7a7a7a;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 0px;
+}
+
+#navbar nav a.selected {
+  background: #333;
+  color: black;
+}
+
+#navbar nav a:hover {
+  color: #04adcc;
+}
+
+#navbar {
+  border-bottom: 1.5px solid;
+  border-color: #04adcc;
+  margin: 25px 0 0 0;
+}
+
+
+#navbar_home {
+  position: fixed;
+  top: 13%;
+  left: 7%;
+  width: 40%;
+}
+
+#navbar_home nav a {
+  display: inline-block;
+  width: 20%;
+  text-transform: lowercase;
+  font: .95em avenir, helvetica, Arial, sans-serif;
+  color: #7a7a7a;
+  text-align: center;
+  text-decoration: none;
+}
+
+#navbar_home nav a.selected {
+  background: #333;
+  color: white;
+}
+
+#navbar_home nav a:hover {
+  color: #04adcc;
+}
+
+#navbar_blog {
+  border-bottom: 1.5px solid;
+  border-color: #04adcc;
+  margin: 25px 0 0 0;
+}
+
+#navbar_blog nav a {
+  display: inline-block;
+  width: 7%;
+  text-transform: lowercase;
+  font: .95em avenir, helvetica, Arial, sans-serif;
+  color: #7a7a7a;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 30px;
+}
+
+#navbar_blog nav a.selected {
+  background: #333;
+  color: black;
+}
+
+#navbar_blog nav a:hover {
+  color: #04adcc;
+}
+
+.links {
+  margin: 0 0 0 120px;
+}
+
+/*////////// LOGO //////////*/
+
+.logo_type {
+  position: absolute;
+  top: 43%;
+  left: 67.5%;
+}
+
+#logo_type_1 {
+  line-height: 100%;
+}
+
+#logo_type_2 {
+  position: absolute;
+  top: 77%;
+  line-height: 100%;
+}
+
+.logo_type_not_home {
+  position: fixed;
+  top: 66%;
+  left: 8%;
+}
+
+/*////////// FOOTER //////////*/
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center; 
+  font-size: 0.75em;
+  padding: 10px 0;
+  background: #919191;
+  border-top: 1px solid;
+  border-color: #04adcc;
+}
+
+/*///// for design /////*/
+
+#wmdslogo {
+  width: 100px;
+
+}
+
+.design_wrapper {
+  position: relative;
+  top: 150px;
+  width: 600px;
+  margin: 50px auto;
+}
+
+.portrait_port {
+  width: 100px;
+}
+
+.landscape_port {
+  width: 200px;
+}
+
+
+/*RESPONSIVE*/ 
+
+@media only screen and (max-width: 1250px) {
+  .wrapper {
+    width: 40%;
+    left: 7%;
+  }
+
+  #navbar {
+    width: 100%;
+  }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+  #navbar {
+    font-size: 80%;
+    width: 100%;
+  }
+
+  #navbar nav a {
+  display: inline-block;
+  width: 10%;
+
+  }
+
+  #navbar_home {
+    font-size: 80%;
+    width: 50%;
+  }
+
+  .logo_type {
+  position: absolute;
+  top: 43%;
+  left: 50%;
+  font-size: 100%;
+  }
+
+  .logo_type_not_home {
+    font-size: 80%;
+
+  }
+
+  #donpic {
+  position: fixed;
+  top: 33px;
+  left: 40px;
+  z-index: 2;
+  width: 110px;
+
+}
+
+.wrapper {
+    width: 47%;
+    left: 5%;
+  }
+
+}
+
+
+@media only screen and (max-width: 800px) {
+  #navbar {
+    font-size: 80%;
+    width: 100%;
+  }
+
+  #navbar_home {
+    font-size: 80%;
+    width: 60%;
+  }
+
+  .logo_type {
+  position: absolute;
+  top: 43%;
+  left: 40%;
+  }
+
+  .logo_type_not_home {
+    font-size: 75%;
+  }
+
+  #donpic {
+  position: fixed;
+  top: 35px;
+  left: 35px;
+  z-index: 2;
+  width: 100px;
+  }
+
+ .wrapper {
+    width: 47%;
+    left: 5%;
+  }
+
+}
+
+
+@media only screen and (max-width: 750px) {
+  #navbar {
+    font-size: 80%;
+    width: 100%;
+    left: 10%;
+  }
+
+  #navbar_home {
+    font-size: 80%;
+    width: 70%;
+    left: 10%;
+  } 
+
+  .logo_type {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 100%;
+  }
+
+  .logo_type_not_home {
+    display: none;
+  }
+
+  .wrapper {
+    width: 55%;
+    left: 0%;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  #navbar {
+    font-size: 70%;
+    width: 100%;
+    left: 10%;
+  }
+
+  #navbar_home {
+    font-size: 80%;
+    width: 80%;
+    left: 10%;
+  }
+
+  .logo_type {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  font-size: 100%;
+  }
+
+  .wrapper {
+    width: 55%;
+    left: 2%;
+  }
+
+}
+
+
+@media only screen and (max-width: 640px) {
+  #navbar {
+    font-size: 60%;
+    width: 100%;
+    left: 10%;
+  }
+
+  #navbar_home {
+    font-size: 80%;
+    width: 90%;
+    left: 10%;
+  }
+
+  .logo_type {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  font-size: 100%;
+  }
+
+}

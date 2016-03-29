@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DonDotCom</title>
+  <link rel="SHORTCUT ICON" href="assets/df.ico">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+</head>
+<body>
+
+  <div class = "wrapper_blocker">
+  </div>
+  
+   <header>
+    <% if content_for? :blog_nav %>
+      <%= yield :blog_nav %>
+    <% else %>  
+      <%=link_to image_tag('sig_pic.png', id:'donpic'), root_path %>
+    <%end%>
+
+      <div class="fixer">
+        <div id="navbar_blog">
+            <nav>
+              <div class="links">
+                <a href="design.html">design</a>
+                <a href="programming.html">programming</a>
+                <a href="blog.html">blog</a>
+                <a href="sandbox.html">sandbox</a>
+              </div>
+            </nav>
+        </div><!-- #navbar -->
+      </div>
+  </header>
+
+<%= yield %>
+
+<footer>
+      &copy; 2016 Don Febbraio. All Rights Reserved. &nbsp;
+
+      <%=link_to image_tag('email-icon.png', class: 'social_links'), 'mailto:donedesign1@gmail.com?Subject=donfebbraio.com', class: 'Email Me'%>
+
+      <%=link_to image_tag('twitter-icon.png', class: 'social_links', alt: "Twitter Icon"), 'https://twitter.com/Donnief3', class: 'twitter' %>
+
+      <%=link_to image_tag('github-icon.png', class: 'social_links', alt: "Github Icon"), 'https://github.com/febbraiod', class: 'github' %>
+
+      <%=link_to image_tag('linkedin-icon.png', class: 'social_links', alt: "LinkedIn Icon"), 'https://www.linkedin.com/in/don-febbraio-10ab0b10a', class: 'linkedin' %>
+      
+  </footer>
+
+</body>
+</html>
