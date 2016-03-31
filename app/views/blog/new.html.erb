@@ -1,0 +1,19 @@
+<div class="wrapper">
+<h1>Hi Don!</h1>
+
+<%=form_for @post, url: blog_index_path do |f| %>
+
+<%=f.label :headline %><br>
+<%=f.text_field :headline %>
+<br>
+<%=f.label :date %><br>
+<%=f.text_field :date %>
+<br>
+<%=f.label :content %><br>
+<%=f.text_area :content %>
+<br>
+<!--need image upload and icon upload -->
+<%=f.submit%>
+<%end%>
+
+</div>

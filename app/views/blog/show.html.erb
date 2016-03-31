@@ -1,0 +1,19 @@
+<div class="logo_type_not_home">
+    <h1><%=@post.date%></h1> 
+</div>
+
+  <div class="wrapper">
+
+<h3><%=@post.headline%></h3>
+
+<%if @post.icon%>
+  <%= image_tag @post.icon, class: 'title_icon', id: 'headline_icon' %>
+<%end%>
+
+<p><%= simple_format(@post.content) %></p>
+
+<%if @post.image%>
+  <%= image_tag @post.image %>
+<%end%>
+
+</div>

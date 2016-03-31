@@ -9,12 +9,12 @@
   <div class="wrapper">
 
     <% @posts.each do |post| %>
-      <h3><%=post.headline%><h3>
+      <h3><%=link_to post.headline, blog_path(post)%></h3>
       <%if post.icon%>
         <%= image_tag post.icon, class: 'title_icon', id: 'headline_icon' %>
       <%end%>
       <h4><%=post.date%></h4>
-      <p>&nbsp; &nbsp; &nbsp;<%= post.content %></p>
+      <p><%= simple_format(post.content)%></p>
       <%if post.image%>
         <%= image_tag post.image %>
       <%end%>

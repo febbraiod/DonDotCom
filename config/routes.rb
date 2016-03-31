@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
   root to: 'application#home'
-  get "/blog" => "blog#index"
+
+  resources :blog, param: :headline
+
+  patch '/blog' => 'blog#update'
 
 end
