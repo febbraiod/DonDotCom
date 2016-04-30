@@ -1,3 +1,5 @@
+<!--javascritp tag for just this page...might need to tell the app layout too -->
+
 <% content_for :blog_nav do %>
   <%=link_to image_tag('don.png', id:'donpic'), root_path %>
 <% end %>
@@ -10,14 +12,16 @@
 
     <% @posts.each do |post| %>
       <h3><%=link_to post.headline, blog_path(post)%></h3>
-      <%if post.icon%>
+      <%if post.icon%> <!-- maybe use paperclip -->
         <%= image_tag post.icon, class: 'title_icon', id: 'headline_icon' %>
       <%end%>
       <h4><%=post.date%></h4>
-      <p><%= simple_format(post.content)%></p>
-      <%if post.image%>
+      <p id = <%="post_" + "#{post.id}"%>><%= truncate post.content, length: 250%>
+      <button class="js-more" data-id=<%="#{ post.id }"%>>More</button></p>
+    <!--  retrieve this image in the api call to 'more' 
+    also dont forget tolookinto using paper clip <%#if post.image%>
         <%= image_tag post.image %>
-      <%end%>
+      <%#end%> -->
     <%end%>
 
 
@@ -34,4 +38,4 @@
     <p>In October this year, I began to teach myself Ruby and applied to App Academy. At the time I was going through their admissions process (which is no joke by the way), I stumbled upon the "Learn Verified" program offered by the Flatiron school in New York City. I liked their online format and jokingly said to a friend "I kinda hope I get accepted to App Academy so I can turn them down and do Learn". Well no need for that arose as I got insanely nervous and screwed up the App Academy interview, badly. I won't go into the ugly details, but I did not get the honor of considering turning them down. I did however get accepted to Learn Verified, and I'm on my way to a life changing new career (I hope!).</p>
 
 
-  </div><!--.wrapper -->
+  </div><!--.wrapper

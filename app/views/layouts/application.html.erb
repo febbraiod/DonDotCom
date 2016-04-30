@@ -11,28 +11,40 @@
 </head>
 <body>
 
-  <div class = "wrapper_blocker">
-  </div>
+
   
    <header>
     <% if content_for? :blog_nav %>
+      <div class = "wrapper_blocker">
+      </div>
       <%= yield :blog_nav %>
-    <% else %>  
+    <% elsif content_for? :home_nav %>
+      <!-- No pic on this page -->
+    <% else %>
+      <div class = "wrapper_blocker">
+      </div>  
       <%=link_to image_tag('sig_pic.png', id:'donpic'), root_path %>
     <%end%>
 
-      <div class="fixer">
-        <div id="navbar_blog">
-            <nav>
-              <div class="links">
-                <a href="design.html">design</a>
-                <a href="programming.html">programming</a>
-                <%=link_to 'blog', blog_index_path%>
-                <a href="sandbox.html">sandbox</a>
-              </div>
-            </nav>
-        </div><!-- #navbar -->
-      </div>
+    <% if content_for? :home_nav %>
+       <%= yield :home_nav %>
+      </div><!-- #navbar -->
+    <% else %>
+    <div class="fixer">
+      <div id="navbar_blog">
+        <nav>
+          <div class="links">
+            <a href="design.html">design</a>
+            <a href="programming.html">programming</a>
+            <%=link_to 'blog', blog_index_path%>
+            <a href="sandbox.html">sandbox</a>
+          </div>
+        </nav>
+      </div><!-- #navbar -->
+    </div>
+    <% end %>
+
+
   </header>
 
 <%= yield %>
@@ -48,7 +60,7 @@
 
       <%=link_to image_tag('linkedin-icon.png', class: 'social_links', alt: "LinkedIn Icon"), 'https://www.linkedin.com/in/don-febbraio-10ab0b10a', class: 'linkedin' %>
       
-  </footer>
+</footer>
 
 </body>
 </html>

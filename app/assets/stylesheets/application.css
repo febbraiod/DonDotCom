@@ -160,6 +160,7 @@ img, video, audio, iframe, table, form {
 
 /*////////// NAVBAR //////////*/
 
+
 #navbar nav a {
   display: inline-block;
   width: 10%;
@@ -246,9 +247,9 @@ img, video, audio, iframe, table, form {
 /*////////// LOGO //////////*/
 
 .logo_type {
-  position: absolute;
-  top: 43%;
-  left: 67.5%;
+  position: fixed;
+  top: 40%;
+  left:66%;
 }
 
 #logo_type_1 {
@@ -285,7 +286,6 @@ footer {
 
 #wmdslogo {
   width: 100px;
-
 }
 
 .design_wrapper {
@@ -378,9 +378,9 @@ footer {
   }
 
   .logo_type {
-  position: absolute;
-  top: 43%;
-  left: 40%;
+  position: fixed;
+  bottom: 33%;
+  right: 40%;
   }
 
   .logo_type_not_home {
@@ -482,4 +482,15 @@ footer {
   font-size: 100%;
   }
 
+}
+
+/*//for blog links//*/
+a {
+  text-decoration: none;
+  color: #04adcc;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #04adcc;
 }

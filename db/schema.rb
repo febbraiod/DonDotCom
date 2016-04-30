@@ -11,7 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331153316) do
+ActiveRecord::Schema.define(version: 20160411001557) do
+
+  create_table "design_images", force: :cascade do |t|
+    t.integer "design_id"
+    t.string  "thumb_url"
+    t.string  "fullsize_url"
+    t.text    "description"
+  end
+
+  create_table "designs", force: :cascade do |t|
+    t.string   "client_name"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "headline"
@@ -22,6 +37,22 @@ ActiveRecord::Schema.define(version: 20160331153316) do
     t.datetime "updated_at", null: false
     t.string   "image"
     t.string   "slug"
+  end
+
+  create_table "program_images", force: :cascade do |t|
+    t.string   "image_url"
+    t.text     "description"
+    t.integer  "program_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "programs", force: :cascade do |t|
+    t.string   "main_image_url"
+    t.string   "link"
+    t.text     "description"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end
