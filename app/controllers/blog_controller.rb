@@ -4,7 +4,6 @@ class BlogController < ApplicationController
   def index
     @posts = Post.all
     @posts = @posts.sort_by {|a| a.date}.reverse
-
   end
 
   def new
@@ -30,6 +29,10 @@ class BlogController < ApplicationController
 
   def show
     @post = Post.find_by(slug: params[:headline])
+    respond_to do |f|
+      f.html { render :show }
+      f.json { render json: @post}
+    end
   end
 
     private

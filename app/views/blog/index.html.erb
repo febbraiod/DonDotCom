@@ -1,4 +1,3 @@
-<!--javascritp tag for just this page...might need to tell the app layout too -->
 
 <% content_for :blog_nav do %>
   <%=link_to image_tag('don.png', id:'donpic'), root_path %>
@@ -14,20 +13,23 @@
       <h3><%=link_to post.headline, blog_path(post)%></h3>
       <%if post.icon%> <!-- maybe use paperclip -->
         <%= image_tag post.icon, class: 'title_icon', id: 'headline_icon' %>
+    <!-- the icon is where i should use paperclip, as its really only meant for one image -->
       <%end%>
       <h4><%=post.date%></h4>
-      <p id = <%="post_" + "#{post.id}"%>><%= truncate post.content, length: 250%>
-      <button class="js-more" data-id=<%="#{ post.id }"%>>More</button></p>
-    <!--  retrieve this image in the api call to 'more' 
-    also dont forget tolookinto using paper clip <%#if post.image%>
-        <%= image_tag post.image %>
-      <%#end%> -->
+      <p id = <%="post_" + "#{post.slug}"%>><%= truncate post.content, length: 250%></p>
+        <div id=<%="post_#{post.slug}_images"%> class='hidden'>
+          <% post.post_images.each do |img|%>
+          <%= image_tag img.image_url %>
+          <%end%>
+        </div>
+      <button class="js-more" data-id=<%="#{ post.slug }"%>>More</button>
     <%end%>
 
+    <br>
 
     <h3 id = "headline_icon">Don: Episode IV - A New Hope </h3>
   
-      <%= image_tag "anewhope.png", class: 'title_icon', id: 'headline_icon', alt: "Luke Skywalker" %>
+      <%= image_tag "anewhope.png", class: 'title_icon', alt: "Luke Skywalker" %>
 
     <h4>10.10.15 &ndash; 12.7.15</h4>
     
@@ -38,4 +40,4 @@
     <p>In October this year, I began to teach myself Ruby and applied to App Academy. At the time I was going through their admissions process (which is no joke by the way), I stumbled upon the "Learn Verified" program offered by the Flatiron school in New York City. I liked their online format and jokingly said to a friend "I kinda hope I get accepted to App Academy so I can turn them down and do Learn". Well no need for that arose as I got insanely nervous and screwed up the App Academy interview, badly. I won't go into the ugly details, but I did not get the honor of considering turning them down. I did however get accepted to Learn Verified, and I'm on my way to a life changing new career (I hope!).</p>
 
 
-  </div><!--.wrapper
+  </div><!--.wrapper-->

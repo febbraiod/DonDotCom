@@ -12,8 +12,8 @@
 
 <p><%= simple_format(@post.content) %></p>
 
-<%if @post.image%>
-  <%= image_tag @post.image %>
+<%@post.post_images.each do |img|%>
+  <%= image_tag img.image_url %>
 <%end%>
 
 <!-- needs an edit button for me and a comment(maybe just tags?) options for the public -->

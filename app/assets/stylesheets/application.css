@@ -321,35 +321,35 @@ footer {
 
 @media only screen and (max-width: 1000px) {
 
-  #navbar {
+#navbar {
     font-size: 80%;
     width: 100%;
   }
 
-  #navbar nav a {
+#navbar nav a {
   display: inline-block;
   width: 10%;
 
   }
 
-  #navbar_home {
+#navbar_home {
     font-size: 80%;
     width: 50%;
   }
 
-  .logo_type {
+.logo_type {
   position: absolute;
   top: 43%;
   left: 50%;
   font-size: 100%;
   }
 
-  .logo_type_not_home {
+.logo_type_not_home {
     font-size: 80%;
 
   }
 
-  #donpic {
+#donpic {
   position: fixed;
   top: 33px;
   left: 40px;
@@ -494,3 +494,14 @@ a:hover {
   text-decoration: underline;
   color: #04adcc;
 }
+
+/*//for blog//*/
+
+.hidden{
+  display: none
+}
+
+.unhidden{
+  display:block;
+}
+
