@@ -1,3 +1,3 @@
 class Design < ActiveRecord::Base
-  has_many :design_images
+  has_one :gallery
 end

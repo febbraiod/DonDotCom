@@ -1,7 +1,7 @@
 <div class="wrapper">
 <h1>Hi Don!</h1>
 
-<%=form_for @post, url: blog_index_path do |f| %>
+<%=form_for @post, url: blog_index_path, html: { multipart: true } do |f| %>
 
 <%=f.label :headline %><br>
 <%=f.text_field :headline %>
@@ -13,6 +13,16 @@
 <%=f.text_area :content %>
 <br>
 <!--need image upload and icon upload -->
+<h5>Icon:</h5>
+    <%= f.collection_select :icon_id, Icon.all, :id, :name, include_blank: true %>
+<h5>New Icon:</h5>
+    <%= f.fields_for :icon do |ico| %>
+      <%= ico.label :name %><br>
+      <%= ico.text_field :name %><br>
+      <%= ico.label :icon %><br>
+      <%= ico.file_field :icon %>
+    <% end %>
+
 <%=f.submit%>
 <%end%>
 

@@ -8,10 +8,17 @@ class BlogController < ApplicationController
 
   def new
     @post = Post.new()
+    @post.build_icon
   end
 
   def create
-    @post = Post.new(post_params)
+    binding.pry
+    if post_params[:icon_id].empty?
+      @post = Post.new(post_params)
+    else
+      @post = Post.new(post_params)
+      @post.icon = Icon.find_by(id: post_params[:icon_id])
+    end
     @post.save
     redirect_to blog_path(@post)
   end
@@ -38,7 +45,7 @@ class BlogController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:headline, :date, :content)
+      params.require(:post).permit(:headline, :date, :content, :icon_id, :icon_attributes => [:name, :icon])
     end
 
 

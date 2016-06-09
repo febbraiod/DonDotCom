@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430180303) do
+ActiveRecord::Schema.define(version: 20160609201931) do
 
   create_table "design_images", force: :cascade do |t|
     t.integer "design_id"
@@ -28,6 +28,30 @@ ActiveRecord::Schema.define(version: 20160430180303) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "galleries", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.string   "name"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "pic_file_name"
+    t.string   "pic_content_type"
+    t.integer  "pic_file_size"
+    t.datetime "pic_updated_at"
+  end
+
   create_table "post_images", force: :cascade do |t|
     t.string   "image_url"
     t.integer  "post_id"
@@ -39,18 +63,10 @@ ActiveRecord::Schema.define(version: 20160430180303) do
     t.string   "headline"
     t.string   "date"
     t.text     "content"
-    t.string   "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "slug"
-  end
-
-  create_table "program_images", force: :cascade do |t|
-    t.string   "image_url"
-    t.text     "description"
-    t.integer  "program_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "icon_id"
   end
 
   create_table "programs", force: :cascade do |t|

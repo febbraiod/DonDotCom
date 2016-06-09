@@ -1,6 +1,48 @@
 == README
 
-Notes for don...
+add paperclip
 
-Look into using Paperclip for blog post images!
-Use javascript to truncate the body of your posts and add the rest of the text if the user clicks a button.
+post has one gallery, gallery has many images
+design has one gallery ect...
+
+the gallery needs to be named after the post or design
+
+class Design
+  has_one :gallery
+end
+
+class Post
+  has_one :gallery
+  has_one :icon
+end
+
+class Gallery
+  has_many :images
+
+  belongs_to :Design
+  belongs_to :Post
+end
+
+class Image
+  belongs_to :gallery
+end
+
+class Icon
+  belongs_to :post
+end
+
+
+the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
+
+need to get rid of the Jquery fun in blog index and just link to full blog show page.
+
+blog show page will have content in left column content will ref images (see img 1)
+
+second column with have images from gallery with images label 1.1, 1.2
+
+LogoType on home page should be links too.
+
+design and programming can obv stay the save but should change color when hovered
+text for rinse should change to 'blog' when hovered over and repoeat can change to sandbox.
+
+use friendly-id for designs too

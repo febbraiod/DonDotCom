@@ -1,0 +1,12 @@
+---
+:Icon:
+  :icon:
+  - :thumb
+:Photo:
+  :pic:
+  - :large_horiz
+  - :large_vert
+  - :medium_horiz
+  - :medium_vert
+  - :thumb_horiz
+  - :thumb_vert

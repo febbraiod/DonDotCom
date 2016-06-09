@@ -5,6 +5,6 @@ $(function(){
       $("#post_" + slug).text(resp.post.content);
       $("#post_" + slug + "_images").removeClass('hidden');
     });
-    $(this).hide()
+    $(this).hide();
   });
 });

@@ -38,6 +38,11 @@ gem 'active_model_serializers'
 # allows routes like: blog/12-1-15 as opposed to blog/:id
 gem 'friendly_id'
 
+#for paperclip
+gem "paperclip", "~> 5.0.0.beta1"
+
+gem 'pry'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

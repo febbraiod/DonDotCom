@@ -268,6 +268,10 @@ img, video, audio, iframe, table, form {
   left: 8%;
 }
 
+.don {
+  color: #04adcc;
+}
+
 /*////////// FOOTER //////////*/
 
 footer {
@@ -302,6 +306,27 @@ footer {
 .landscape_port {
   width: 200px;
 }
+
+/*///// for blog /////*/
+
+.post_wrapper {
+  position: relative;
+  top: 100px;
+  left: 50px;
+  width: 60%;
+  margin: 50px auto;
+}
+
+#post_headline {
+  font-size: 2.8em;
+  color: #04adcc;
+}
+
+#postdate {
+  font-size: 3em;
+  max-width: 100px;
+}
+
 
 
 /*RESPONSIVE*/ 
