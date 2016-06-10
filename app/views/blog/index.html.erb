@@ -11,7 +11,7 @@
 
     <% @posts.each do |post| %>
       <h3><%=link_to post.headline, blog_path(post)%></h3>
-      <%if post.icon%>
+      <%if post.icon && post.icon.icon.url(:thumb) != '/images/thumb/missing.png' %>
         <%= image_tag post.icon.icon.url(:thumb), class: 'title_icon', id: 'headline_icon' %>
     <!-- the icon is where i should use paperclip, as its really only meant for one image -->
       <%end%>

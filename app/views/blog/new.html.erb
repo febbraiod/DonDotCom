@@ -23,6 +23,14 @@
       <%= ico.file_field :icon %>
     <% end %>
 
+<h5>Gallery Images:</h5>
+  <%= f.fields_for :gallery do |gal|%>
+    <%= gal.label :name %><br>
+    <%= gal.text_field :name%><br>
+    <%= gal.label :photos %><br>
+    <%= file_field_tag "photos[]", type: :file, multiple:true %>
+  <% end %>    
+
 <%=f.submit%>
 <%end%>
 

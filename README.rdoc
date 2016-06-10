@@ -1,6 +1,6 @@
 == README
 
-add paperclip
+set up gallery for post
 
 post has one gallery, gallery has many images
 design has one gallery ect...
@@ -23,7 +23,7 @@ class Gallery
   belongs_to :Post
 end
 
-class Image
+class Photo
   belongs_to :gallery
 end
 

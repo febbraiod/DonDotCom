@@ -8,9 +8,8 @@ class Post < ActiveRecord::Base
 
   accepts_nested_attributes_for :icon
 
-  def icon_attributes=(icon_attributes)
-    self.icon = Icon.find_or_create_by(name: icon_attributes[:name])
-    self.icon.update(icon_attributes)
+  def gallery_attributes=(gallery_attributes)
+    self.gallery = Gallery.new(name: gallery_attributes[:name])
   end
 
 end

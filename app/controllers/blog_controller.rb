@@ -9,14 +9,20 @@ class BlogController < ApplicationController
   def new
     @post = Post.new()
     @post.build_icon
+    @post.build_gallery
   end
 
   def create
     binding.pry
     if post_params[:icon_id].empty?
       @post = Post.new(post_params)
+      params[:photos].each do |pic|
+        binding.pry
+        @post.gallery.photos << Photo.create(pic: pic)
+      end
     else
       @post = Post.new(post_params)
+      binding.pry
       @post.icon = Icon.find_by(id: post_params[:icon_id])
     end
     @post.save
@@ -45,7 +51,9 @@ class BlogController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:headline, :date, :content, :icon_id, :icon_attributes => [:name, :icon])
+      params.require(:post).permit(:headline, :date, :content, :icon_id, 
+                                   :icon_attributes => [:name, :icon], 
+                                   :gallery_attributes => [:name, :photos => []])
     end
 
 
