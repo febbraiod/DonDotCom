@@ -1,9 +1,7 @@
 == README
 
-set up gallery for post
+set up design pages
 
-post has one gallery, gallery has many images
-design has one gallery ect...
 
 the gallery needs to be named after the post or design
 
@@ -32,13 +30,11 @@ class Icon
 end
 
 
+fill in blog posts:
 the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
 
+
 need to get rid of the Jquery fun in blog index and just link to full blog show page.
-
-blog show page will have content in left column content will ref images (see img 1)
-
-second column with have images from gallery with images label 1.1, 1.2
 
 LogoType on home page should be links too.
 
@@ -46,3 +42,11 @@ design and programming can obv stay the save but should change color when hovere
 text for rinse should change to 'blog' when hovered over and repoeat can change to sandbox.
 
 use friendly-id for designs too
+
+links are weird. clicking on design from the blog show page trying to use blog#show as it's route
+
+use javascipt to bind a hover on the images where when you hover over one it floats up large and center
+
+about me page?
+
+refactor blog forms into partials 

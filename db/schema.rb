@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160610004521) do
-
-  create_table "design_images", force: :cascade do |t|
-    t.integer "design_id"
-    t.string  "thumb_url"
-    t.string  "fullsize_url"
-    t.text    "description"
-  end
+ActiveRecord::Schema.define(version: 20160612175902) do
 
   create_table "designs", force: :cascade do |t|
     t.string   "client_name"

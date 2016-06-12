@@ -14,6 +14,23 @@
 <%=f.text_area :content %>
 <br>
 <!--need image upload and icon upload -->
+<h5>Icon:</h5>
+    <%= f.collection_select :icon_id, Icon.all, :id, :name, include_blank: true %>
+<h5>New Icon:</h5>
+    <%= f.fields_for :icon do |ico| %>
+      <%= ico.label :name %><br>
+      <%= ico.text_field :name %><br>
+      <%= ico.label :icon %><br>
+      <%= ico.file_field :icon %>
+    <% end %>
+
+<h5>Gallery Images:</h5>
+  <%= f.fields_for :gallery do |gal|%>
+    <%= gal.label :name %><br>
+    <%= gal.text_field :name%><br>
+    <%= gal.label :photos %><br>
+    <%= file_field_tag "photos[]", type: :file, multiple:true %>
+  <% end %>    
 <%=f.submit%>
 <%end%>
 

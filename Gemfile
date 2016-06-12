@@ -39,7 +39,7 @@ gem 'active_model_serializers'
 gem 'friendly_id'
 
 #for paperclip
-gem "paperclip", "~> 5.0.0.beta1"
+gem 'paperclip', '~> 5.0.0.beta1'
 
 gem 'pry'
 
