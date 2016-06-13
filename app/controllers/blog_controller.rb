@@ -13,16 +13,13 @@ class BlogController < ApplicationController
   end
 
   def create
-    binding.pry
     if post_params[:icon_id].empty?
       @post = Post.new(post_params)
       params[:photos].each do |pic|
-        binding.pry
         @post.gallery.photos << Photo.create(pic: pic)
       end
     else
       @post = Post.new(post_params)
-      binding.pry
       @post.icon = Icon.find_by(id: post_params[:icon_id])
     end
     @post.save
@@ -31,9 +28,12 @@ class BlogController < ApplicationController
 
   def edit
     @post = Post.find_by(slug: params[:headline])
+    @post.build_icon unless @post.icon
+    @post.build_gallery unless @post.gallery
   end
 
   def update
+    binding.pry
     @post = Post.find_by(slug: params[:headline])
     @post.update(post_params)
     @post.save

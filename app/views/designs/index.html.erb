@@ -1,0 +1,28 @@
+<div class="logo_type_not_home">
+    <h1>design</h1> 
+</div>
+
+<div class="design_wrapper">
+<!-- build show page then link the title and all the photos to the show page -->
+  <%@designs.each do |d|%>
+    <div class='design_container'>
+  <!--       <h5><%= link_to d.title, design_path(d) %></h5> -->
+      <%if d.gallery%>
+          <%= image_tag d.gallery.photos.first.pic.url(:large_horiz), style: 'max-width: 100%;' %>
+          <div class='thumb_container'>
+            <% d.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
+              <span class='design_thumb'>
+                <%= image_tag img.pic.url(:thumb) %>
+              </span>
+            <% end %>
+          </div>
+      <% end %> 
+      <br>
+      <div class='design_desc' style='float: right;'>  
+        <small>for <%= d.client_name %></small><br>
+        <%= d.description %>
+      </div>
+    </div>
+  <% end %>
+
+</div>

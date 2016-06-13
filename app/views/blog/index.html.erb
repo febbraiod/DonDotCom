@@ -1,4 +1,3 @@
-
 <% content_for :blog_nav do %>
   <%=link_to image_tag('don.png', id:'donpic'), root_path %>
 <% end %>
@@ -17,11 +16,6 @@
       <%end%>
       <h4><%=post.date%></h4>
       <p id=<%="post_" + "#{post.slug}"%>><%= truncate post.content, length: 250%></p>
-        <div id=<%="post_#{post.slug}_images"%> class='hidden'>
-          <% post.post_images.each do |img|%>
-          <%= image_tag img.image_url %>
-          <%end%>
-        </div>
       <button class="js-more" data-id=<%="#{ post.slug }"%>>More</button>
     <%end%>
 

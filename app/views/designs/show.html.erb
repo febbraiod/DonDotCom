@@ -1,0 +1,24 @@
+<div class="logo_type_not_home">
+  <h1 style='max-width: 100px; font-size: 3em;'><%= @design.title %></h1>
+</div>
+
+<div class='design_wrapper'>
+
+  <div class='design_container'>
+    <%if @design.gallery %>
+      <%= image_tag @design.gallery.photos.first.pic.url(:large_horiz), style: 'max-width: 100%;' %>
+        <div class='thumb_container'>
+          <% @design.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
+            <span class='design_thumb'>
+              <%= image_tag img.pic.url(:thumb) %>
+            </span>
+          <% end %>
+        </div>
+  </div>
+    <div style='float: right;'> 
+    <%= @design.description %>
+    <small>for <%= @design.client_name %></small>
+  </div>
+  <% end %>
+
+</div>
