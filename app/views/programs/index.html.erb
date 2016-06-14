@@ -1,0 +1,27 @@
+<div class="logo_type_not_home">
+  <h1>code</h1> 
+</div>
+
+<div class="program_wrapper__index">
+
+  <% @programs.each do |p| %>
+    <div class='program_container'>
+        <%= p.description %><br>
+        Demo link: <%= p.demo %><br>
+        <%= p.link %>
+      <%if p.gallery %>
+        <div class='program_thumb_container'>
+          <% p.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
+            <div>
+              <%= image_tag img.pic.url, class: 'program_thumb' %>
+            </div>
+          <% end %>
+        </div>
+        <div class='program_view_container'>
+          <%= image_tag p.gallery.photos.first.pic.url %>
+        </div>
+      <%end%>
+    </div>
+  <%end%>
+
+</div>

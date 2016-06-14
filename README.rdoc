@@ -2,6 +2,8 @@
 
 set up design pages
 
+Look at show page. If I can get each section on the index page to display like this do I need a show page? Can I use javascipt and Jquery to make each section on the index page function like a show page? If you hover over the thumb and the display shows a full enough resolution image in the view box. this might show design sense and jquery skills at the same time.
+
 
 the gallery needs to be named after the post or design
 

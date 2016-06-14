@@ -10,10 +10,8 @@ class DesignsController < ApplicationController
   end
 
   def create
-    @design = design.new(design_params)
-    params[:photos].each do |pic|
-      @design.gallery.photos << Photo.create(pic: pic)
-    end
+    @design = Design.new(design_params)
+    @design.add_photos(params[:photos])
     @design.save
     redirect_to design_path(@design)
   end
@@ -30,18 +28,15 @@ class DesignsController < ApplicationController
   def update
     @design = Design.find_by(id: params[:id])
     @design.update(design_params)
-    binding.pry
-     params[:photos].each do |pic|
-      @design.gallery.photos << Photo.create(pic: pic)
-    end
+    @design.add_photos(params[:photos]) unless params[:photos].nil?
     redirect_to design_path(@design)
   end
 
     private
 
     def design_params
-        params.require(:design).permit(:title, :client, :description, 
-                                     :gallery_attributes => [:name, :photos => []])
+        params.require(:design).permit(:title, :client, :description, :long_desc,
+                                       :gallery_attributes => [:name, :photos => []])
     end
 
 end

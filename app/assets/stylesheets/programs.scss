@@ -1,3 +1,36 @@
 // Place all the styles related to the Programs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.program_wrapper__index {
+  position: relative;
+  top: 80px;
+  width: 50%;
+  margin: 50px auto;
+}
+
+.program_thumb_container {
+  width: 112px;
+  margin-right: 10px;
+  border: solid;
+}
+
+.program_thumb {
+  max-width: 111px;
+  height: 111px;
+  margin-bottom: 31px;
+  padding: 1px;
+}
+
+.program_view_container {
+  border: solid;
+  max-width: 64%;
+}
+
+.program_container {
+  border: solid;
+}
+
+
+

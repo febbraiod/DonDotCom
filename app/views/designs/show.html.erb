@@ -1,24 +1,27 @@
-<div class="logo_type_not_home">
-  <h1 style='max-width: 100px; font-size: 3em;'><%= @design.title %></h1>
+<!-- needs responsive css for widths less than 1287px -->
+
+<div class="logo_type_not_home__design_show">
+  <h1 style='max-width: 90px; font-size: 3em; color: #04adcc;'><%= @design.title %></h1>
 </div>
 
 <div class='design_wrapper'>
-
   <div class='design_container'>
-    <%if @design.gallery %>
-      <%= image_tag @design.gallery.photos.first.pic.url(:large_horiz), style: 'max-width: 100%;' %>
+    <div class='long_desc'> 
+      <%= @design.long_desc %><br>
+      <small>Client: <%= @design.client_name %></small>
+    </div>
+      <%if @design.gallery %>
         <div class='thumb_container'>
           <% @design.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
-            <span class='design_thumb'>
-              <%= image_tag img.pic.url(:thumb) %>
-            </span>
+            <div>
+              <%= image_tag img.pic.url, class: 'thumb' %>
+            </div>
           <% end %>
         </div>
+        <div class='view_container'>
+          <%= image_tag @design.gallery.photos.first.pic.url, style: 'max-width: 100%; max-height: 590px;' %>
+        </div>
+      </div>
+    <% end %>
   </div>
-    <div style='float: right;'> 
-    <%= @design.description %>
-    <small>for <%= @design.client_name %></small>
-  </div>
-  <% end %>
-
 </div>

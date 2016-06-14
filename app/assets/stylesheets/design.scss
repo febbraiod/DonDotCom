@@ -1,17 +1,114 @@
-// Place all the styles related to the design controller here.
+/*// Place all the styles related to the design controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+/* /$$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$  /$$$$$$  /$$   /$$       /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$$  /$$$$$$ 
+  | $$__  $$| $$_____/ /$$__  $$|_  $$_/ /$$__  $$| $$$ | $$      | $$__  $$ /$$__  $$ /$$__  $$| $$_____/ /$$__  $$
+  | $$  \ $$| $$      | $$  \__/  | $$  | $$  \__/| $$$$| $$      | $$  \ $$| $$  \ $$| $$  \__/| $$      | $$  \__/
+  | $$  | $$| $$$$$   |  $$$$$$   | $$  | $$ /$$$$| $$ $$ $$      | $$$$$$$/| $$$$$$$$| $$ /$$$$| $$$$$   |  $$$$$$ 
+  | $$  | $$| $$__/    \____  $$  | $$  | $$|_  $$| $$  $$$$      | $$____/ | $$__  $$| $$|_  $$| $$__/    \____  $$
+  | $$  | $$| $$       /$$  \ $$  | $$  | $$  \ $$| $$\  $$$      | $$      | $$  | $$| $$  \ $$| $$       /$$  \ $$
+  | $$$$$$$/| $$$$$$$$|  $$$$$$/ /$$$$$$|  $$$$$$/| $$ \  $$      | $$      | $$  | $$|  $$$$$$/| $$$$$$$$|  $$$$$$/
+  |_______/ |________/ \______/ |______/ \______/ |__/  \__/      |__/      |__/  |__/ \______/ |________/ \______/*/
 
-.design_container {
-  max-width: 600px;
-  padding: 2px;
-  margin: 5px;
+/*show page*/
+
+/*needs responsive css for widths less than 1363px*/
+
+.design_wrapper {
+  position: relative;
+  top: 80px;
+  width: 60%;
+  margin: 50px auto;
 }
 
 .thumb_container {
+  margin-right: 10px;
+  float: left;
 }
 
-.design_thumb {
-  margin: 0 24px 0 1px;
+.thumb {
+  max-width: 111px;
+  height: 111px;
+  margin-bottom: 31px;
+  padding: 1px;
+}
+
+.view_container {
+  float: left;
+  max-width: 64%;
+}
+
+.long_desc {
+  max-width: 20%; 
+  float: right;
+  padding: 0 0 0 5px;
+  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+  font-size: .85em;
+  line-height: 1.55em;
+  border-left: solid;
+  border-color: #04adcc;
+  border-width: 2px;
+}
+
+.design_container {
+  max-height: 100%
+}
+
+.logo_type_not_home__design_show {
+  position: fixed;
+  top: 60%;
+  left: 68%;
+}
+
+/*index page*/
+
+/*breaksdown around 1010px width*/
+
+hr {
+    border-top: 4px solid #04adcc;
+}
+
+#hr_holder__1 {
+  position: relative;
+  width: 158px;
+  bottom: 86px;
+  left: 9px;
+}
+
+#hr_holder__2 {
+  position: relative;
+  width: 44px;
+  bottom: 97px;
+  left: 224px;
+}
+
+.design_wrapper__index {
+  position: relative;
+  top: 80px;
+  width: 43%;
+  margin: 50px auto;
+  border-left: solid;
+  border-right: solid;
+  border-color: #04adcc;
+  border-width: 2px;
+}
+
+.thumb_container__index {
+
+}
+
+.thumb__index {
+  max-width: 111px;
+  height: 111px;
+  margin-bottom: 5px;
+  margin-right: 3px;
+  margin-left: 3px;
+  padding: 1px;
+}
+
+.design_desc {
+  font-family: avenir, helvetica, arial, sans-serif;
+  font-size: 1em;
+  padding: 5px;
 }
