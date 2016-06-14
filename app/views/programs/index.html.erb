@@ -4,24 +4,53 @@
 
 <div class="program_wrapper__index">
 
-  <% @programs.each do |p| %>
-    <div class='program_container'>
-        <%= p.description %><br>
-        Demo link: <%= p.demo %><br>
-        <%= p.link %>
-      <%if p.gallery %>
-        <div class='program_thumb_container'>
-          <% p.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
-            <div>
-              <%= image_tag img.pic.url, class: 'program_thumb' %>
+  <% @programs.each do |program| %>
+    <% photos = program.gallery.photos %>
+
+    <div id='clearfix' style='border: solid;'>
+
+        <div style='float: left'>
+
+
+        <!-- the following section is ugly! -->
+          <div class='program_thumb_container_1'>
+            <% photos.first(4).each do |img| %>
+              <div>
+                <%= image_tag img.pic.url, class: 'program_thumb' %>
+              </div>
+            <% end %>
+          </div>
+
+          <% if photos.length > 4 %>
+            <div class='program_thumb_container_2'>
+              <% photos.last(photos.length - 4).each do |img| %>
+                <div>
+                  <%= image_tag img.pic.url, class: 'program_thumb' %>
+                </div>
+              <% end %>
+              <% (8 - photos.length).times do |place_holder| %>
+                <%= image_tag "anewhope.png", class: 'place_holder' %>
+              <%end%>
             </div>
-          <% end %>
+          <%end%>
         </div>
+
+
         <div class='program_view_container'>
-          <%= image_tag p.gallery.photos.first.pic.url %>
+          <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
-      <%end%>
+
+        <div>
+        <%= program.description %><br>
+        Demo link: <%= program.demo %><br>
+        Live link: <%= program.link %>
+        </div>
+
     </div>
+
+    <br><br>
+    <hr>
+
   <%end%>
 
 </div>

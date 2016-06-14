@@ -10,10 +10,18 @@
   margin: 50px auto;
 }
 
-.program_thumb_container {
+.program_thumb_container_1 {
+  display: inline-block;
   width: 112px;
   margin-right: 10px;
-  border: solid;
+  border: dotted;
+}
+
+.program_thumb_container_2 {
+  display: inline-block;
+  width: 112px;
+  margin-right: 10px;
+  border: dotted;
 }
 
 .program_thumb {
@@ -24,13 +32,23 @@
 }
 
 .program_view_container {
-  border: solid;
-  max-width: 64%;
+  float: left;
+  border: dashed;
+  max-width: 60%;
 }
 
-.program_container {
-  border: solid;
+#clearfix {
+  overflow: auto;
 }
 
+.highlight_image {
+  max-width: 100%;
+}
 
+.place_holder {
+  max-width: 111px;
+  height: 111px;
+  margin-bottom: 31px;
+  padding: 1px;
+}
 
