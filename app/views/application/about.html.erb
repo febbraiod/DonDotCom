@@ -1,0 +1,29 @@
+<% content_for :about_nav do %>
+  <%=link_to image_tag('don.png', id:'donpic'), root_path %>
+<% end %>
+
+<div class="logo_type_not_home">
+  <h1>life</h1>
+</div>
+
+<div class='wrapper'>
+
+<p>Well, hello there world!</p>
+
+<p>I'm an arts lover, designer and full stack web developer. A great cook and a mediocre guitar player. Game enthusiast. Book junkie.</p>
+
+<p>My passion is creating and improving things. I love to think both creatively and analytically.</p>
+
+<p>Design and Programming are my bread and butter because they use both sides of my brain. I am comfortable leading or working as part of a team as well as tackling projects on my own when the situation calls for it.
+
+<p>Above all, I love to learn new things and grow as a result.</p>
+
+<ul>
+<li>Email: <%= mail_to 'febbraio.don@gmail.com' %></li>
+<li>Resume: <%= link_to "Don's Resume", 'https://learn.co/febbraiod/resume', :target => "_blank" %></li>
+<li>Github: <%= link_to 'febbraiod', 'https://github.com/febbraiod', :target => "_blank" %></li>
+<li>Linkedin: <%= link_to 'donfebbraio' , 'https://www.linkedin.com/in/donfebbraio', :target => "_blank" %></li>
+<li>Twitter: <%= link_to '@Donnief3', 'https://twitter.com/Donnief3', :target => "_blank" %></li>
+</ul>
+
+</div>

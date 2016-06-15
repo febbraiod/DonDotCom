@@ -1,54 +1,32 @@
 == README
 
-set up design pages
 
-Look at show page. If I can get each section on the index page to display like this do I need a show page? Can I use javascipt and Jquery to make each section on the index page function like a show page? If you hover over the thumb and the display shows a full enough resolution image in the view box. this might show design sense and jquery skills at the same time.
+add second column to design show page like with programs
 
+clean up design index page
 
-the gallery needs to be named after the post or design
+need to get rid of the Jquery fun in blog index and just link to full blog show page.
 
-class Design
-  has_one :gallery
-end
+use jQuery for gallerys on design and program pages
 
-class Post
-  has_one :gallery
-  has_one :icon
-end
-
-class Gallery
-  has_many :images
-
-  belongs_to :Design
-  belongs_to :Post
-end
-
-class Photo
-  belongs_to :gallery
-end
-
-class Icon
-  belongs_to :post
-end
-
+do i want to do the design pages the same as the programs?
 
 fill in blog posts:
 the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
 
 
-need to get rid of the Jquery fun in blog index and just link to full blog show page.
-
-LogoType on home page should be links too.
+LogoType on home page should be links:
 
 design and programming can obv stay the save but should change color when hovered
 text for rinse should change to 'blog' when hovered over and repoeat can change to sandbox.
 
-use friendly-id for designs too
-
-links are weird. clicking on design from the blog show page trying to use blog#show as it's route
+use friendly-id for designs and programs too
 
 use javascipt to bind a hover on the images where when you hover over one it floats up large and center
 
-about me page?
+refactor blog forms into partials
 
-refactor blog forms into partials 
+
+
+
+put sandbox ideas on programming page

@@ -13,10 +13,10 @@
 
   
    <header>
-    <% if content_for? :blog_nav %>
+    <% if content_for? :about_nav %>
       <div class = "wrapper_blocker">
       </div>
-      <%= yield :blog_nav %>
+      <%= yield :about_nav %>
     <% elsif content_for? :home_nav %>
       <!-- No pic on this page -->
     <% else %>
@@ -36,7 +36,7 @@
             <%=link_to 'design', designs_path%>
             <%=link_to 'programming', programs_path%>
             <%=link_to 'blog', blog_index_path%>
-            <a href="sandbox.html">sandbox</a>
+            <%=link_to 'about me',  about_path %>
           </div>
         </nav>
       </div><!-- #navbar -->
