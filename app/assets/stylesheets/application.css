@@ -360,6 +360,44 @@ footer {
   border-color: #04adcc;
 }
 
+/* /$$   /$$  /$$$$$$  /$$      /$$ /$$$$$$$$
+  | $$  | $$ /$$__  $$| $$$    /$$$| $$_____/
+  | $$  | $$| $$  \ $$| $$$$  /$$$$| $$      
+  | $$$$$$$$| $$  | $$| $$ $$/$$ $$| $$$$$   
+  | $$__  $$| $$  | $$| $$  $$$| $$| $$__/   
+  | $$  | $$| $$  | $$| $$\  $ | $$| $$      
+  | $$  | $$|  $$$$$$/| $$ \/  | $$| $$$$$$$$
+  |__/  |__/ \______/ |__/     |__/|________/*/
+
+#home_head {
+  color: #7a7a7a;
+}
+
+#home_head:hover {
+  margin: 17px;
+  color: #04adcc;
+  text-decoration: none;
+}
+
+#rinse_link {
+  color: #7a7a7a;
+}
+
+#rinse_link:hover {
+  margin: 17px;
+  text-decoration: none;
+  color: #04adcc;
+}
+
+#repeat_link {
+  color: #7a7a7a;
+}
+
+#repeat_link:hover {
+  margin: 17px;
+  text-decoration: none;
+  color: #04adcc;
+}
 
 
 /* /$$$$$$$  /$$        /$$$$$$   /$$$$$$        /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$$  /$$$$$$ 

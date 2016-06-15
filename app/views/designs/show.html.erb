@@ -1,27 +1,58 @@
 <!-- needs responsive css for widths less than 1287px -->
 
-<div class="logo_type_not_home__design_show">
-  <h1 style='max-width: 90px; font-size: 3em; color: #04adcc;'><%= @design.title %></h1>
-</div>
+<% photos = @design.gallery.photos.sort_by {|pic| pic.pic_file_name} %>
+<% if photos.length > 4 %>
+  <div class='design_wrapper_2'>
+<% else %>
+  <div class='design_wrapper'>
+<% end %>
 
-<div class='design_wrapper'>
+  <% if photos.length > 4 %>
+    <div class="logo_type_not_home__design_show_2">
+  <% else %>
+    <div class="logo_type_not_home__design_show_1">
+  <% end %>
+    <h1 style='max-width: 90px; font-size: 3em; color: #04adcc;'><%= @design.title %></h1>
+  </div>
+
   <div class='design_container'>
+
     <div class='long_desc'> 
       <%= @design.long_desc %><br>
       <small>Client: <%= @design.client_name %></small>
     </div>
+
+
       <%if @design.gallery %>
-        <div class='thumb_container'>
-          <% @design.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
+        <div class='design_thumb_container_1'>
+          <% photos.first(4).each do |img| %>
+            <div>
+              <%= image_tag img.pic.url, class: 'thumb' %>
+            </div>
+          <%end%>
+        </div>
+
+        <% if photos.length > 4 %>
+          <div class='design_thumb_container_2'>
+          <% photos.last(photos.length - 4).each do |img| %>
             <div>
               <%= image_tag img.pic.url, class: 'thumb' %>
             </div>
           <% end %>
+          <% (8 - photos.length).times do |place_holder| %>
+            <%= image_tag "placeholder_thumb", class: 'place_holder' %>
+          <%end%>
+          </div>
+        <%end%>
+
+        <% if photos.length > 4 %>
+          <div class='design_view_container_2'>
+        <% else %>
+          <div class='design_view_container'>
+        <% end %>
+          <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
-        <div class='view_container'>
-          <%= image_tag @design.gallery.photos.first.pic.url, style: 'max-width: 100%; max-height: 590px;' %>
-        </div>
-      </div>
-    <% end %>
+    <%end%>
   </div>
+
 </div>

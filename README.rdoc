@@ -1,10 +1,6 @@
 == README
 
 
-add second column to design show page like with programs
-
-clean up design index page
-
 need to get rid of the Jquery fun in blog index and just link to full blog show page.
 
 use jQuery for gallerys on design and program pages
@@ -20,13 +16,15 @@ LogoType on home page should be links:
 design and programming can obv stay the save but should change color when hovered
 text for rinse should change to 'blog' when hovered over and repoeat can change to sandbox.
 
+
+nav on home page gets ulgy around 1315 width.
+
 use friendly-id for designs and programs too
 
 use javascipt to bind a hover on the images where when you hover over one it floats up large and center
 
 refactor blog forms into partials
 
-
-
-
 put sandbox ideas on programming page
+
+after functional consdier trying to redo layouts with bootstrap for less conditional type css, or at some point covewrt everyting to angular to use ng-if.

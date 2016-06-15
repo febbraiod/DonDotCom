@@ -15,3 +15,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require posts
+
+
+$(function(){
+  bind_rinse();
+  bind_repeat();
+});
+
+function bind_rinse(){
+  $('#rinse_link').hover( function(){
+    $(this).text('blog');
+  }, function(){
+    $(this).html('ri<span class="don">n</span>se');
+  });
+
+  $('#rinse_link').click(function(){$(this).html('ri<span class="don">n</span>se');});
+}
+
+function bind_repeat(){
+  $('#repeat_link').hover( function(){
+    $(this).text('about');
+  }, function(){
+    $(this).text('repeat');
+  });
+
+  $('#repeat_link').click(function(){$(this).test('repeat');});
+}
