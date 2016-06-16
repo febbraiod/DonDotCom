@@ -1,7 +1,6 @@
 == README
  
 
-
 fill in blog posts:
 the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
 

@@ -1,11 +1,31 @@
-// Place all the styles related to the Blog controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*show*/
+
+#post_headline {
+  display: inline-block;
+  font-size: 2.6em;
+  color: #04adcc;
+  margin-top: 0;
+}
+
+#headline_icon {
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/*index*/
 
 #hr_holder__4 {
   position: relative;
   width: 124px;
   bottom: 84px;
   left: 5px;
+}
+
+#index_headline {
+  display: inline;
+}
+
+#index_headline_icon {
+  display: inline;
 }

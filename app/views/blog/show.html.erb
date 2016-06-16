@@ -5,22 +5,16 @@
 <div class="post_wrapper">
 
 <h3 id='post_headline'><%=@post.headline%></h3>
+  
+  <%if @post.icon && @post.icon.icon.url(:thumb) != '/images/thumb/missing.png'%>
+    <%= image_tag @post.icon.icon.url(:thumb), class: 'title_icon', id: 'headline_icon' %>
+  <%end%>
 
   <div style="float: left; width: 60%;">
-    <%if @post.icon && @post.icon.icon.url(:thumb) != '/images/thumb/missing.png'%>
-      <%= image_tag @post.icon.icon.url(:thumb), class: 'title_icon', id: 'headline_icon' %>
-    <%end%>
-
     <p><%= simple_format(@post.content) %></p>
   </div>
 
   <div style="float: right; width: 38%;">
-
-  <!-- old way to be replace with paperclip: -->
-    <%@post.post_images.each_with_index do |img, i|%>
-      <caption><small><%="img #{i + 1}"%>.</small></caption><%= image_tag img.image_url %>
-      <caption><small><%="img #{i + 1}"%>.</small></caption><%= image_tag img.image_url %>
-    <%end%>
 
   <!-- paperclip: --> <!-- maybe i can use Jquery later to hook into the image refs (<p id='img1'>see img 1<p> and replace them wit the actual image like $('#img1').html('/insert/img/url/here/img1') -->
 
