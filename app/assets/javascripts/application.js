@@ -15,12 +15,21 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require posts
+//= require design
 
 
 $(function(){
   bind_rinse();
   bind_repeat();
+  bind_thumbs();
 });
+
+function bind_thumbs(){
+  $('.thumb').click(function(){
+    var image_url = this.src;
+    $('.design_view_container').children()[0].src = image_url;
+  });
+}
 
 function bind_rinse(){
   $('#rinse_link').hover( function(){

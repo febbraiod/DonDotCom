@@ -13,7 +13,7 @@
           <div class='thumb_container__index'>
             <% d.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
               <span class='design_thumb'>
-                <%= image_tag img.pic.url, class: 'thumb__index' %>
+                <%= link_to image_tag(img.pic.url, class: 'thumb__index'), design_path(d) %>
               </span>
             <% end %>
           </div>

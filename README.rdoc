@@ -5,6 +5,10 @@ need to get rid of the Jquery fun in blog index and just link to full blog show 
 
 use jQuery for gallerys on design and program pages
 
+
+
+
+
 do i want to do the design pages the same as the programs?
 
 fill in blog posts:
