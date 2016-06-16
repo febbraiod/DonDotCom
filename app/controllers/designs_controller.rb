@@ -11,7 +11,7 @@ class DesignsController < ApplicationController
 
   def create
     @design = Design.new(design_params)
-    @design.add_photos(params[:photos])
+    @design.add_photos(params[:photos]) unless params[:photos].nil?
     @design.save
     redirect_to design_path(@design)
   end

@@ -8,7 +8,7 @@
     <% @posts.each do |post| %>
       <h3 id='index_headline'><%=link_to post.headline, blog_path(post)%></h3>
       <%if post.icon && post.icon.icon.url(:thumb) != '/images/thumb/missing.png' %>
-        <%= image_tag post.icon.icon.url(:thumb), class: 'title_icon', id: 'index_headline_icon' %>
+        <%= image_tag post.icon.icon.url, class: 'title_icon', id: 'index_headline_icon' %>
     <!-- the icon is where i should use paperclip, as its really only meant for one image -->
       <%end%>
       <h4><%=post.date%></h4>

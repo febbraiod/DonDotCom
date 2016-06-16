@@ -5,10 +5,26 @@ class Post < ActiveRecord::Base
   has_one :gallery
   belongs_to :icon
 
-  accepts_nested_attributes_for :icon
-
   def gallery_attributes=(gallery_attributes)
-    self.gallery = Gallery.new(name: gallery_attributes[:name])
+    if self.gallery
+      self.gallery.name = gallery_attributes[:name]
+      self.gallery.save
+      binding.pry
+    else
+      self.gallery = Gallery.new(name: gallery_attributes[:name])
+      self.gallery.save
+      binding.pry
+    end
+  end
+
+  def add_photos(photos)
+    photos.sort_by {|p| p.original_filename}.each do |pic|
+      self.gallery.photos << Photo.create(pic: pic)
+    end
+  end
+
+  def icon_attributes=(icon_attributes)
+    self.icon = Icon.find_or_create_by(icon_attributes) unless icon_attributes[:name] == ""
   end
 
 end

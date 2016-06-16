@@ -8,6 +8,10 @@ fill in designs
 
 fill in programs.
 
+devise?(ug) <--- might be useful if i add comment features to blog
+for now watch rails cast on session setting.
+
+do away with thumb styles for icons, and designs anf programs? using full images and letting the browser resize looks way better
 
 question all the <hr> tags. do they make the design better or worse. think about sepration of project vs over all look.(might need pages to be more populated to make a good decision)
 

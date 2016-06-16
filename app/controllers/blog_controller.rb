@@ -13,14 +13,10 @@ class BlogController < ApplicationController
   end
 
   def create
-    if post_params[:icon_id].empty?
-      @post = Post.new(post_params)
-      params[:photos].each do |pic|
-        @post.gallery.photos << Photo.create(pic: pic)
-      end
-    else
-      @post = Post.new(post_params)
-      @post.icon = Icon.find_by(id: post_params[:icon_id])
+    @post = Post.new(post_params)
+    @post.add_photos(params[:photos]) unless params[:photos].nil?
+    if params[:icon_id]
+      @post.icon = Icon.find_by[:icon_id]
     end
     @post.save
     redirect_to blog_path(@post)
@@ -33,9 +29,12 @@ class BlogController < ApplicationController
   end
 
   def update
-    binding.pry
     @post = Post.find_by(slug: params[:headline])
     @post.update(post_params)
+    @post.add_photos(params[:photos]) unless params[:photos].nil?
+    if params[:icon_id]
+      @post.icon = Icon.find_by[:icon_id]
+    end
     @post.save
     redirect_to blog_path(@post)
   end

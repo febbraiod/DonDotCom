@@ -5,9 +5,9 @@
 <div class="post_wrapper">
 
 <h3 id='post_headline'><%=@post.headline%></h3>
-  
+
   <%if @post.icon && @post.icon.icon.url(:thumb) != '/images/thumb/missing.png'%>
-    <%= image_tag @post.icon.icon.url(:thumb), class: 'title_icon', id: 'headline_icon' %>
+    <%= image_tag @post.icon.icon.url, class: 'title_icon', id: 'headline_icon' %>
   <%end%>
 
   <div style="float: left; width: 60%;">
