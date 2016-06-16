@@ -25,7 +25,7 @@ $(function(){
 });
 
 function bind_thumbs(){
-  $('.thumb').click(function(){
+  $('.thumb').hover(function(){
     var image_url = this.src;
     $('.design_view_container').children()[0].src = image_url;
   });
