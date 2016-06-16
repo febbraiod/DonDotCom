@@ -4,19 +4,17 @@
 
 <div class="program_wrapper__index">
 
-  <% @programs.each do |program| %>
+  <% @programs.each_with_index do |program, idx| %>
     <% photos = program.gallery.photos %>
 
     <div id='clearfix' style='border: solid;'>
 
         <div style='float: left'>
 
-
-        <!-- the following section is ugly! -->
           <div class='program_thumb_container_1'>
             <% photos.first(4).each do |img| %>
               <div>
-                <%= image_tag img.pic.url, class: 'program_thumb' %>
+                <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
               </div>
             <% end %>
           </div>
@@ -25,7 +23,7 @@
             <div class='program_thumb_container_2'>
               <% photos.last(photos.length - 4).each do |img| %>
                 <div>
-                  <%= image_tag img.pic.url, class: 'program_thumb' %>
+                  <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
                 </div>
               <% end %>
               <% (8 - photos.length).times do |place_holder| %>
@@ -36,7 +34,7 @@
         </div>
 
 
-        <div class='program_view_container'>
+        <div class="program_view_container" id=<%="view_#{idx}"%>>
           <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
 

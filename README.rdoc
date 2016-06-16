@@ -1,7 +1,10 @@
 == README
 
 
-use jQuery for gallerys on design and program pages:
+use jQuery for gallerys on program page
+
+clean up JS locations
+
  
 
 need to get rid of the Jquery fun in blog index and just link to full blog show page.
@@ -25,9 +28,9 @@ text for rinse should change to 'blog' when hovered over and repoeat can change 
 
 nav on home page gets ulgy around 1315 width.
 
-use friendly-id for designs and programs too
+factor out inline styles in favor of sheets
 
-use javascipt to bind a hover on the images where when you hover over one it floats up large and center
+use friendly-id for designs and programs too
 
 refactor blog forms into partials
 

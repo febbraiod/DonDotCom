@@ -21,10 +21,11 @@
 $(function(){
   bind_rinse();
   bind_repeat();
-  bind_thumbs();
+  bind_design_thumbs();
+  bind_program_thumbs();
 });
 
-function bind_thumbs(){
+function bind_design_thumbs(){
   $('.thumb').hover(function(){
     var image_url = this.src;
     if($('.design_view_container').children()[0] === undefined){
@@ -33,6 +34,13 @@ function bind_thumbs(){
         $('.design_view_container').children()[0].src = image_url;
       }
   });
+}
+
+function bind_program_thumbs(){
+  $('.program_thumb').hover(function(){
+    var image_url = this.src;
+    var index = $(this).data('index');
+    $('#view_' + index).children()[0].src = image_url = image_url;});
 }
 
 function bind_rinse(){
