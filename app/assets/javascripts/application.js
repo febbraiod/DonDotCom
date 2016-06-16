@@ -27,7 +27,11 @@ $(function(){
 function bind_thumbs(){
   $('.thumb').hover(function(){
     var image_url = this.src;
-    $('.design_view_container').children()[0].src = image_url;
+    if($('.design_view_container').children()[0] === undefined){
+        $('.design_view_container_2').children()[0].src = image_url;
+      }else{
+        $('.design_view_container').children()[0].src = image_url;
+      }
   });
 }
 

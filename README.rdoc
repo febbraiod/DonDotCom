@@ -1,9 +1,11 @@
 == README
 
 
+use jQuery for gallerys on design and program pages:
+ 
+
 need to get rid of the Jquery fun in blog index and just link to full blog show page.
 
-use jQuery for gallerys on design and program pages
 
 
 
