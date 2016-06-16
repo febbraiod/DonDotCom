@@ -4,14 +4,15 @@
 
 <div class="post_wrapper">
 
-<h3 id='post_headline'><%=@post.headline%></h3>
-
   <%if @post.icon && @post.icon.icon.url(:thumb) != '/images/thumb/missing.png'%>
+    <h3 id='post_headline_with_icon'><%=@post.headline%></h3>
     <%= image_tag @post.icon.icon.url, class: 'title_icon', id: 'headline_icon' %>
+  <%else%>
+    <h3 id='post_headline'><%=@post.headline%></h3>
   <%end%>
-
   <div style="float: left; width: 60%;">
-    <p><%= simple_format(@post.content) %></p>
+    <p><%= simple_format(@post.content)%></p>
+    <br><br>
   </div>
 
   <div style="float: right; width: 38%;">
@@ -23,7 +24,7 @@
         <caption><small><%="img #{i + 1}"%>.</small></caption><%= image_tag img.pic.url(:medium_horiz) %>
       <%end%>
     <%end%>
-    <p>.</p>
+    <p style='visibility: hidden;'>.</p>
   </div>
   <!-- needs an edit button for me and a comment(maybe just tags?) options for the public -->
 
