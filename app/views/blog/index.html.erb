@@ -13,7 +13,7 @@
       <%end%>
       <h4><%=post.date%></h4>
       <p id=<%="post_" + "#{post.slug}"%>><%= truncate(post.content, length: 280) {link_to "more", blog_path(post)} %></p>
-<!--       <button class="js-more" data-id=<%= post.slug %>>More</button> -->
+      <br>
     <%end%>
 
     <br>
