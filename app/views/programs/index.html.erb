@@ -1,5 +1,6 @@
 <div class="logo_type_not_home">
   <h1>code</h1> 
+  <div id='hr_holder__3'><hr></div>
 </div>
 
 <div class="program_wrapper__index">
@@ -7,7 +8,7 @@
   <% @programs.each_with_index do |program, idx| %>
     <% photos = program.gallery.photos %>
 
-    <div id='clearfix' style='border: solid;'>
+    <div id='clearfix'>
 
         <div style='float: left'>
 
@@ -38,7 +39,7 @@
           <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
 
-        <div>
+        <div id='program_details'>
           <%= program.description %><br>
           Demo link: <%= program.demo %><br>
           Live link: <%= program.link %>
@@ -46,8 +47,10 @@
 
     </div>
 
+    <% if idx < @programs.length - 1 %>
+    <hr id='program_break'>
+    <% end %>
     <br><br>
-    <hr>
 
   <%end%>
 

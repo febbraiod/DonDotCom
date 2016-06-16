@@ -1,10 +1,4 @@
 == README
-
-
-use jQuery for gallerys on program page
-
-clean up JS locations
-
  
 
 need to get rid of the Jquery fun in blog index and just link to full blog show page.
@@ -20,13 +14,10 @@ fill in blog posts:
 the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
 
 
-LogoType on home page should be links:
-
-design and programming can obv stay the save but should change color when hovered
-text for rinse should change to 'blog' when hovered over and repoeat can change to sandbox.
+question all the <hr> tags. do they make the design better or worse. think about sepration of project vs over all look.(might need pages to be more populated to make a good decision)
 
 
-nav on home page gets ulgy around 1315 width.
+nav on home page gets ugly around 1315 width.
 
 factor out inline styles in favor of sheets
 

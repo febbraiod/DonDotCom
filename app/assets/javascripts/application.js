@@ -16,6 +16,7 @@
 //= require turbolinks
 //= require posts
 //= require design
+//= require programs
 
 
 $(function(){
@@ -24,24 +25,6 @@ $(function(){
   bind_design_thumbs();
   bind_program_thumbs();
 });
-
-function bind_design_thumbs(){
-  $('.thumb').hover(function(){
-    var image_url = this.src;
-    if($('.design_view_container').children()[0] === undefined){
-        $('.design_view_container_2').children()[0].src = image_url;
-      }else{
-        $('.design_view_container').children()[0].src = image_url;
-      }
-  });
-}
-
-function bind_program_thumbs(){
-  $('.program_thumb').hover(function(){
-    var image_url = this.src;
-    var index = $(this).data('index');
-    $('#view_' + index).children()[0].src = image_url = image_url;});
-}
 
 function bind_rinse(){
   $('#rinse_link').hover( function(){

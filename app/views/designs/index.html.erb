@@ -6,7 +6,7 @@
 
 <div class="design_wrapper__index">
 <!-- build show page then link the title and all the photos to the show page -->
-  <%@designs.each do |d|%>
+  <%@designs.each_with_index do |d, idx|%>
     <div class='design_container'>
   <!--       <h5><%= link_to d.title, design_path(d) %></h5> -->
       <%if d.gallery%>
@@ -24,8 +24,14 @@
         <%= link_to d.title, design_path(d) %> <small>for <%= d.client_name %></small>
       </div>
     </div>
+
+    <br>
+    <% if idx < @designs.length - 1 %>
+    <hr id='program_break'>
+    <% end %>
     <br>
     <br>
+
   <% end %>
 
 </div>

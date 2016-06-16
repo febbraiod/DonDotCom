@@ -2,17 +2,13 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-// $(function(){
-//   bind_thumbs();
-//   alert('hi');
-// });
-
-// function bind_thumbs(){
-//   $('.thumb').hover(function(){
-//     alert('hi');
-//     var content = this.attr('src');
-//     debugger
-//     $('.design_view_container').html(content);
-//     $('.design_view_container_2').html(content);
-//   }, function(){});
-// }
+function bind_design_thumbs(){
+  $('.thumb').hover(function(){
+    var image_url = this.src;
+    if($('.design_view_container').children()[0] === undefined){
+        $('.design_view_container_2').children()[0].src = image_url;
+      }else{
+        $('.design_view_container').children()[0].src = image_url;
+      }
+  });
+}
