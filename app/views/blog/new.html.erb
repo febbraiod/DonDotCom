@@ -24,7 +24,7 @@
     <% end %>
 
 <h5>Gallery Images:</h5>
-  <%= f.fields_for :gallery do |gal|%>
+  <%= f.fields_for @post.gallery do |gal|%>
     <%= gal.label :name %><br>
     <%= gal.text_field :name%><br>
     <%= gal.label :photos %><br>
