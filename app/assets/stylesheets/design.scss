@@ -43,10 +43,14 @@
 }
 
 .thumb {
-  max-width: 111px;
   height: 111px;
   margin-bottom: 31px;
   padding: 1px;
+}
+
+.thumb_box {
+  max-width: 111px;
+  overflow: hidden;
 }
 
 .design_view_container {
@@ -121,12 +125,17 @@ hr {
 }
 
 .thumb__index {
-  max-width: 111px;
   height: 111px;
   margin-bottom: 5px;
   margin-right: 3px;
   margin-left: 3px;
   padding: 1px;
+}
+
+.thumb_box__index {
+  display: inline-block;
+  max-width: 111px;
+  overflow: hidden;
 }
 
 .design_desc {

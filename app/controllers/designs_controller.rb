@@ -11,6 +11,7 @@ class DesignsController < ApplicationController
 
   def create
     @design = Design.new(design_params)
+    binding.pry
     @design.add_photos(params[:photos]) unless params[:photos].nil?
     @design.save
     redirect_to design_path(@design)
@@ -36,7 +37,7 @@ class DesignsController < ApplicationController
 
     def design_params
         params.require(:design).permit(:title, :client, :description, :long_desc,
-                                       :gallery_attributes => [:name, :photos => []])
+                                       :gallery => [:name])
     end
 
 end

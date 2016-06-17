@@ -12,9 +12,9 @@
       <%if d.gallery%>
           <div class='thumb_container__index'>
             <% d.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
-              <span class='design_thumb'>
+              <div class='thumb_box__index'>
                 <%= link_to image_tag(img.pic.url, class: 'thumb__index'), design_path(d) %>
-              </span>
+              </div>
             <% end %>
           </div>
       <% end %> 
@@ -27,7 +27,7 @@
 
     <br>
     <% if idx < @designs.length - 1 %>
-    <hr id='program_break'>
+      <hr id='program_break'>
     <% end %>
     <br>
     <br>
