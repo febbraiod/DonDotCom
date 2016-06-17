@@ -1,5 +1,16 @@
 == README
  
+nav on home page gets ugly around 1315 width.
+
+factor out inline styles in favor of sheets
+
+
+
+
+
+don't do the following until heroku issue is resolved:
+
+_____________________________________________________________________
 
 fill in blog posts:
 the photos need to be named after gallery and numbered also need to include horiz or vert in name to determine style
@@ -11,9 +22,15 @@ fill in programs.
 devise?(ug) <--- might be useful if i add comment features to blog
 for now watch rails cast on session setting.
 
-do away with thumb styles for icons, and designs anf programs? using full images and letting the browser resize looks way better
+_____________________________________________________________________
+
+
+do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
 
 question all the <hr> tags. do they make the design better or worse. think about sepration of project vs over all look.(might need pages to be more populated to make a good decision)
+
+
+
 
 do i want to do the design pages the same as the programs?
 
@@ -25,7 +42,7 @@ use friendly-id for designs and programs too
 
 refactor blog forms into partials
 
-host on heroku
+
 
 get other programs hosted on heroku and link (ezi and legal aid)
 
