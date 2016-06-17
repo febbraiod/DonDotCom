@@ -13,9 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20160614154739) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "designs", force: :cascade do |t|
-    t.string   "client_name"
-    t.string   "title"
+    t.text     "client_name"
+    t.text     "title"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 20160614154739) do
   create_table "galleries", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "name"
+    t.text     "name"
     t.integer  "post_id"
     t.integer  "design_id"
     t.integer  "program_id"
@@ -34,47 +37,47 @@ ActiveRecord::Schema.define(version: 20160614154739) do
   create_table "icons", force: :cascade do |t|
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.string   "icon_file_name"
-    t.string   "icon_content_type"
+    t.text     "icon_file_name"
+    t.text     "icon_content_type"
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
-    t.string   "name"
+    t.text     "name"
   end
 
   create_table "photos", force: :cascade do |t|
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-    t.string   "pic_file_name"
-    t.string   "pic_content_type"
+    t.text     "pic_file_name"
+    t.text     "pic_content_type"
     t.integer  "pic_file_size"
     t.datetime "pic_updated_at"
     t.integer  "gallery_id"
   end
 
   create_table "post_images", force: :cascade do |t|
-    t.string   "image_url"
+    t.text     "image_url"
     t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string   "headline"
-    t.string   "date"
+    t.text     "headline"
+    t.text     "date"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "slug"
+    t.text     "slug"
     t.integer  "icon_id"
   end
 
   create_table "programs", force: :cascade do |t|
-    t.string   "link"
+    t.text     "link"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "title"
-    t.string   "demo"
+    t.text     "title"
+    t.text     "demo"
   end
 
 end

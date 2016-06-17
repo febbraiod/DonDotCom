@@ -34,4 +34,4 @@ get other programs hosted on heroku and link (ezi and legal aid)
 
 put sandbox ideas on programming page
 
-after functional consdier trying to redo layouts with bootstrap for less conditional type css, or at some point covewrt everyting to angular to use ng-if.
+after functional consider trying to redo layouts with bootstrap for less conditional type css, or at some point covewrt everyting to angular to use ng-if.
