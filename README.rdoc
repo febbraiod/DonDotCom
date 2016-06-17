@@ -1,12 +1,18 @@
 == README
 
-test heroku galleries
+
+It looks like clients are not getting saved on heroku when uploading a project to designs
+
+save assets locally to reupload in-case we lose everything in the future
 
 
 
 
 
 
+
+
+deploying erases images, so populating the site is pointless until it's 100% finished
 
 don't do the following until heroku issues are all resolved:
 
