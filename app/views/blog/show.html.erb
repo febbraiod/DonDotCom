@@ -7,6 +7,7 @@
   <%if @post.icon && @post.icon.icon.url(:thumb) != '/images/thumb/missing.png'%>
     <h3 id='post_headline_with_icon'><%=@post.headline%></h3>
     <%= image_tag @post.icon.icon.url, class: 'title_icon', id: 'headline_icon' %>
+    <br>
   <%else%>
     <h3 id='post_headline'><%=@post.headline%></h3>
   <%end%>

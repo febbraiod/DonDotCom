@@ -1,9 +1,6 @@
 == README
  
 
-post icons do act right if editing the post
-If Title is short layout gets weird
-
 nav on home page gets ugly around 1315 width.
 
 factor out inline styles in favor of sheets
