@@ -24,7 +24,7 @@ class Post < ActiveRecord::Base
   end
 
   def icon_attributes=(icon_attributes)
-    self.icon = Icon.find_or_create_by(icon_attributes) unless icon_attributes[:name] == ""
+    self.icon = Icon.new(name: icon_attributes["name"], icon: icon_attributes["icon"]) unless icon_attributes[:name] == ""
   end
 
 end

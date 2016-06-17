@@ -5,11 +5,9 @@ class Design < ActiveRecord::Base
     if self.gallery
       self.gallery.name = gallery_attributes[:name]
       self.gallery.save
-      binding.pry
     else
       self.gallery = Gallery.new(name: gallery_attributes[:name])
       self.gallery.save
-      binding.pry
     end
   end
 
