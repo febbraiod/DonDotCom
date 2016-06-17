@@ -9,11 +9,9 @@ class Post < ActiveRecord::Base
     if self.gallery
       self.gallery.name = gallery_attributes[:name]
       self.gallery.save
-      binding.pry
     else
       self.gallery = Gallery.new(name: gallery_attributes[:name])
       self.gallery.save
-      binding.pry
     end
   end
 
@@ -24,7 +22,12 @@ class Post < ActiveRecord::Base
   end
 
   def icon_attributes=(icon_attributes)
-    self.icon = Icon.new(name: icon_attributes["name"], icon: icon_attributes["icon"]) unless icon_attributes[:name] == ""
+    if icon_attributes["name"] != "" && !icon_attributes["icon"].nil?
+      self.icon = Icon.find_or_create_by(name: icon_attributes["name"])
+      if self.icon.icon.nil?
+        self.icon.icon = icon_attributes["icon"]
+      end
+    end
   end
 
 end
