@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# for better log entries in heroku
 gem 'rails_12factor'
 
 gem 'jquery-turbolinks'
@@ -42,6 +43,7 @@ gem 'friendly_id'
 
 #for paperclip
 gem 'paperclip', '~> 5.0.0.beta1'
+gem 'aws-sdk', '~> 2.3'
 
 gem 'pry'
 
