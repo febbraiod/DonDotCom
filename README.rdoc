@@ -1,5 +1,6 @@
 == README
 
+add edit button to design and programs(later make visable to only admins)
 
 
 think about how to sort designs and programs? rank attr 1-100?

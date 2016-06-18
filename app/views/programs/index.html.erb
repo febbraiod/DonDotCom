@@ -9,12 +9,9 @@
 
     <% photos = program.gallery.photos %>
 
-<!--       <h2 style='color: #04adcc'><%= program.title %></h2>
-      <p id='program_details'><%= program.description %></p> -->
     <h3 style='color: #04adcc; margin-bottom: 5px;'><%=program.title%></h3>
     <p style='margin-top: 5px; margin-bottom: 20px;'><small><%= program.description %></small></p>
     <div id='clearfix'>
-
 
         <div style='float: left'>
 
@@ -49,7 +46,7 @@
         <p class='program_details'>Video Demo link: <%= link_to "#{program.title} demo", program.demo %></p>
         <p class='program_details'>App: <%= link_to "#{program.title}", program.link %></p>
     </div>
-
+    <%= link_to 'edit', edit_program_path(program) %> <!-- if admin -->
     <% if idx < @programs.length - 1 %>
       <hr id='program_break'>
     <% else %>

@@ -6,53 +6,53 @@
 <% else %>
   <div class='design_wrapper'>
 <% end %>
+<%= link_to 'edit', edit_design_path(@design) %> <!-- if admin -->
 
-  <% if photos.length > 4 %>
-    <div class="logo_type_not_home__design_show_2">
-  <% else %>
-    <div class="logo_type_not_home__design_show_1">
-  <% end %>
-    <h1 style='max-width: 90px; font-size: 3em; color: #04adcc;'><%= @design.title %></h1>
-  </div>
+    <% if photos.length > 4 %>
+      <div class="logo_type_not_home__design_show_2">
+    <% else %>
+      <div class="logo_type_not_home__design_show_1">
+    <% end %>
+      <h1 style='max-width: 90px; font-size: 3em; color: #04adcc;'><%= @design.title %></h1>
+      </div>
 
-  <div class='design_container'>
-
-    <div class='long_desc'> 
-      <%= @design.long_desc %><br>
-      <small>Client: <%= @design.client_name %></small>
-    </div>
-
-
-      <%if @design.gallery %>
-        <div class='design_thumb_container_1'>
-          <% photos.first(4).each do |img| %>
-            <div class='thumb_box'>
-              <%= image_tag img.pic.url, class: 'thumb' %>
-            </div>
-          <%end%>
+      <div class='design_container'>
+        <div class='long_desc'> 
+          <%= @design.long_desc %><br>
+          <small>Client: <%= @design.client_name %></small>
         </div>
 
-        <% if photos.length > 4 %>
-          <div class='design_thumb_container_2'>
-          <% photos.last(photos.length - 4).each do |img| %>
-            <div class='thumb_box'>
-              <%= image_tag img.pic.url, class: 'thumb' %>
+
+          <%if @design.gallery %>
+            <div class='design_thumb_container_1'>
+              <% photos.first(4).each do |img| %>
+                <div class='thumb_box'>
+                  <%= image_tag img.pic.url, class: 'thumb' %>
+                </div>
+              <%end%>
             </div>
-          <% end %>
-          <% (8 - photos.length).times do |place_holder| %>
-            <div class='place_holder_thumb'></div>
-          <%end%>
-          </div>
+
+            <% if photos.length > 4 %>
+              <div class='design_thumb_container_2'>
+              <% photos.last(photos.length - 4).each do |img| %>
+                <div class='thumb_box'>
+                  <%= image_tag img.pic.url, class: 'thumb' %>
+                </div>
+              <% end %>
+              <% (8 - photos.length).times do |place_holder| %>
+                <div class='place_holder_thumb'></div>
+              <%end%>
+              </div>
+            <%end%>
+
+            <% if photos.length > 4 %>
+              <div class='design_view_container_2'>
+            <% else %>
+              <div class='design_view_container'>
+            <% end %>
+                <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' unless @design.gallery.photos.first.nil?%>
+              </div>
         <%end%>
 
-        <% if photos.length > 4 %>
-          <div class='design_view_container_2'>
-        <% else %>
-          <div class='design_view_container'>
-        <% end %>
-          <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' unless @design.gallery.photos.first.nil?%>
-        </div>
-    <%end%>
+    </div>
   </div>
-
-</div>
