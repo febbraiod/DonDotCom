@@ -20,7 +20,7 @@
 
           <div class='program_thumb_container_1'>
             <% photos.first(4).each do |img| %>
-              <div>
+              <div class='thumb_box'>
                 <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
               </div>
             <% end %>
@@ -29,12 +29,12 @@
           <% if photos.length > 4 %>
             <div class='program_thumb_container_2'>
               <% photos.last(photos.length - 4).each do |img| %>
-                <div>
+                <div class='thumb_box'>
                   <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
                 </div>
               <% end %>
               <% (8 - photos.length).times do |place_holder| %>
-                <%= image_tag "placeholder_thumb", class: 'place_holder' %>
+                <div class='place_holder_thumb'></div>
               <%end%>
             </div>
           <%end%>
