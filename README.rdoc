@@ -1,18 +1,30 @@
 == README
 
 
-It looks like clients are not getting saved on heroku when uploading a project to designs
+you will need to apply all design fixes to programs as well.
+
+factor out inline styles in favor of sheets
+nav on home page gets ugly around 1315 width.
+
+
+do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
+
+
+
+question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
+
+
+get other programs hosted on heroku and link (ezi and legal aid)
+
+
+refactor blog forms into partials
+
+
+
+
+deploying erases images, so populating the site is pointless until it's 100% finished !!! LOOK AT ARTICLES ABOUT PERSTISTING DATA ON S3. IMAGES GET KILLED BY TIME OUT TOO !!! In other words you cannot persist files on heroku.
 
 save assets locally to reupload in-case we lose everything in the future
-
-
-
-
-
-
-
-
-deploying erases images, so populating the site is pointless until it's 100% finished
 
 don't do the following until heroku issues are all resolved:
 
@@ -31,32 +43,4 @@ for now watch rails cast on session setting.
 _____________________________________________________________________
 
 
-factor out inline styles in favor of sheets
-nav on home page gets ugly around 1315 width.
-
-
-do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
-
-
-
-question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
-
-
-
-do i want to do the design pages the same as the programs?
-
-get other programs hosted on heroku and link (ezi and legal aid)
-
-
-
-use friendly-id for designs
-
-
-refactor blog forms into partials
-
-
-
-
 put sandbox ideas on programming page
-
-after functional consider trying to redo layouts with bootstrap for less conditional type css, or at some point covert everyting to angular to use ng-if.
