@@ -1,6 +1,10 @@
 <div class="wrapper">
   <h2>Edit <%=@program.title%></h2>
 
+  <p>would you like to delete this program?<p>
+  <%=link_to 'deprogram', program_path(@program), :method => :delete %>
+  <br>
+
   <%=form_for @program, html: { multipart: true } do |f| %>
     <%=f.label :title %><br>
     <%=f.text_field :title %>
@@ -16,7 +20,9 @@
     <br>
 
     <h5>Gallery Images:</h5>
-      <%= f.fields_for :gallery do |gal|%>
+      <%= f.fields_for @program.gallery do |gal|%>
+        <%= gal.label  'replace photos' %>
+        <%= gal.check_box 'replace photos', {:checked => false}, "true", "false"%><br><br>
         <%= gal.label :name %><br>
         <%= gal.text_field :name%><br>
         <%= gal.label :photos %><br>

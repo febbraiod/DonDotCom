@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <h1>Hi Don!</h1>
+  <h1>Edit <%=@design.title%></h1>
   <p>would you like to delete this design?<p>
   <%=link_to 'death to design', design_path(@design), :method => :delete %>
   <br>
@@ -19,7 +19,7 @@
     <br>
 
     <h5>Gallery Images:</h5>
-      <%= f.fields_for :gallery do |gal|%>
+      <%= f.fields_for @design.gallery do |gal|%>
         <%= gal.label  'replace photos' %>
         <%= gal.check_box 'replace photos', {:checked => false}, "true", "false"%><br><br>
         <%= gal.label :gallery_name %><br>

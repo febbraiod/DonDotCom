@@ -2,11 +2,13 @@
 
 
 
-marinade the steak and chicken.
-
-need delete functions now.
-
 you will need to apply all design fixes to programs as well.
+
+test blog gallery features
+
+def going to need a link to edit each program only if signed in DEVISE.
+
+factor out controller stuff into methods in models
 
 factor out inline styles in favor of sheets
 nav on home page gets ugly around 1315 width.

@@ -27,7 +27,6 @@ class DesignsController < ApplicationController
 
   def update
     @design = Design.find_by(id: params[:id])
-    binding.pry
     if params[:design][:gallery]["replace photos"] == 'true'
       @design.gallery.photos.delete_all
     end
