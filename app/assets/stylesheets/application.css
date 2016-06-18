@@ -87,6 +87,12 @@ a:hover {
   color: #04adcc;
 }
 
+/*for design and program pages*/
+.thumb_box {
+  max-width: 111px;
+  overflow: hidden;
+}
+
 
 /* /$$      /$$ /$$$$$$$$ /$$$$$$$  /$$$$$$  /$$$$$$ 
   | $$$    /$$$| $$_____/| $$__  $$|_  $$_/ /$$__  $$

@@ -23,7 +23,6 @@
 }
 
 .program_thumb {
-  max-width: 111px;
   height: 111px;
   margin-bottom: 31px;
   padding: 1px;
@@ -31,8 +30,10 @@
 
 .program_view_container {
   float: left;
+  min-height: 430px;
   border: solid 1px;
   max-width: 60%;
+  margin-right: 10px;
 }
 
 #clearfix {
