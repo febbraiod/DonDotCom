@@ -2,10 +2,7 @@
 
 
 
-you will need to apply all design fixes to programs as well:
-
-fix css on programs to handle thumbs the way designs do.
-also program view box needs a min height otherwise text gets wierd.
+think about how to sort designs and programs? rank attr 1-100?
 
 
 

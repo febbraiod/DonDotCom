@@ -12,7 +12,7 @@
     <!-- the icon is where i should use paperclip, as its really only meant for one image -->
       <%end%>
       <h4><%=post.date%></h4>
-      <p id=<%="post_" + "#{post.slug}"%>><%= truncate(post.content, length: 280) {link_to "more", blog_path(post)} %></p>
+      <p class='post_wrapper__index' id=<%="post_" + "#{post.slug}"%>><%= truncate(post.content, length: 280) {link_to "more", blog_path(post)} %></p>
       <br>
     <%end%>
 

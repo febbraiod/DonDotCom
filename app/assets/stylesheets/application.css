@@ -88,9 +88,18 @@ a:hover {
 }
 
 /*for design and program pages*/
+
 .thumb_box {
   max-width: 111px;
   overflow: hidden;
+}
+
+.place_holder_thumb {
+  width: 111px;
+  height: 111px;
+  background: white;
+  margin-bottom: 31px;
+  padding: 1px;
 }
 
 
@@ -154,8 +163,8 @@ video, audio, iframe, table, form {
 
 .wrapper {
   position: relative;
-  top: 100px;
-  width: 550px;
+  top: 75px;
+  width: 50%;
   margin: 50px auto;
 }
 

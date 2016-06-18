@@ -23,6 +23,7 @@
 }
 
 .program_thumb {
+  max-width: 111px;
   height: 111px;
   margin-bottom: 31px;
   padding: 1px;
@@ -30,10 +31,8 @@
 
 .program_view_container {
   float: left;
-  min-height: 430px;
   border: solid 1px;
   max-width: 60%;
-  margin-right: 10px;
 }
 
 #clearfix {
@@ -52,13 +51,15 @@
 }
 
 .program_details {
+  float: left;
   font-family: avenir, helvetica, arial, sans-serif;
   font-size: 1em;
-  padding: 5px;
+  padding: 0px;
+  margin: 0px;
 }
 
 #program_break {
-  border-top: 1px solid #04adcc;;
+  border-top: 1px solid #04adcc;
 }
 
 #hr_holder__3 {

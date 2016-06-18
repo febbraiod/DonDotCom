@@ -6,15 +6,21 @@
 <div class="program_wrapper__index">
 
   <% @programs.each_with_index do |program, idx| %>
+
     <% photos = program.gallery.photos %>
 
+<!--       <h2 style='color: #04adcc'><%= program.title %></h2>
+      <p id='program_details'><%= program.description %></p> -->
+    <h3 style='color: #04adcc; margin-bottom: 5px;'><%=program.title%></h3>
+    <p style='margin-top: 5px; margin-bottom: 20px;'><small><%= program.description %></small></p>
     <div id='clearfix'>
+
 
         <div style='float: left'>
 
           <div class='program_thumb_container_1'>
             <% photos.first(4).each do |img| %>
-              <div class='thumb_box'>
+              <div>
                 <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
               </div>
             <% end %>
@@ -23,7 +29,7 @@
           <% if photos.length > 4 %>
             <div class='program_thumb_container_2'>
               <% photos.last(photos.length - 4).each do |img| %>
-                <div class='thumb_box'>
+                <div>
                   <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
                 </div>
               <% end %>
@@ -38,19 +44,15 @@
         <div class="program_view_container" id=<%="view_#{idx}"%>>
           <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
-
-        <div id='program_details'>
-          <%= program.description %><br>
-          Demo link: <%= program.demo %><br>
-          Live link: <%= program.link %>
-        </div>
-
+        <p class='program_details'>Video Demo link: <%= link_to "#{program.title} demo", program.demo %></p>
+        <p class='program_details'>App: <%= link_to "#{program.title}", program.link %></p>
     </div>
 
     <% if idx < @programs.length - 1 %>
-    <hr id='program_break'>
+      <hr id='program_break'>
+    <% else %>
+      <br>
     <% end %>
-    <br><br>
 
   <%end%>
 

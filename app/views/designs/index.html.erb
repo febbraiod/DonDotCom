@@ -17,8 +17,7 @@
               </div>
             <% end %>
           </div>
-      <% end %> 
-      <br>
+      <% end %>
       <div class='design_desc'>  
         <%= d.description %><br>
         <%= link_to d.title, design_path(d) %> <small>for <%= d.client_name %></small>
@@ -26,9 +25,6 @@
     </div>
 
     <br>
-    <% if idx < @designs.length - 1 %>
-      <hr id='program_break'>
-    <% end %>
     <br>
     <br>
   <% end %>
