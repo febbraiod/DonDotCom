@@ -32,7 +32,6 @@ class ProgramsController < ApplicationController
     if params[:program][:gallery]["replace photos"] == 'true'
       @program.gallery.photos.delete_all
     end
-    binding.pry
     @program.update(program_params)
     @program.add_photos(params[:photos]) unless params[:photos].nil?
     redirect_to programs_path
