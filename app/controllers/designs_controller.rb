@@ -11,7 +11,6 @@ class DesignsController < ApplicationController
 
   def create
     @design = Design.new(design_params)
-    binding.pry
     @design.add_photos(params[:photos]) unless params[:photos].nil?
     @design.save
     redirect_to design_path(@design)
@@ -28,9 +27,21 @@ class DesignsController < ApplicationController
 
   def update
     @design = Design.find_by(id: params[:id])
+    binding.pry
+    if params[:design][:gallery]["replace photos"] == 'true'
+      @design.gallery.photos.delete_all
+    end
     @design.update(design_params)
     @design.add_photos(params[:photos]) unless params[:photos].nil?
     redirect_to design_path(@design)
+  end
+
+  def destroy
+    @design = Design.find_by(id: params[:id])
+    @design.gallery.photos.delete_all
+    @design.gallery.delete
+    @design.delete
+    redirect_to designs_path
   end
 
     private

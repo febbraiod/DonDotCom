@@ -1,5 +1,8 @@
 <div class="wrapper">
   <h1>Hi Don!</h1>
+  <p>would you like to delete this design?<p>
+  <%=link_to 'death to design', design_path(@design), :method => :delete %>
+  <br>
 
   <%=form_for @design, html: { multipart: true } do |f| %>
     <%=f.label :title %><br>
@@ -17,10 +20,12 @@
 
     <h5>Gallery Images:</h5>
       <%= f.fields_for :gallery do |gal|%>
-        <%= gal.label :name %><br>
-        <%= gal.text_field :name%><br>
+        <%= gal.label  'replace photos' %>
+        <%= gal.check_box 'replace photos', {:checked => false}, "true", "false"%><br><br>
+        <%= gal.label :gallery_name %><br>
+        <%= gal.text_field :name %><br>
         <%= gal.label :photos %><br>
-        <%= file_field_tag "photos[]", type: :file, multiple:true %>
+        <%= file_field_tag "photos[]", type: :file, multiple:true %><br>
       <% end %>    
 
     <%=f.submit%>

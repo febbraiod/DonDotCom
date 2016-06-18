@@ -40,7 +40,7 @@
             </div>
           <% end %>
           <% (8 - photos.length).times do |place_holder| %>
-            <div class: 'place_holder_thumb'></div>
+            <div class='place_holder_thumb'></div>
           <%end%>
           </div>
         <%end%>
@@ -50,7 +50,7 @@
         <% else %>
           <div class='design_view_container'>
         <% end %>
-          <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' %>
+          <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' unless @design.gallery.photos.first.nil?%>
         </div>
     <%end%>
   </div>

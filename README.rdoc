@@ -1,6 +1,11 @@
 == README
 
 
+
+marinade the steak and chicken.
+
+need delete functions now.
+
 you will need to apply all design fixes to programs as well.
 
 factor out inline styles in favor of sheets
@@ -20,9 +25,6 @@ get other programs hosted on heroku and link (ezi and legal aid)
 refactor blog forms into partials
 
 
-
-
-deploying erases images, so populating the site is pointless until it's 100% finished !!! LOOK AT ARTICLES ABOUT PERSTISTING DATA ON S3. IMAGES GET KILLED BY TIME OUT TOO !!! In other words you cannot persist files on heroku.
 
 save assets locally to reupload in-case we lose everything in the future
 
