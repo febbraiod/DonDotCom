@@ -18,8 +18,9 @@
     <h5>Gallery Images:</h5>
       <%= f.fields_for @program.gallery do |gal|%>
         <%= gal.label :name %><br>
-        <%= gal.text_field :name%><br>
+        <%= gal.text_field :name%><br><br>
         <%= gal.label :photos %><br>
+        <small>min 4</small><br>
         <%= file_field_tag "photos[]", type: :file, multiple:true %>
       <% end %>    
 

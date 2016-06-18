@@ -91,14 +91,15 @@ a:hover {
 
 .thumb_box {
   max-width: 111px;
+  height: 111px;
   overflow: hidden;
+  margin-bottom: 31px;
 }
 
 .place_holder_thumb {
   width: 111px;
   height: 111px;
   background: white;
-  margin-bottom: 31px;
   padding: 1px;
 }
 
