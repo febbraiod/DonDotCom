@@ -39,9 +39,7 @@ class ProgramsController < ApplicationController
 
   def destroy
     @program = Program.find_by(id: params[:id])
-    @program.gallery.photos.delete_all
-    @program.gallery.delete
-    @program.delete
+    @program.destroy
     redirect_to programs_path
   end
 

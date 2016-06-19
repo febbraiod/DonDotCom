@@ -1,14 +1,8 @@
 == README
 
-
-think about how to sort designs and programs? rank attr 1-100?
-
-
 add devise, authenicate for new, edit, and delete actions also disappear link to edit if not signed in.
 
-
-
-factor out controller stuff into methods in models
+need delete button for post.
 
 factor out inline styles in favor of sheets
 nav on home page gets ugly around 1315 width.

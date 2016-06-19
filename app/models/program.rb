@@ -1,5 +1,5 @@
 class Program < ActiveRecord::Base
-  has_one :gallery
+  has_one :gallery, :dependent => :destroy
 
   def gallery=(gallery_attributes)
     if self.gallery

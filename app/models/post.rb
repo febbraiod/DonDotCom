@@ -2,7 +2,7 @@ class Post < ActiveRecord::Base
   include FriendlyId
   friendly_id :headline, use: :slugged
 
-  has_one :gallery
+  has_one :gallery, :dependent => :destroy
   belongs_to :icon
 
   def gallery=(gallery_attributes)

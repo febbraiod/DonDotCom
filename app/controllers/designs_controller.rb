@@ -10,7 +10,6 @@ class DesignsController < ApplicationController
   end
 
   def create
-    binding.pry
     @design = Design.new(design_params)
     @design.add_photos(params[:photos]) unless params[:photos].nil?
     @design.save
@@ -38,9 +37,7 @@ class DesignsController < ApplicationController
 
   def destroy
     @design = Design.find_by(id: params[:id])
-    @design.gallery.photos.delete_all
-    @design.gallery.delete
-    @design.delete
+    @design.destory
     redirect_to designs_path
   end
 

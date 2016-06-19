@@ -11,8 +11,7 @@ class BlogController < ApplicationController
     @post.build_gallery
   end
 
-  def create
-    binding.pry
+  def create12
     @post = Post.new(post_params)
     @post.add_photos(params[:photos]) unless params[:photos].nil?
     if params[:icon_id]
@@ -45,6 +44,14 @@ class BlogController < ApplicationController
       f.html { render :show }
       f.json { render json: @post}
     end
+  end
+
+  def delete
+    @post = Post.find_by(slug: params[:headline])
+    @post.destory
+    redirect_to blog_path
+  end
+
   end
 
     private
