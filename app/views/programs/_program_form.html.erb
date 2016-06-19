@@ -1,0 +1,29 @@
+  <%=form_for @program, html: { multipart: true } do |f| %>
+    <%=f.label :title %><br>
+    <%=f.text_field :title %>
+    <br>
+    <%=f.label :description %><br>
+    <%=f.text_area :description %>
+    <br>
+    <%=f.label :link %><br>
+    <%=f.text_field :link %>
+    <br>
+    <%=f.label :demo %><br>
+    <%=f.text_field :demo %>
+    <br><br>
+    <%=f.label :display_rank%> 
+    <%=number_field_tag :display_rank, nil, in: 1...100%>
+    <br>
+
+    <h5>Gallery Images:</h5>
+      <%= f.fields_for @program.gallery do |gal|%>
+        <%= gal.label :name %><br>
+        <%= gal.text_field :name%><br><br>
+        <%= gal.label :photos %>:<br><br>
+        <%= file_field_tag "photos[]", type: :file, multiple:true %><br><br>
+        <%= gal.label 'replace photos' unless @program.gallery.photos.count == 0 %>
+        <%= gal.check_box 'replace photos', {:checked => false}, "true", "false" unless @program.gallery.photos.count == 0%>
+      <% end %>    
+    <br><br>
+    <%=f.submit%>
+  <%end%>

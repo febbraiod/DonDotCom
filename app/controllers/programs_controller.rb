@@ -1,7 +1,7 @@
 class ProgramsController < ApplicationController
 
  def index
-    @programs = Program.all
+    @programs = Program.all.sort_by {|p| p.display_rank}
   end
 
   def new
@@ -50,7 +50,7 @@ class ProgramsController < ApplicationController
 
     def program_params
         params.require(:program).permit(:title, :description, :link, :demo,
-                                        :gallery => [:name])
+                                        :display_rank, :gallery => [:name])
     end
 
 end
