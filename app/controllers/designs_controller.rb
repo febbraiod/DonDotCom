@@ -1,7 +1,7 @@
 class DesignsController < ApplicationController
 
   def index
-    @designs = Design.all
+    @designs = Design.all.sort_by {|d| d.display_rank}
   end
 
   def new
@@ -10,6 +10,7 @@ class DesignsController < ApplicationController
   end
 
   def create
+    binding.pry
     @design = Design.new(design_params)
     @design.add_photos(params[:photos]) unless params[:photos].nil?
     @design.save
@@ -47,7 +48,7 @@ class DesignsController < ApplicationController
 
     def design_params
         params.require(:design).permit(:title, :client_name, :description, :long_desc,
-                                       :gallery => [:name])
+                                       :display_rank, :gallery => [:name])
     end
 
 end

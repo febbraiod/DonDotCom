@@ -1,6 +1,5 @@
 class BlogController < ApplicationController
 
-
   def index
     @posts = Post.all
     @posts = @posts.sort_by {|a| a.date}.reverse
@@ -13,6 +12,7 @@ class BlogController < ApplicationController
   end
 
   def create
+    binding.pry
     @post = Post.new(post_params)
     @post.add_photos(params[:photos]) unless params[:photos].nil?
     if params[:icon_id]
@@ -52,7 +52,7 @@ class BlogController < ApplicationController
     def post_params
       params.require(:post).permit(:headline, :date, :content, :icon_id, 
                                    :icon_attributes => [:name, :icon], 
-                                   :gallery_attributes => [:name, :photos => []])
+                                   :gallery=> [:name])
     end
 
 

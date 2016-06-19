@@ -1,16 +1,12 @@
 == README
 
-add edit button to design and programs(later make visable to only admins)
-
 
 think about how to sort designs and programs? rank attr 1-100?
 
 
+add devise, authenicate for new, edit, and delete actions also disappear link to edit if not signed in.
 
 
-test blog gallery features
-
-def going to need a link to edit each program only if signed in DEVISE.
 
 factor out controller stuff into methods in models
 
