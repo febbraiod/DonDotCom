@@ -4,17 +4,15 @@
 </div>
 
 <div class="program_wrapper__index">
-
   <% @programs.each_with_index do |program, idx| %>
 
     <% photos = program.gallery.photos %>
 
     <h3 style='color: #04adcc; margin-bottom: 5px;'><%=program.title%></h3>
     <p style='margin-top: 5px; margin-bottom: 20px;'><small><%= program.description %></small></p>
+    
     <div id='clearfix'>
-
         <div style='float: left'>
-
           <div class='program_thumb_container_1'>
             <% photos.first(4).each do |img| %>
               <div class='thumb_box'>
@@ -30,6 +28,7 @@
                   <%= image_tag img.pic.url, class: 'program_thumb', data: {index: "#{idx}"} %>
                 </div> 
               <% end %>
+
               <% (8 - photos.length).times do |place_holder| %>
                 <div class='thumb_box'>
                   <div class='place_holder_thumb'></div>
@@ -39,14 +38,15 @@
           <%end%>
         </div>
 
-
         <div class="program_view_container" id=<%="view_#{idx}"%>>
           <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
         <p class='program_details'>Video Demo link: <%= link_to "#{program.title} demo", program.demo %></p>
         <p class='program_details'>App: <%= link_to "#{program.title}", program.link %></p>
     </div>
+
     <%= link_to 'edit', edit_program_path(program) %> <!-- if admin -->
+      
     <% if idx < @programs.length - 1 %>
       <hr id='program_break'>
     <% else %>

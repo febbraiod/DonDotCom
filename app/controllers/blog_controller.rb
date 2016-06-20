@@ -48,10 +48,8 @@ class BlogController < ApplicationController
 
   def delete
     @post = Post.find_by(slug: params[:headline])
-    @post.destory
+    @post.destroy
     redirect_to blog_path
-  end
-
   end
 
     private
@@ -61,6 +59,5 @@ class BlogController < ApplicationController
                                    :icon_attributes => [:name, :icon], 
                                    :gallery=> [:name])
     end
-
 
 end

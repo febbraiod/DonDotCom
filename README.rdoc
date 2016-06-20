@@ -1,15 +1,16 @@
 == README
 
-add devise, authenicate for new, edit, and delete actions also disappear link to edit if not signed in.
-
 need delete button for post.
 
+need partial for blog forms
+
+add devise, authenicate for new, edit, and delete actions also disappear link to edit if not signed in.
+
 factor out inline styles in favor of sheets
-nav on home page gets ugly around 1315 width.
+nav on home page gets ugly around 1315 width(responsive css)
 
 
 do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
-
 
 
 question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
@@ -18,9 +19,9 @@ question all the <hr> tags. do they make the design better or worse. think about
 get other programs hosted on heroku and link (ezi and legal aid)
 
 
-refactor blog forms into partials
 
 
+_____________get here by tuesday
 
 save assets locally to reupload in-case we lose everything in the future
 
@@ -34,9 +35,6 @@ the photos need to be named after gallery and numbered also need to include hori
 fill in designs
 
 fill in programs.
-
-devise?(ug) <--- might be useful if i add comment features to blog
-for now watch rails cast on session setting.
 
 _____________________________________________________________________
 

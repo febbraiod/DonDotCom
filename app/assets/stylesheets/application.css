@@ -222,13 +222,12 @@ video, audio, iframe, table, form {
 
 #navbar nav a {
   display: inline-block;
-  width: 10%;
-  text-transform: lowercase;
+  width: 7%;
   font: .95em avenir, helvetica, Arial, sans-serif;
   color: #7a7a7a;
   text-align: center;
   text-decoration: none;
-  margin: 0 0 0 0px;
+  margin: 0 0 0 30px;
 }
 
 #navbar nav a.selected {
@@ -250,14 +249,13 @@ video, audio, iframe, table, form {
 #navbar_home {
   position: fixed;
   top: 13%;
-  left: 7%;
-  width: 40%;
+  left: 6%;
+  width: 45%;
 }
 
 #navbar_home nav a {
-  display: inline-block;
-  width: 20%;
-  text-transform: lowercase;
+  float: left;
+  margin-right: 35px;
   font: .95em avenir, helvetica, Arial, sans-serif;
   color: #7a7a7a;
   text-align: center;
@@ -270,32 +268,6 @@ video, audio, iframe, table, form {
 }
 
 #navbar_home nav a:hover {
-  color: #04adcc;
-}
-
-#navbar_blog {
-  border-bottom: 1.5px solid;
-  border-color: #04adcc;
-  margin: 25px 0 0 0;
-}
-
-#navbar_blog nav a {
-  display: inline-block;
-  width: 7%;
-  text-transform: lowercase;
-  font: .95em avenir, helvetica, Arial, sans-serif;
-  color: #7a7a7a;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 0 0 30px;
-}
-
-#navbar_blog nav a.selected {
-  background: #333;
-  color: black;
-}
-
-#navbar_blog nav a:hover {
   color: #04adcc;
 }
 
@@ -458,51 +430,77 @@ footer {
     width: 100%;
   }
 
+  #navbar nav a {
+  font: .90em avenir, helvetica, Arial, sans-serif;
+  }
+
+
 }
+
+@media only screen and (max-width: 1080px) {
+
+  #navbar_home {
+    top: 13%;
+    left: 25%;
+    width: 70%;
+  } 
+
+  .logo_type {
+    position: absolute;
+    left: 1%;
+    top: 60px;
+    font-size: 100%;
+  }
+
+  #navbar nav a {
+  font: .85em avenir, helvetica, Arial, sans-serif;
+  }
+
+}
+
 
 
 @media only screen and (max-width: 1000px) {
 
-#navbar {
-    font-size: 80%;
-    width: 100%;
-  }
-
-#navbar nav a {
-  display: inline-block;
-  width: 10%;
-
-  }
-
-#navbar_home {
-    font-size: 80%;
+  .wrapper {
+    position: relative;
+    top: 75px;
     width: 50%;
+    margin: 50px auto;
   }
 
-.logo_type {
-  position: absolute;
-  top: 43%;
-  left: 50%;
-  font-size: 100%;
+  #navbar {
+      font-size: 90%;
+      width: 100%;
   }
 
-.logo_type_not_home {
+  #navbar nav a {
+    display: inline-block;
+    width: 10%;
+  }
+
+  #navbar_home {
+    left: 20%;
+  }
+
+  .logo_type {
+    position: absolute;
+    left: 1%;
+    top: 60px;
+    font-size: 100%;
+  }
+
+  .logo_type_not_home {
     font-size: 80%;
-
   }
 
-#donpic {
-  position: fixed;
-  top: 33px;
-  left: 40px;
-  z-index: 2;
-  width: 110px;
+  #donpic {
+    position: fixed;
+    top: 33px;
+    left: 40px;
+    z-index: 2;
+    width: 110px;
 
-}
-
-.wrapper {
-    width: 47%;
-    left: 5%;
   }
 
 }
@@ -515,26 +513,15 @@ footer {
   }
 
   #navbar_home {
-    font-size: 80%;
-    width: 60%;
   }
 
-  .logo_type {
-  position: fixed;
-  bottom: 33%;
-  right: 40%;
-  }
-
-  .logo_type_not_home {
-    font-size: 75%;
-  }
 
   #donpic {
-  position: fixed;
-  top: 35px;
-  left: 35px;
-  z-index: 2;
-  width: 100px;
+    position: fixed;
+    top: 35px;
+    left: 35px;
+    z-index: 2;
+    width: 100px;
   }
 
  .wrapper {
@@ -553,15 +540,14 @@ footer {
   }
 
   #navbar_home {
-    font-size: 80%;
     width: 70%;
     left: 10%;
   } 
 
   .logo_type {
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 60px;
+    left: 10%;
     font-size: 100%;
   }
 
@@ -578,7 +564,6 @@ footer {
 
 @media only screen and (max-width: 700px) {
   #navbar {
-    font-size: 70%;
     width: 100%;
     left: 10%;
   }
@@ -586,14 +571,15 @@ footer {
   #navbar_home {
     font-size: 80%;
     width: 80%;
-    left: 10%;
+    left: 0%;
+    font-size: 100%;
   }
 
   .logo_type {
-  position: absolute;
-  top: 30%;
-  left: 15%;
-  font-size: 100%;
+    position: absolute;
+    left: -10%;
+    top: 60px;
+    font-size: 100%;
   }
 
   .wrapper {
@@ -605,23 +591,56 @@ footer {
 
 
 @media only screen and (max-width: 640px) {
-  #navbar {
-    font-size: 60%;
-    width: 100%;
-    left: 10%;
-  }
 
   #navbar_home {
-    font-size: 80%;
-    width: 90%;
-    left: 10%;
+    position: relative;
+    top: 50px;
+    left: 0%;
+    width: 100%;
+    font-size: 100%;
+  }
+
+  #navbar_home nav a {
+    margin-right: 30px;
+  }
+
+  .links {
+    margin: 0 0 0 100px;
   }
 
   .logo_type {
-  position: absolute;
-  top: 20%;
-  left: 15%;
-  font-size: 100%;
+    position: absolute;
+    top: 60px;
+    left: -45px;
   }
 
 }
+
+@media only screen and (max-width: 500px) {
+
+  #navbar_home {
+    position: relative;
+    top: 50px;
+    left: 0%;
+    width: 100%;
+    font-size: 85%;
+  }
+
+  #navbar_home nav a {
+    margin-right: 20px;
+  }
+
+  .links {
+    margin: 0 0 0 90px;
+  }
+
+  .logo_type {
+    position: absolute;
+    top: 60px;
+    font-size: 75%;
+    left: -10px;
+  }
+
+}
+
+

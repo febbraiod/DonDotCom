@@ -1,32 +1,29 @@
-<div class="logo_type_not_home">
+<div class="logo_type_not_home" id='design_logo'>
     <h1>design</h1>
     <div id='hr_holder__1'><hr></div>
     <div id='hr_holder__2'><hr></div>
 </div>
 
 <div class="design_wrapper__index">
-<!-- build show page then link the title and all the photos to the show page -->
   <%@designs.each_with_index do |d, idx|%>
     <div class='design_container'>
-  <!--       <h5><%= link_to d.title, design_path(d) %></h5> -->
       <%if d.gallery%>
-          <div class='thumb_container__index'>
-            <% d.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
-              <div class='thumb_box__index'>
-                <%= link_to image_tag(img.pic.url, class: 'thumb__index'), design_path(d) %>
-              </div>
-            <% end %>
-          </div>
-      <% end %>
+        <div class='thumb_container__index'>
+          <% d.gallery.photos.sort_by {|pic| pic.pic_file_name}.each do |img| %>
+            <div class='thumb_box__index'>
+              <%= link_to image_tag(img.pic.url, class: 'thumb__index'), design_path(d) %>
+            </div>
+          <%end%>
+        </div>
+      <%end%>
       <div class='design_desc'>  
         <%= d.description %><br>
         <%= link_to d.title, design_path(d) %> <small>for <%= d.client_name %></small>
       </div>
     </div>
-
-    <br>
-    <br>
-    <br>
   <% end %>
 
+  <br>
+  <br>
+  <br>
 </div>

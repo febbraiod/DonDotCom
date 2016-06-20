@@ -13,12 +13,12 @@
   <%end%>
   <div style="float: left; width: 60%;">
     <p><%= simple_format(@post.content)%></p>
-    <br><br>
+    <br>
+    <%= link_to 'edit post', edit_blog_path(@post)%>
+    <br>
   </div>
 
   <div style="float: right; width: 38%;">
-
-  <!-- paperclip: --> <!-- maybe i can use Jquery later to hook into the image refs (<p id='img1'>see img 1<p> and replace them wit the actual image like $('#img1').html('/insert/img/url/here/img1') -->
 
     <%if @post.gallery%>
       <%@post.gallery.photos.each_with_index do |img, i|%>
@@ -27,6 +27,5 @@
     <%end%>
     <p style='visibility: hidden;'>.</p>
   </div>
-  <!-- needs an edit button for me and a comment(maybe just tags?) options for the public -->
 
 </div>

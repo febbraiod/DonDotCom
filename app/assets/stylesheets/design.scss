@@ -88,8 +88,6 @@
 
 /*index page*/
 
-/*breaksdown first around 1300px width*/
-
 hr {
   border-top: 3px solid #04adcc;
 }
@@ -137,4 +135,143 @@ hr {
   font-family: avenir, helvetica, arial, sans-serif;
   font-size: 1em;
   padding: 5px;
+}
+
+@media only screen and (max-width: 1290px) {
+
+  #design_logo {
+    font-size: 80%;
+  }
+
+  hr {
+    border-top: 2px solid #04adcc;
+  }
+
+  #hr_holder__1 {
+    position: relative;
+    width: 125px;
+    bottom: 68px;
+    left: 9px;
+  }
+
+  #hr_holder__2 {
+    position: relative;
+    width: 35px;
+    bottom: 78px;
+    left: 180px;
+  }
+
+}
+
+@media only screen and (max-width: 1080px) {
+   #design_logo {
+    font-size: 70%;
+  }
+
+  hr {
+    border-top: 1.5px solid #04adcc;
+  }
+
+  #hr_holder__1 {
+    position: relative;
+    width: 110px;
+    bottom: 58px;
+    left: 6px;
+  }
+
+  #hr_holder__2 {
+    position: relative;
+    width: 30px;
+    bottom: 66px;
+    left: 158px;
+  }
+
+  .design_wrapper__index {
+    left: 15px;
+    width: 45%;
+  }
+
+}
+
+@media only screen and (max-width: 1020px) {
+   #design_logo {
+    font-size: 70%;
+  }
+
+  hr {
+    border-top: 1.5px solid #04adcc;
+  }
+
+  #hr_holder__1 {
+    position: relative;
+    width: 110px;
+    bottom: 58px;
+    left: 6px;
+  }
+
+  #hr_holder__2 {
+    position: relative;
+    width: 30px;
+    bottom: 66px;
+    left: 158px;
+  }
+
+  .design_wrapper__index {
+    left: 35px;
+    width: 50%;
+  }
+
+
+}
+
+@media only screen and (max-width: 920px) {
+   #design_logo {
+    font-size: 65%;
+  }
+
+  hr {
+    border-top: 1px solid #04adcc;
+  }
+
+  #hr_holder__1 {
+    position: relative;
+    width: 95px;
+    bottom: 55px;
+    left: 6px;
+  }
+
+  #hr_holder__2 {
+    position: relative;
+    width: 26px;
+    bottom: 63px;
+    left: 148px;
+  }
+
+  .design_wrapper__index {
+    left: 80px;
+    width: 60%;
+  }
+
+
+}
+
+@media only screen and (max-width: 766px) {
+  #design_logo {
+    font-size: 40%;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .design_wrapper__index {
+    left: 80px;
+    width: 70%;
+  }
+
+  .design_desc {
+    margin-bottom: 20px;
+  }
+
+
 }
