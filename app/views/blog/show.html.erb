@@ -11,14 +11,14 @@
   <%else%>
     <h3 id='post_headline'><%=@post.headline%></h3>
   <%end%>
-  <div style="float: left; width: 60%;">
+  <div class='post_content'>
     <p><%= simple_format(@post.content)%></p>
     <br>
-    <%= link_to 'edit post', edit_blog_path(@post)%>
+    <%= link_to 'edit post', edit_blog_path(@post) unless !current_user%>
     <br>
   </div>
 
-  <div style="float: right; width: 38%;">
+  <div class='post_gallery'>
 
     <%if @post.gallery%>
       <%@post.gallery.photos.each_with_index do |img, i|%>

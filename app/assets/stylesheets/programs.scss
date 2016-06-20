@@ -10,6 +10,10 @@
   margin: 50px auto;
 }
 
+.program_thumb_wrapper {
+  float: left
+}
+
 .program_thumb_container_1 {
   display: inline-block;
   width: 112px;
@@ -48,6 +52,16 @@
   font-size: 1em;
   padding: 0px;
   margin-right: 10px;
+}
+
+.program_title {
+  color: #04adcc; 
+  margin-bottom: 5px;
+}
+
+.program_desc {
+  margin-top: 5px; 
+  margin-bottom: 20px;
 }
 
 #program_break {

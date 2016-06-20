@@ -1,22 +1,21 @@
 == README
 
-responsive css accoutn for screens up to 1920 X 1080
 factor out inline styles in favor of sheets
+
+responsive css --> use chrome plug in
 
 need delete button for post.
 
 need partial for blog forms
 
-add devise, authenicate for new, edit, and delete actions also disappear link to edit if not signed in.
-
-for heroku, upload then register, after the remove registerable from the user model and redeply this way no one else can sign up.
-
-
-
-do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
+for heroku, upload then register, 
+after that remove registerable from the user model and redeploy 
+this way no one else can sign up.
 
 
 question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
+
+
 
 
 get other programs hosted on heroku and link (ezi and legal aid)
@@ -25,6 +24,8 @@ get other programs hosted on heroku and link (ezi and legal aid)
 
 
 _____________get here by tuesday
+
+do away with thumb styles for icons, and designs and programs? using full images and letting the browser resize looks way better
 
 save assets locally to reupload in-case we lose everything in the future
 

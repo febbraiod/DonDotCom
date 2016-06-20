@@ -8,11 +8,11 @@
 
     <% photos = program.gallery.photos %>
 
-    <h3 style='color: #04adcc; margin-bottom: 5px;'><%=program.title%></h3>
-    <p style='margin-top: 5px; margin-bottom: 20px;'><small><%= program.description %></small></p>
+    <h3 class='program_title'><%=program.title%></h3>
+    <p class= 'program_desc'><small><%= program.description %></small></p>
     
     <div id='clearfix'>
-        <div style='float: left'>
+        <div class='program_thumb_wrapper'>
           <div class='program_thumb_container_1'>
             <% photos.first(4).each do |img| %>
               <div class='thumb_box'>
