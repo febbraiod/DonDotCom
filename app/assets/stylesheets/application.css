@@ -235,16 +235,15 @@ video, audio, iframe, table, form {
   color: black;
 }
 
-#navbar nav a:hover {
-  color: #04adcc;
-}
-
 #navbar {
   border-bottom: 1.5px solid;
   border-color: #04adcc;
   margin: 25px 0 0 0;
 }
 
+#navbar nav a:hover {
+  color: #04adcc;
+}
 
 #navbar_home {
   position: fixed;
@@ -431,7 +430,7 @@ footer {
   }
 
   #navbar nav a {
-  font: .90em avenir, helvetica, Arial, sans-serif;
+    font: .90em avenir, helvetica, Arial, sans-serif;
   }
 
 
@@ -470,8 +469,8 @@ footer {
   }
 
   #navbar {
-      font-size: 90%;
-      width: 100%;
+    font-size: 90%;
+    width: 100%;
   }
 
   #navbar nav a {
@@ -499,7 +498,7 @@ footer {
     top: 33px;
     left: 40px;
     z-index: 2;
-    width: 110px;
+    width: 100px;
 
   }
 
@@ -518,10 +517,10 @@ footer {
 
   #donpic {
     position: fixed;
-    top: 35px;
+    top: 40px;
     left: 35px;
     z-index: 2;
-    width: 100px;
+    width: 90px;
   }
 
  .wrapper {
@@ -616,7 +615,7 @@ footer {
 
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 515px) {
 
   #navbar_home {
     position: relative;
@@ -630,10 +629,6 @@ footer {
     margin-right: 20px;
   }
 
-  .links {
-    margin: 0 0 0 90px;
-  }
-
   .logo_type {
     position: absolute;
     top: 60px;
@@ -641,6 +636,29 @@ footer {
     left: -10px;
   }
 
+  #navbar {
+    margin-left: 0px;
+    font-size: 73%;
+    width: 100%;
+  }
+
+  #donpic {
+    display: none;
+  }
+
 }
 
+@media only screen and (max-width: 485px) {
 
+  .links {
+    margin: 0 0 0 50px;
+  }
+
+  .logo_type {
+    position: absolute;
+    top: 60px;
+    font-size: 75%;
+    left: -50px;
+  }
+
+}

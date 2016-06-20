@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
   patch '/blog' => 'blog#update'
 
+  devise_for :users
+
 end

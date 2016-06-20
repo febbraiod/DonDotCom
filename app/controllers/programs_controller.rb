@@ -1,6 +1,7 @@
 class ProgramsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
- def index
+  def index
     @programs = Program.all.sort_by {|p| p.display_rank}
   end
 

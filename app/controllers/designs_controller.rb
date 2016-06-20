@@ -1,4 +1,5 @@
 class DesignsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @designs = Design.all.sort_by {|d| d.display_rank}

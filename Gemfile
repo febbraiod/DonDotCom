@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # for better log entries in heroku
 gem 'rails_12factor'
 
+gem 'devise'
+
 gem 'jquery-turbolinks'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
