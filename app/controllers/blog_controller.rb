@@ -30,11 +30,11 @@ class BlogController < ApplicationController
 
   def update
     @post = Post.find_by(slug: params[:headline])
-    @post.update(post_params)
-    @post.add_photos(params[:photos]) unless params[:photos].nil?
     if post_params[:icon_id]
       @post.icon = Icon.find_by(id: post_params[:icon_id])
     end
+    @post.update(post_params)
+    @post.add_photos(params[:photos]) unless params[:photos].nil?
     @post.save
     redirect_to blog_path(@post)
   end
