@@ -1,17 +1,21 @@
 == README
 
-factor out inline styles in favor of sheets
 
 responsive css --> use chrome plug in
 
 need delete button for post.
 
-need partial for blog forms
-
 for heroku, upload then register, 
 after that remove registerable from the user model and redeploy 
 this way no one else can sign up.
 
+
+
+-------------
+
+think about scrolling for blog posts
+
+need partial for blog forms
 
 question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
 

@@ -15,5 +15,46 @@
   top: 75px;
   margin: 50px auto;
   width: 30%;
+  max-width: 550px;
   line-height: 1.25em;
+}
+
+@media only screen and (max-width: 1280px) {
+
+#about_wrapper {
+    width: 40%;
+
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  #about_wrapper {
+    width: 50%;
+  }
+
+  #about_logo {
+    top: 50%;
+  }
+
+  
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  #about_wrapper {
+    width: 50%;
+  }
+
+  #about_logo {
+    top: 50%;
+  }
+
+  #hr_holder__5 {
+    display: none;
+  }
+
+
 }
