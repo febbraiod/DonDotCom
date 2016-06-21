@@ -1,8 +1,5 @@
 == README
 
-
-responsive css --> use chrome plug in
-
 need delete button for post.
 
 for heroku, upload then register, 
