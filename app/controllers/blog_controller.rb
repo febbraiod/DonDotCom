@@ -12,7 +12,7 @@ class BlogController < ApplicationController
     @post.build_gallery
   end
 
-  def create12
+  def create
     @post = Post.new(post_params)
     @post.add_photos(params[:photos]) unless params[:photos].nil?
     if params[:icon_id]

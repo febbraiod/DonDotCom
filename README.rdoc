@@ -2,9 +2,7 @@
 
 need delete button for post.
 
-for heroku, upload then register, 
-after that remove registerable from the user model and redeploy 
-this way no one else can sign up.
+blog posts aren't editing or adding correctlyon heroku.
 
 
 
