@@ -56,19 +56,20 @@ html {
 }
 
 h1 {
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
   color: #7a7a7a;
   font-size: 570%;
+  font-weight: normal;
 }
 
 h2 {
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
   font-size: 1.5em;
 }
 
 
 h3 {
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
   font-size: 1.7em;
 }
 
@@ -93,7 +94,7 @@ a:hover {
   max-width: 111px;
   height: 111px;
   overflow: hidden;
-  margin-bottom: 31px;
+  margin-bottom: 15px;
 }
 
 .place_holder_thumb {
@@ -288,7 +289,7 @@ video, audio, iframe, table, form {
 .logo_type {
   position: fixed;
   top: 40%;
-  left:66%;
+  left: 66%;
 }
 
 #logo_type_1 {
@@ -419,6 +420,12 @@ footer {
   |__/  |__/|________/ \______/ |__/       \______/ |__/  \__/ \______/ |______/    \_/    |________/*/
 
 
+@media only screen and (max-width: 1367px) {
+  .logo_type {
+    position: fixed;
+    top: 38%;
+}
+
 @media only screen and (max-width: 1250px) {
   .wrapper {
     width: 40%;
@@ -526,6 +533,13 @@ footer {
  .wrapper {
     width: 47%;
     left: 5%;
+  }
+
+  .logo_type {
+    position: absolute;
+    left: 5%;
+    top: 60px;
+    font-size: 100%;
   }
 
 }

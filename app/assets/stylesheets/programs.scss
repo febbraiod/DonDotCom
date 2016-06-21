@@ -6,7 +6,8 @@
 .program_wrapper__index {
   position: relative;
   top: 80px;
-  width: 50%;
+  left: 20px;
+  width: 55%;
   margin: 50px auto;
 }
 
@@ -46,7 +47,7 @@
   max-width: 100%;
 }
 
-.program_details {
+.program_links {
   float: left;
   font-family: avenir, helvetica, arial, sans-serif;
   font-size: 1em;
@@ -75,4 +76,40 @@
   left: 12px;
 }
 
+/* /$$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$  /$$$$$$ /$$    /$$ /$$$$$$$$
+  | $$__  $$| $$_____/ /$$__  $$| $$__  $$ /$$__  $$| $$$ | $$ /$$__  $$|_  $$_/| $$   | $$| $$_____/
+  | $$  \ $$| $$      | $$  \__/| $$  \ $$| $$  \ $$| $$$$| $$| $$  \__/  | $$  | $$   | $$| $$      
+  | $$$$$$$/| $$$$$   |  $$$$$$ | $$$$$$$/| $$  | $$| $$ $$ $$|  $$$$$$   | $$  |  $$ / $$/| $$$$$   
+  | $$__  $$| $$__/    \____  $$| $$____/ | $$  | $$| $$  $$$$ \____  $$  | $$   \  $$ $$/ | $$__/   
+  | $$  \ $$| $$       /$$  \ $$| $$      | $$  | $$| $$\  $$$ /$$  \ $$  | $$    \  $$$/  | $$      
+  | $$  | $$| $$$$$$$$|  $$$$$$/| $$      |  $$$$$$/| $$ \  $$|  $$$$$$/ /$$$$$$   \  $/   | $$$$$$$$
+  |__/  |__/|________/ \______/ |__/       \______/ |__/  \__/ \______/ |______/    \_/    |________/*/
 
+
+@media only screen and (max-width: 1024px) {
+  .program_wrapper__index {
+    position: relative;
+    left: 115px;
+    width: 61%;
+    margin: 50px auto;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+  .program_wrapper__index {
+    top: 100px;
+    left: 120px;
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .program_view_container {
+    max-width: 50%;
+  }
+
+  #program_logo {
+    display: none;
+  }
+
+}

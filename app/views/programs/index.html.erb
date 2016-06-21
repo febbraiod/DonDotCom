@@ -1,4 +1,4 @@
-<div class="logo_type_not_home">
+<div class="logo_type_not_home" id='program_logo'>
   <h1>code</h1> 
   <div id='hr_holder__3'><hr></div>
 </div>
@@ -41,8 +41,8 @@
         <div class="program_view_container" id=<%="view_#{idx}"%>>
           <%= image_tag program.gallery.photos.first.pic.url, class: 'highlight_image' %>
         </div>
-        <p class='program_details'>Video Demo link: <%= link_to "#{program.title} demo", program.demo %></p>
-        <p class='program_details'>App: <%= link_to "#{program.title}", program.link %></p>
+        <p class='program_links'>Video Demo link: <%= link_to "#{program.title} demo", program.demo %></p>
+        <p class='program_links'>App: <%= link_to "#{program.title}", program.link %></p>
     </div>
 
     <%= link_to 'edit', edit_program_path(program) %> <!-- if admin -->
