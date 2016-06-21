@@ -47,10 +47,10 @@ class BlogController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @post = Post.find_by(slug: params[:headline])
     @post.destroy
-    redirect_to blog_path
+    redirect_to blog_index_path
   end
 
     private

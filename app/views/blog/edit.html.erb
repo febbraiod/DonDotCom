@@ -1,6 +1,8 @@
 <div class="wrapper">
 
-<h1>Hi Don!</h1>
+<h3>Edit: <%=@post.headline%></h3>
+
+<%= link_to 'delete post', blog_path(@post), :method => :delete %><br><br><br>
 
 <%=form_for @post, url: blog_path(@post) do |f| %>
 
