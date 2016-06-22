@@ -3,7 +3,7 @@ class BlogController < ApplicationController
 
   def index
     @posts = Post.all
-    @posts = @posts.sort_by {|post| post.id}.reverse
+    @posts = @posts.sort_by {|post| post.created_at}.reverse
   end
 
   def new
@@ -56,9 +56,8 @@ class BlogController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:headline, :date, :content, :icon_id, 
-                                   :icon_attributes => [:name, :icon], 
-                                   :gallery=> [:name])
+      params.require(:post).permit(:headline, :date, :content, :icon_id, :created_at,
+                                   :icon_attributes => [:name, :icon], :gallery=> [:name])
     end
 
 end
