@@ -1,8 +1,6 @@
 == README
 
 
-dates don't sort correctly in the current format(blog)
-
 "code" headline on program index is too close to the wrapper
 
 responsive needs work outside of those set sizes.
@@ -15,7 +13,7 @@ need partial for blog forms
 
 question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
 
-get other programs hosted on heroku and link (ezi and legal aid)
+get other programs hosted on heroku and link (ezi and legal aid) <---- do a blog post on this.
 
 save assets locally to reupload in-case we lose everything in the future
 

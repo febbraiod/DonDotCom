@@ -71,7 +71,7 @@
   max-width: 20%; 
   float: right;
   padding: 0 0 0 5px;
-  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: .85em;
   line-height: 1.55em;
   border-left: solid;
@@ -258,6 +258,13 @@ hr {
     max-width: 35%;
   }
 
+  #title_headline {
+    position: fixed;
+    left: 100px;
+    bottom: 150px;
+  }
+
+
 }
 
 @media only screen and (max-width: 1260px) {
@@ -291,7 +298,6 @@ hr {
   }
 
   #title_headline {
-    max-width: 500px; 
   }
 
   .design_view_container_2 {
@@ -360,7 +366,7 @@ hr {
     left: 800px;
     max-width: 150px;
     padding: 0 0 0 5px;
-    font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+    font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: .85em;
     line-height: 1.55em;
   }
@@ -413,6 +419,7 @@ hr {
   }
 
   #title_headline {
+    position: static;
     max-width: 500px; 
   }
 
