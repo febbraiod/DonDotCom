@@ -3,7 +3,7 @@ class BlogController < ApplicationController
 
   def index
     @posts = Post.all
-    @posts = @posts.sort_by {|post| post.id}
+    @posts = @posts.sort_by {|post| post.id}.reverse
   end
 
   def new
