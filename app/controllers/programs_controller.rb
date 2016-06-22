@@ -35,6 +35,7 @@ class ProgramsController < ApplicationController
     end
     @program.update(program_params)
     @program.add_photos(params[:photos]) unless params[:photos].nil?
+    @program.save
     redirect_to programs_path
   end
 
