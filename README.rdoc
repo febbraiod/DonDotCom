@@ -1,6 +1,8 @@
 == README
 
 
+dates don't sort correctly in the current format(blog)
+
 "code" headline on program index is too close to the wrapper
 
 responsive needs work outside of those set sizes.
