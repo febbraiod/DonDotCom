@@ -17,6 +17,7 @@
 //= require posts
 //= require design
 //= require programs
+//= require kerning.js
 
 
 $(function(){

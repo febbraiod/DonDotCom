@@ -308,10 +308,24 @@ video, audio, iframe, table, form {
   left: 8%;
 }
 
+.don_design {
+  -letter-transform: skew(-5deg) none;
+  -letter-color: #04adcc;
+}
+
+.don_program {
+  -letter-transform: none none skew(-5deg) none;
+  -letter-color: none none #04adcc;
+}
+
+.don_rinse {
+  -letter-transform: none none skew(-5deg) none;
+  -letter-color: none none #04adcc;
+}
+
 .don {
   color: #04adcc;
 }
-
 
 /* /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$$$ /$$$$$$$ 
   | $$_____//$$__  $$ /$$__  $$|__  $$__/| $$_____/| $$__  $$
