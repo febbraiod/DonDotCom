@@ -309,18 +309,21 @@ video, audio, iframe, table, form {
 }
 
 .don_design {
-  -letter-transform: skew(-5deg) none;
+  -letter-transform: skew(-4deg) none;
   -letter-color: #04adcc;
+  -letter-kern: -2px 0 0 -2px -1px;
 }
 
 .don_program {
-  -letter-transform: none none skew(-5deg) none;
+  -letter-transform: none none skew(-4deg) none;
   -letter-color: none none #04adcc;
+  -letter-kern: 0 0 -1px;
 }
 
 .don_rinse {
-  -letter-transform: none none skew(-5deg) none;
+  -letter-transform: none none skew(-4deg) none;
   -letter-color: none none #04adcc;
+  -letter-kern: 0 0 -2px;
 }
 
 .don {
