@@ -3,7 +3,8 @@
 
 "code" headline on program index is too close to the wrapper
 
-responsive needs work outside of those set sizes.
+responsive needs work outside of those set sizes. esp on the straight width changes on the programs page
+look at prgrams getting cut off to the right and the sig pic bumps down
 
 -------------
 

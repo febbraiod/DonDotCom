@@ -85,8 +85,26 @@
   | $$  | $$| $$$$$$$$|  $$$$$$/| $$      |  $$$$$$/| $$ \  $$|  $$$$$$/ /$$$$$$   \  $/   | $$$$$$$$
   |__/  |__/|________/ \______/ |__/       \______/ |__/  \__/ \______/ |______/    \_/    |________/*/
 
+@media only screen and (max-width: 1320px) {
 
-@media only screen and (max-width: 1024px) {
+  #program_logo {
+    position: fixed;
+    top: 450px;
+    left: 50px;
+  }
+
+  #hr_holder__3 {
+    position: relative;
+    width: 184px;
+    bottom: 84px;
+    left: 12px;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 1130px) {
   .program_wrapper__index {
     position: relative;
     left: 115px;
@@ -96,12 +114,31 @@
 
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .program_wrapper__index {
-    top: 100px;
-    left: 120px;
+    position: relative;
+    left: 110px;
+    width: 62%;
+    margin: 40px auto;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+  #hr_holder__3 {
+    display: none;
+  }
+
+  .program_wrapper__index {
+    width: 70%;
+  }
+
+}
+
+@media only screen and (max-width: 888px) {
+  .program_wrapper__index {
+    left: 125px;
     width: 100%;
-    margin: 20px auto;
   }
 
   .program_view_container {
@@ -113,3 +150,33 @@
   }
 
 }
+
+@media only screen and (max-width: 760px) {
+  .program_wrapper__index {
+    left: 100px;
+    width: 100%;
+  }
+
+  .program_view_container {
+    max-width: 50%;
+  }
+
+}
+
+@media only screen and (max-height: 769px) {
+
+  #program_logo {
+    top: 375px;
+    left: 50px;
+  }
+
+}
+
+@media only screen and (max-height: 601px) {
+
+  #program_logo {
+    display: none;
+  }
+
+}
+

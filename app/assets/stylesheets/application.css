@@ -171,7 +171,7 @@ video, audio, iframe, table, form {
 }
 
 .wrapper p {
-  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', times, serif;
+  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: .90em;
   line-height: 1.55em;
 }

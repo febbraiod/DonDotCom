@@ -14,7 +14,7 @@
   <div class='post_content'>
     <p><%= simple_format(@post.content)%></p>
     <br>
-    <%= link_to 'edit post', edit_blog_path(@post) unless !current_user%>
+    <%= link_to 'edit post', edit_blog_path(@post), id: 'program_edit' unless !current_user%>
     <br>
   </div>
 

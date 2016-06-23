@@ -45,7 +45,7 @@
         <p class='program_links'>App: <%= link_to "#{program.title}", program.link %></p>
     </div>
 
-    <%= link_to 'edit', edit_program_path(program) %> <!-- if admin -->
+    <%= link_to 'edit', edit_program_path(program) unless !current_user %> <!-- if admin -->
       
     <% if idx < @programs.length - 1 %>
       <hr id='program_break'>
