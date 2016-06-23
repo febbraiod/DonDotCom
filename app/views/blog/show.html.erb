@@ -12,7 +12,7 @@
     <h3 id='post_headline'><%=@post.headline%></h3>
   <%end%>
   <div class='post_content'>
-    <p><%= simple_format(@post.content)%></p>
+    <p><%= simple_format(@post.content, {}, :sanitize => false)%></p>
     <br>
     <%= link_to 'edit post', edit_blog_path(@post), id: 'program_edit' unless !current_user%>
     <br>
@@ -22,7 +22,7 @@
 
     <%if @post.gallery%>
       <%@post.gallery.photos.each_with_index do |img, i|%>
-        <caption><small><%="img #{i + 1}"%>.</small></caption><%= image_tag img.pic.url(:medium_horiz) %>
+        <%= image_tag img.pic.url, class: "post_image post_image_#{i + 1}" %>
       <%end%>
     <%end%>
     <p style='visibility: hidden;'>.</p>

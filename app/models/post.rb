@@ -25,7 +25,6 @@ class Post < ActiveRecord::Base
     if icon_attributes["name"] != "" && !icon_attributes["icon"].nil?
       self.icon = Icon.find_or_create_by(name: icon_attributes["name"])
       if self.icon.icon_file_name.nil?
-        binding.pry
         self.icon.icon = icon_attributes["icon"]
       end
     end

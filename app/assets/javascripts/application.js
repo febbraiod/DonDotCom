@@ -25,10 +25,11 @@ $(function(){
   bind_repeat();
   bind_design_thumbs();
   bind_program_thumbs();
+  place_blog_images();
 });
 
 function bind_rinse(){
-  $('#rinse_link').hover( function(){
+  $('#rinse_link').hover(function(){
     $(this).text('blog');
   }, function(){
     $(this).html('ri<span class="don">n</span>se');
@@ -38,7 +39,7 @@ function bind_rinse(){
 }
 
 function bind_repeat(){
-  $('#repeat_link').hover( function(){
+  $('#repeat_link').hover(function(){
     $(this).text('about');
   }, function(){
     $(this).text('repeat');
@@ -46,3 +47,14 @@ function bind_repeat(){
 
   $('#repeat_link').click(function(){$(this).test('repeat');});
 }
+
+function place_blog_images(){
+  $('.img_1').html($('.post_image_1'));
+  $('.img_2').html($('.post_image_2'));
+  $('.img_3').html($('.post_image_3'));
+  $('.img_4').html($('.post_image_4'));
+  $('.img_5').html($('.post_image_5'));
+}
+
+
+
