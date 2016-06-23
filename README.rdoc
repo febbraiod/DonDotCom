@@ -1,10 +1,9 @@
 == README
 
 
-"code" headline on program index is too close to the wrapper
+get EZI post up.
 
-responsive needs work outside of those set sizes. esp on the straight width changes on the programs page
-look at prgrams getting cut off to the right and the sig pic bumps down
+
 
 -------------
 
@@ -12,7 +11,6 @@ think about scrolling for blog posts
 
 need partial for blog forms
 
-question all the <hr> tags. do they make the design better or worse. think about seperation of projects vs over all look.(might need pages to be more populated to make a good decision)
 
 get other programs hosted on heroku and link (ezi and legal aid) <---- do a blog post on this.
 
