@@ -1,7 +1,13 @@
 == README
 
 
+get friendly ids up for programs
+get legal-aid up
 get EZI post up.
+
+
+
+think about next page for project so users don't have to go back to the index to get the next project
 
 
 
