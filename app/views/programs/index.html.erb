@@ -9,7 +9,7 @@
     <% photos = program.gallery.photos %>
 
     <h3 class='program_title'><%=program.title%></h3>
-    <p class= 'program_desc'><small><%= program.description %></small></p>
+    <p class= 'program_desc'><small><%=simple_format(program.description)%></small></p>
     
     <div id='clearfix'>
         <div class='program_thumb_wrapper'>
