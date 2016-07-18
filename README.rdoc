@@ -1,15 +1,43 @@
 == README
 
 
+think about next page for designs so users don't have to go back to the index to get the next design
+same for blog posts
+
+in model
+
+def get_next(post)
+  id = post.id + 1
+  next_post = nil
+
+  while next_post == nil || id > post.id + 50
+    next_post = Post.find(id)
+    id += 1
+  end
+
+  next_post
+end
+
+def get_prev(post)
+  id = post.id + 1
+  prev_post = nil
+
+  while next_post == nil || id < 1
+    next_post = Post.find(id)
+    id -= 1
+  end
+
+  prev_post
+end
+
+could i use something like this is a serialize to return the id and make an api call for the next post which would again return the next id?
+
+problem: might go on forever looking after the last post. might need to set a limit on searches. and then make link like if next_post.id != nil
+
 get friendly ids up for programs
-get legal-aid up
 get EZI post up.
 
-
-
-think about next page for project so users don't have to go back to the index to get the next project
-
-
+this isn't working because post are organized by date. Maybe add pointers to each post for links?(like a linked list?)
 
 -------------
 
@@ -20,7 +48,7 @@ need partial for blog forms
 
 get other programs hosted on heroku and link (ezi and legal aid) <---- do a blog post on this.
 
-save assets locally to reupload in-case we lose everything in the future
+
 
 don't do the following until heroku issues are all resolved:
 
