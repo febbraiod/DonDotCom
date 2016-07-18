@@ -34,27 +34,12 @@ class Post < ActiveRecord::Base
   # for nav between posts
 
   def self.get_next(post)
-    id = post.id + 1
-    next_post = nil
-
-    while next_post == nil && id > post.id + 50
-      next_post = Post.find(id) if Post.find_by(id: id)
-      id += 1
-    end
-
-    next_post
+    self.where("created_at > ?", post.created_at).order("created_at").first
   end
 
   def self.get_prev(post)
-    id = post.id - 1
-    prev_post = nil
-
-    while prev_post == nil && id > 0
-      prev_post = Post.find(id) if Post.find_by(id: id)
-      id -= 1
-    end
-
-    prev_post
+    self.where("created_at < ?", post.created_at).order("created_at DESC").first
   end
+
 
 end

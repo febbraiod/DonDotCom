@@ -40,7 +40,6 @@ class BlogController < ApplicationController
   end
 
   def show
-    binding.pry
     @post = Post.find_by(slug: params[:headline])
     @next_post = Post.get_next(@post)
     @prev_post = Post.get_prev(@post)
