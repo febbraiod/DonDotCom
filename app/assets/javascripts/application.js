@@ -15,11 +15,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require posts
+//= require blog
 //= require design
 //= require programs
 //= require kerning.js
-
-
 
 
 $(function(){
@@ -27,15 +26,15 @@ $(function(){
   bind_repeat();
   bind_design_thumbs();
   bind_program_thumbs();
+  bind_blog_buttons();
   place_blog_images();
 });
 
 function bind_rinse(){
   $('#rinse_link').hover(function(){
-    var rinse = this.text;
     $(this).text('blog');
   }, function(){
-    $(this).html('<span class="don_rinse kerningjs" style="visibility: inherit;"><span class="word1" style="display: inline-block;"><span class="char1" style="display: inline-block; transform: none; margin-right: 0px;">r</span><span class="char2" style="display: inline-block; transform: none; margin-right: 0px;">i</span><span class="char3" style="display: inline-block; transform: skew(-4deg); color: rgb(4, 173, 204); margin-right: -2px;">n</span><span class="char4" style="display: inline-block; transform: none;">s</span><span class="char5" style="display: inline-block;">e</span></span></span>');
+    $(this).html('ri<span class="don">n</span>se');
   });
 
   $('#rinse_link').click(function(){$(this).html('ri<span class="don">n</span>se');});
@@ -50,19 +49,5 @@ function bind_repeat(){
 
   $('#repeat_link').click(function(){$(this).test('repeat');});
 }
-
-function place_blog_images(){
-  $('.img_1').html($('.post_image_1'));
-  $('.img_2').html($('.post_image_2'));
-  $('.img_3').html($('.post_image_3'));
-  $('.img_4').html($('.post_image_4'));
-  $('.img_5').html($('.post_image_5'));
-  $('.img_6').html($('.post_image_6'));
-  $('.img_7').html($('.post_image_7'));
-  $('.img_8').html($('.post_image_8'));
-  $('.img_9').html($('.post_image_9'));
-  $('.img_10').html($('.post_image_10'));
-}
-
 
 
