@@ -12,11 +12,13 @@
     <h3 id='post_headline'><%=@post.headline%></h3>
   <%end%>
   <div class='post_content'>
-    <%= link_to 'prev', blog_path(@prev_post) if @prev_post%>
-    <%= link_to 'next', blog_path(@next_post) if @next_post%>
     <p><%= simple_format(@post.content, {}, :sanitize => false)%></p>
-    <br>
-    <%= link_to 'edit post', edit_blog_path(@post), id: 'program_edit' unless !current_user%>
+    <%= link_to image_tag('DonPrevButton', size: "30x30", id: 'next_icon'), blog_path(@prev_post) if @prev_post%>
+    <%= link_to image_tag('DonNextButton', size: "30x30", id: 'prev_icon'), blog_path(@next_post), style: 'float: right' if @next_post%>
+    <%if current_user %>
+      <br><br> 
+    <%end%>
+    <%= link_to 'edit post', edit_blog_path(@post), id: 'program_edit' if current_user%>
     <br>
   </div>
 
