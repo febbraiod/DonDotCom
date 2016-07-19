@@ -13,10 +13,10 @@
   <%end%>
   <div class='post_content'>
     <p><%= simple_format(@post.content, {}, :sanitize => false)%></p>
-    <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), blog_path(@prev_post), class: 'prev_post_link'  if @prev_post%>
-    <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial;'), blog_path(@next_post), style: 'float: right', class: 'next_post_link' if @next_post%>
-    <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), blog_path(@prev_post), class: 'prev_post_link' if @prev_post%>
-    <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), blog_path(@next_post), style: 'float: right; margin-bottom: 100px;', class: 'next_post_link' if @next_post%>
+    <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), blog_path(@prev_post), class: 'prev_link'  if @prev_post%>
+    <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial;'), blog_path(@next_post), style: 'float: right', class: 'next_link' if @next_post%>
+    <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), blog_path(@prev_post), class: 'prev_link' if @prev_post%>
+    <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), blog_path(@next_post), style: 'float: right; margin-bottom: 100px;', class: 'next_link' if @next_post%>
     <br>
     <%if current_user %>
       <%= link_to 'edit post', edit_blog_path(@post), id: 'program_edit', style: 'margin-bottom: 100px;'%>

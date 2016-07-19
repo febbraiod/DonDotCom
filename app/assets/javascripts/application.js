@@ -26,7 +26,7 @@ $(function(){
   bind_repeat();
   bind_design_thumbs();
   bind_program_thumbs();
-  bind_blog_buttons();
+  bind_buttons();
   place_blog_images();
 });
 
@@ -50,4 +50,23 @@ function bind_repeat(){
   $('#repeat_link').click(function(){$(this).test('repeat');});
 }
 
+function bind_buttons(){
+
+  $('.next_link').hover(function(){
+    $('#next_icon').hide();
+    $('#hover_next_icon').show();
+  }, function(){
+    $('#next_icon').show();
+    $('#hover_next_icon').hide();
+  });
+
+  $('.prev_link').hover(function(){
+    $('#prev_icon').hide();
+    $('#hover_prev_icon').show();
+  }, function(){
+    $('#prev_icon').show();
+    $('#hover_prev_icon').hide();
+  });
+
+}
 

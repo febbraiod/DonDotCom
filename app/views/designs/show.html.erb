@@ -61,8 +61,8 @@
   </div><!-- wrapper -->
 
       <div id='design_buttons' style='width: 75px; position: fixed; top: 250px; left: 50px'>
-        <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), design_path(@prev_design) if @prev_design%>
-        <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial; float: right;'), design_path(@next_design) if @next_design%>
-        <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), blog_path(@prev_post), class: 'prev_post_link' if @prev_post%>
-        <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), blog_path(@next_post), style: 'float: right; margin-bottom: 100px;', class: 'next_post_link' if @next_post%>
+        <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
+        <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial; float: right;'), design_path(@next_design), class: 'next_link' if @next_design%>
+        <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
+        <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), design_path(@next_design), style: 'float: right; margin-bottom: 100px;', class: 'next_link' if @next_design%>
       </div>
