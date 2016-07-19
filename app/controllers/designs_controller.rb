@@ -19,6 +19,8 @@ class DesignsController < ApplicationController
 
   def show
     @design = Design.find_by(id: params[:id])
+    @prev_design = Design.get_prev(@design)
+    @next_design = Design.get_next(@design)
   end
 
   def edit

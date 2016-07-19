@@ -17,4 +17,14 @@ class Design < ActiveRecord::Base
     end
   end
 
+  #for nav between designs
+
+  def self.get_next(design)
+     self.where("display_rank > ?", design.display_rank).order("display_rank").first
+  end
+
+  def self.get_prev(design)
+     self.where("display_rank < ?", design.display_rank).order("display_rank DESC").first
+  end
+
 end

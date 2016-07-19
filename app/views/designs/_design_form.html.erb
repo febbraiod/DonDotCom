@@ -12,7 +12,7 @@
     <%=f.text_area :long_desc %>
     <br><br>
     <%=f.label :display_rank%> 
-    <%=number_field_tag :display_rank, nil, in: 1...100%>
+    <%=f.text_field :display_rank%>
     <br>
 
     <h5>Gallery Images:</h5>
