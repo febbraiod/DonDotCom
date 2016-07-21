@@ -8,9 +8,11 @@
 
     <% photos = program.gallery.photos %>
 
-    <h3 class='program_title'><%=program.title%></h3>
-    <p class= 'program_desc'><small><%=simple_format(program.description)%></small></p>
-    
+    <div id='prog_head' style='max-width: 650px;'>
+      <h3 class='program_title'><%=program.title%></h3>
+      <p class='program_desc'><small><%=simple_format(program.description)%></small></p>
+    </div>
+
     <div id='clearfix'>
         <div class='program_thumb_wrapper'>
           <div class='program_thumb_container_1'>
