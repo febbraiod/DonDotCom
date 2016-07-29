@@ -32,9 +32,10 @@ $(function(){
 
 function bind_rinse(){
   $('#rinse_link').hover(function(){
+    var rinse = this.text;
     $(this).text('blog');
   }, function(){
-    $(this).html('ri<span class="don">n</span>se');
+    $(this).html('<span class="don_rinse kerningjs" style="visibility: inherit;"><span class="word1" style="display: inline-block;"><span class="char1" style="display: inline-block; transform: none; margin-right: 0px;">r</span><span class="char2" style="display: inline-block; transform: none; margin-right: 0px;">i</span><span class="char3" style="display: inline-block; transform: skew(-4deg); color: rgb(4, 173, 204); margin-right: -2px;">n</span><span class="char4" style="display: inline-block; transform: none;">s</span><span class="char5" style="display: inline-block;">e</span></span></span>');
   });
 
   $('#rinse_link').click(function(){$(this).html('ri<span class="don">n</span>se');});
