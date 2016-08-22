@@ -8,5 +8,8 @@ class ApplicationController < ActionController::Base
 
   def about
   end
+
+  def protohome
+  end
   
 end
