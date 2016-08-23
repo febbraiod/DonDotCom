@@ -185,6 +185,12 @@ video, audio, iframe, table, form {
   z-index: 2;
 }
 
+#donpic_homepage {
+  width: 120px;
+  z-index: 1;
+}
+
+
 
 /*  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$  /$$$$$$  /$$      
    /$$__  $$ /$$__  $$ /$$__  $$|_  $$_/ /$$__  $$| $$      
@@ -314,8 +320,14 @@ video, audio, iframe, table, form {
 }
 
 #about_link {
+  max-width: 150px;
   position: relative;
-  left: 39%;
+  left: 41.5%;
+  bottom: 3%;
+}
+
+#about_link:active {
+  position: relative;
   bottom: 2%;
 }
 
@@ -325,30 +337,25 @@ video, audio, iframe, table, form {
   left: 6%;
 }
 
+#design_link:active {
+  position: relative;
+  top: 26%
+}
+
 #programming_link {
   position: relative;
   left: 72%;
   bottom: 1%;
 }
 
-#blog_link {
-  position: relative;
-  left: 72%;
-}
-
-#about_link:active {
-  position: relative;
-  bottom: 1%;
-}
-
-#design_link:active {
-  position: relative;
-  top: 26%
-}
-
 #programming_link:active {
   position: relative;
   bottom: 0%;
+}
+
+#blog_link {
+  position: relative;
+  left: 72%;
 }
 
 #blog_link:active {
@@ -423,6 +430,11 @@ video, audio, iframe, table, form {
 
 .don {
   color: #04adcc;
+}
+
+#don_repeat {
+  color: #04adcc;
+  margin: 17px;
 }
 
 /* /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$$$ /$$$$$$$ 

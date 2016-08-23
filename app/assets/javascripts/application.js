@@ -72,7 +72,7 @@ function bind_repeat(){
   });
 
   $('#about_link').hover(function(){
-    $('#repeat_link').html('<span id="don_rinse">blog</span>');
+    $('#repeat_link').html('<span id="don_rinse">about</span>');
   }, function(){
     $('#repeat_link').html('<a id="repeat_link" href="/about">repeat</a>');
   });
