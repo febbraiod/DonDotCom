@@ -405,10 +405,20 @@ video, audio, iframe, table, form {
   -letter-kern: 0 0 -1px;
 }
 
+#don_program {
+    color: #04adcc;
+    margin: 17px;
+}
+
 .don_rinse {
   -letter-transform: none none skew(-4deg) none;
   -letter-color: none none #04adcc;
   -letter-kern: 0 0 -2px;
+}
+
+#don_rinse {
+  color: #04adcc;
+  margin: 17px;
 }
 
 .don {

@@ -42,14 +42,11 @@ function bind_design_link(){
 
 function bind_programming_link(){
   $('#programming_link').hover(function(){
-    $('.don_program').css("color", "#04adcc");
-    $('.don_program').css("margin", "17px");
+    $('.don_program').attr('id', 'don_program');
   }, function(){
-    $('.don_program').css("color", "#7a7a7a");
-    $('.don_program').css("margin", "0px");
+    $('.don_program').removeAttr('id');
   });
 }
-
 
 function bind_rinse(){
   $('#rinse_link').hover(function(){
@@ -60,16 +57,11 @@ function bind_rinse(){
   });
 
   $('#blog_link').hover(function(){
-    $('#rinse_link').text('blog');
-    $('#rinse_link').css("color", "#04adcc");
-    $('#rinse_link').css("margin", "17px");
+    $('#rinse_link').html('<span id="don_rinse">blog</span>');
   }, function(){
-    $('#rinse_link').text('rinse');
-    $('#rinse_link').css("color", "#7a7a7a");
-    $('#rinse_link').css("margin", "0px");
-  });
+    $('#rinse_link').html('<span class="don_rinse kerningjs" style="visibility: inherit;"><span class="word1" style="display: inline-block;"><span class="char1" style="display: inline-block; transform: none; margin-right: 0px;">r</span><span class="char2" style="display: inline-block; transform: none; margin-right: 0px;">i</span><span class="char3" style="display: inline-block; transform: skew(-4deg); color: rgb(4, 173, 204); margin-right: -2px;">n</span><span class="char4" style="display: inline-block; transform: none;">s</span><span class="char5" style="display: inline-block;">e</span></span></span>');
 
-  $('#rinse_link').click(function(){$(this).html('ri<span class="don">n</span>se');});
+  });
 }
 
 function bind_repeat(){
@@ -80,17 +72,10 @@ function bind_repeat(){
   });
 
   $('#about_link').hover(function(){
-    $('#repeat_link').text('about');
-    $('#repeat_link').css("color", "#04adcc");
-    $('#repeat_link').css("margin", "17px");
+    $('#repeat_link').html('<span id="don_rinse">blog</span>');
   }, function(){
-    $('#repeat_link').text('repeat');
-    $('#repeat_link').css("color", "#7a7a7a");
-    $('#repeat_link').css("margin", "0px");
+    $('#repeat_link').html('<a id="repeat_link" href="/about">repeat</a>');
   });
-
-
-  $('#repeat_link').click(function(){$(this).text('repeat');});
 }
 
 function bind_buttons(){
