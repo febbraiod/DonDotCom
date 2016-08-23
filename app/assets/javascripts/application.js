@@ -34,11 +34,9 @@ $(function(){
 
 function bind_design_link(){
   $('#design_link').hover(function(){
-    $('.don_design').css("color", "#04adcc");
-    $('.don_design').css("margin", "17px");
+    $('.don_design').attr('id', 'don_design');
   }, function(){
-    $('.don_design').css("color", "#7a7a7a");
-    $('.don_design').css("margin", "0px");
+    $('.don_design').removeAttr('id');
   });
 }
 
