@@ -22,6 +22,7 @@
 
 
 $(function(){
+  bind_design_link();
   bind_rinse();
   bind_repeat();
   bind_design_thumbs();
@@ -29,6 +30,16 @@ $(function(){
   bind_buttons();
   place_blog_images();
 });
+
+function bind_design_link(){
+  $('#design_link').hover(function(){
+    $('.don_design').css("color", "#04adcc");
+    $('.don_design').css("margin", "17px");
+  }, function(){
+    $('.don_design').css("color", "#7a7a7a");
+    $('.don_design').css("margin", "0px");
+  });
+}
 
 function bind_rinse(){
   $('#rinse_link').hover(function(){
@@ -48,7 +59,18 @@ function bind_repeat(){
     $(this).text('repeat');
   });
 
-  $('#repeat_link').click(function(){$(this).test('repeat');});
+  $('#about_link').hover(function(){
+    $('#repeat_link').text('about');
+    $('#repeat_link').css("color", "#04adcc");
+    $('#repeat_link').css("margin", "17px");
+  }, function(){
+    $('#repeat_link').text('repeat');
+    $('#repeat_link').css("color", "#7a7a7a");
+    $('#repeat_link').css("margin", "0px");
+  });
+
+
+  $('#repeat_link').click(function(){$(this).text('repeat');});
 }
 
 function bind_buttons(){

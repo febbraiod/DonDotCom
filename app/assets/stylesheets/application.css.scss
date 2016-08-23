@@ -275,20 +275,16 @@ video, audio, iframe, table, form {
   margin: 0 0 0 120px;
 }
 
+/*new nav*/
 #nav_tree__container {
   position: fixed;
   left: 100px;
-  top: 50px;
+  top: 70px;
   background: image-url('nav_tree.png') no-repeat;
   background-size: 100% 100%;
   height: 500px;
   width: 700px;
 }
-
-/*#nav_tree {
-  max-width: 500px;
-  z-index: -1;
-}*/
 
 .link_holder {
   background-color: white;
@@ -305,9 +301,22 @@ video, audio, iframe, table, form {
   -webkit-box-shadow: 5px 5px 7px 0px #AAA;
 }
 
+.link_holder:hover {
+  background-color: #04adcc;
+  color: white;
+}
+
+.link_holder:active{
+  background-color: #04adcc;
+  color: white;
+  -moz-box-shadow: 0px 0px 0px 0px #AAA;
+  -webkit-box-shadow: 0px 0px 0px 0px #AAA;
+}
+
 #about_link {
   position: relative;
   left: 39%;
+  bottom: 2%;
 }
 
 #design_link {
@@ -319,12 +328,32 @@ video, audio, iframe, table, form {
 #programming_link {
   position: relative;
   left: 72%;
-  bottom: 2%;
+  bottom: 1%;
 }
 
 #blog_link {
   position: relative;
   left: 72%;
+}
+
+#about_link:active {
+  position: relative;
+  bottom: 1%;
+}
+
+#design_link:active {
+  position: relative;
+  top: 26%
+}
+
+#programming_link:active {
+  position: relative;
+  bottom: 0%;
+}
+
+#blog_link:active {
+  position: relative;
+  top: 1%;
 }
 
 /* /$$        /$$$$$$   /$$$$$$   /$$$$$$ 
@@ -439,6 +468,10 @@ footer {
 #repeat_link:hover {
   margin: 17px;
   text-decoration: none;
+  color: #04adcc;
+}
+
+#logo_type_2 a:hover{
   color: #04adcc;
 }
 
