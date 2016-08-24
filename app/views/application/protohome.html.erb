@@ -1,9 +1,16 @@
 <% content_for :home_nav do %>
     <div id='nav_tree__container'>
-      <div id='about_link'><%=link_to image_tag('sig_pic.png', id:'donpic_homepage'), about_path %></div>
-      <div class='link_holder' id='design_link'>design</div>
+      <div id='about_link'><%=link_to image_tag('sig_pic.png', id:'donpic_homepage'), about_path %>
+      <%=link_to image_tag('sig_pic_hover.png', id:'donpic_homepage_hover'), about_path %></div>
+      <%=link_to designs_path do%>
+        <div class='link_holder' id='design_link'>design</div>
+      <%end%>
+      <%=link_to programs_path do%>
       <div class='link_holder' id='programming_link'>programming</div>
+      <%end%>
+      <%=link_to programs_path do%>
       <div class='link_holder' id ='blog_link'>blog</div>
+      <%end%>
     </div>
 <% end %>
 

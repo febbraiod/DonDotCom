@@ -73,10 +73,16 @@ function bind_repeat(){
 
   $('#about_link').hover(function(){
     $('#repeat_link').html('<span id="don_rinse">about</span>');
+    $('#donpic_homepage_hover').show();
+    $('#donpic_homepage').hide();
   }, function(){
     $('#repeat_link').html('<a id="repeat_link" href="/about">repeat</a>');
+    $('#donpic_homepage').show();
+    $('#donpic_homepage_hover').hide();
   });
 }
+
+
 
 function bind_buttons(){
 

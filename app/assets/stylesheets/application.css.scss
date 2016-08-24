@@ -83,11 +83,6 @@ a {
   color: #04adcc;
 }
 
-a:hover {
-  text-decoration: underline;
-  color: #04adcc;
-}
-
 /*for design and program pages*/
 
 .thumb_box {
@@ -190,6 +185,11 @@ video, audio, iframe, table, form {
   z-index: 1;
 }
 
+#donpic_homepage_hover {
+  width: 120px;
+  z-index: 1;
+  display: none;
+}
 
 
 /*  /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$  /$$$$$$  /$$      
@@ -300,6 +300,7 @@ video, audio, iframe, table, form {
   width: 150px;
   min-height: 30px;
   text-align: center;
+  color: black;
   vertical-align: middle;
   line-height: 30px;
   margin-bottom: 100px;
@@ -333,13 +334,13 @@ video, audio, iframe, table, form {
 
 #design_link {
   position: relative;
-  top: 25%;
+  top: 127px;
   left: 6%;
 }
 
 #design_link:active {
   position: relative;
-  top: 26%
+  top: 129px;
 }
 
 #programming_link {
@@ -603,6 +604,7 @@ footer {
     width: 100px;
 
   }
+
 
 }
 
