@@ -1,14 +1,17 @@
 <% content_for :home_nav do %>
-  <div id="navbar_home">
-    <nav>
-      <div class="links">
-        <%=link_to 'design', designs_path%>
-        <%=link_to 'programming', programs_path%>
-        <%=link_to 'blog', blog_index_path%>
-        <%=link_to 'about', about_path %>
-      </div>
-    </nav>
-  </div><!-- #navbar -->
+    <div id='nav_tree__container'>
+      <div id='about_link'><%=link_to image_tag('sig_pic.png', id:'donpic_homepage'), about_path %>
+      <%=link_to image_tag('sig_pic_hover.png', id:'donpic_homepage_hover'), about_path %></div>
+      <%=link_to designs_path do%>
+        <div class='link_holder' id='design_link'>design</div>
+      <%end%>
+      <%=link_to programs_path do%>
+      <div class='link_holder' id='programming_link'>programming</div>
+      <%end%>
+      <%=link_to programs_path do%>
+      <div class='link_holder' id ='blog_link'>blog</div>
+      <%end%>
+    </div>
 <% end %>
 
 
@@ -22,7 +25,7 @@
 
   <div id="logo_type_2">  
     <h1><a id='rinse_link' href='/blog'><span class='don_rinse'>rinse</span></a></h1>
-    <h1><a id='repeat_link' href='/about'>repeat</h1></a>
+    <h1><a id='repeat_link' href='/about'>repeat</a></h1>
   </div>
 </div>
 
