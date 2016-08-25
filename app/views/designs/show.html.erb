@@ -21,12 +21,16 @@
     <div class='design_container'>
       <div class='short_desc'>
         <%= @design.description %><br>
+        <% if !@design.client_name.empty?%>
         <small>Client: <%= @design.client_name %></small>
+        <%end%>
       </div>
 
       <div class='long_desc'> 
         <%= @design.long_desc %><br>
+        <% if !@design.client_name.empty?%>
         <small>Client: <%= @design.client_name %></small>
+        <%end%>
       </div>
 
         <div class='design_thumb_container_1'>
