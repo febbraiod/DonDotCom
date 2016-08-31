@@ -9,4 +9,6 @@ function place_blog_images(){
   $('.img_8').html($('.post_image_8'));
   $('.img_9').html($('.post_image_9'));
   $('.img_10').html($('.post_image_10'));
+  $('.img_11').html($('.post_image_11'));
+  $('.img_12').html($('.post_image_12'));
 }
