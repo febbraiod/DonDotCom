@@ -11,6 +11,6 @@ function place_blog_images(){
   $('.img_10').html($('.post_image_10'));
   $('.img_11').html($('.post_image_11'));
   $('.img_12').html($('.post_image_12'));
-  $('.img_13').html($('.post_image_13'));
-  $('.img_14').html($('.post_image_14'));
 }
+
+
