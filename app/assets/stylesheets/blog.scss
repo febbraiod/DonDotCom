@@ -104,7 +104,7 @@
 
   .post_content {
     float: left; 
-    width: 70%;
+    width: 73%;
   }
 
   #postdate {
@@ -112,6 +112,14 @@
     top: 20px;
     right: 30px;
   }
+
+  #post_headline {
+  font-size: 2.0em;
+}
+
+#post_headline_with_icon {
+  font-size: 2em;
+}
 
 
 }
