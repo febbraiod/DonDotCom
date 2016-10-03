@@ -21,16 +21,18 @@
 
 
 #post_headline {
-  font-size: 2.4em;
+  font-size: 2.3em;
   color: #04adcc;
   margin-top: 0;
+  line-height: 1.1em; 
 }
 
 #post_headline_with_icon {
   display: inline-block;
-  font-size: 2.4em;
+  font-size: 2.3em;
   color: #04adcc;
   margin-top: 0;
+  line-height: 1.1em;
 }
 
 #headline_icon {
@@ -47,8 +49,8 @@
 
 .post_content {
   float: left; 
-  width: 60%;
-  max-width: 600px;
+  width: 68%;
+  max-width: 680px;
   margin-bottom: 50px;
 }
 
@@ -120,7 +122,7 @@
 
   .post_content {
     float: left; 
-    width: 60%;
+    width: 70%;
   }
 
   #postdate {
@@ -161,7 +163,7 @@
 
   .post_content {
     float: left; 
-    width: 60%;
+    width: 70%;
   }
 
   .post_wrapper {
