@@ -8,13 +8,9 @@ function bind_program_thumbs(){
 function hover_header(){
   $('.fixer').hover(function(){
     $('.program_wrapper_blocker').stop(true, true).fadeTo(400, 0);
-
     $('#program_navbar').attr("id","navbar");
-
     }, function(){
     $('.program_wrapper_blocker').stop(true, true).fadeTo(300, 1);
-
     $('#navbar').attr("id","program_navbar");
-
     });
 }
