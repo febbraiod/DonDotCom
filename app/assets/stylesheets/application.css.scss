@@ -142,9 +142,11 @@ video, audio, iframe, table, form {
   position: fixed;
   top: 0;
   background: white;
-  height: 100px;
+  height: 98px;
   width: 100%;
   z-index: 1;
+  border-bottom: 1.5px solid;
+  border-color: #04adcc;
 }
 
 
@@ -243,8 +245,6 @@ video, audio, iframe, table, form {
 }
 
 #navbar {
-  border-bottom: 1.5px solid;
-  border-color: #04adcc;
   margin: 25px 0 0 0;
 }
 
