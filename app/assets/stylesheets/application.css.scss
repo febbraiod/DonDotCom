@@ -237,6 +237,12 @@ video, audio, iframe, table, form {
   margin: 0 0 0 30px;
 }
 
+a:active{
+  display:none;
+}
+
+
+
 #navbar nav a.selected {
   background: #333;
   color: black;
@@ -536,6 +542,13 @@ footer {
     font: .90em avenir, helvetica, Arial, sans-serif;
   }
 
+  #program_navbar {
+    width: 100%;
+  }
+
+  #program_navbar nav a {
+    font: .90em avenir, helvetica, Arial, sans-serif;
+  }
 
 }
 
@@ -582,7 +595,6 @@ footer {
     font-size: 65%;
   }
 
-
   #logo_type_1 {
     line-height: 100%;
   }
@@ -594,11 +606,18 @@ footer {
   }
 
   #navbar nav a {
-  font: .85em avenir, helvetica, Arial, sans-serif;
+    font: .85em avenir, helvetica, Arial, sans-serif;
+  }
+
+  .program_wrapper_blocker {
+    height: 92px;
+  }
+
+  #program_navbar nav a {
+    font: .85em avenir, helvetica, Arial, sans-serif;
   }
 
 }
-
 
 
 @media only screen and (max-width: 1000px) {
@@ -610,12 +629,17 @@ footer {
     margin: 50px auto;
   }
 
-  #navbar {
+  #navbar, #program_navbar {
     font-size: 90%;
     width: 100%;
   }
 
   #navbar nav a {
+    display: inline-block;
+    width: 10%;
+  }
+
+  #program_navbar nav a {
     display: inline-block;
     width: 10%;
   }
@@ -649,14 +673,10 @@ footer {
 
 
 @media only screen and (max-width: 800px) {
-  #navbar {
+  #navbar, #program_navbar {
     font-size: 80%;
     width: 100%;
   }
-
-  #navbar_home {
-  }
-
 
   #donpic {
     position: fixed;
@@ -686,7 +706,7 @@ footer {
     display: none;
   }
 
-  #navbar {
+  #navbar, #program_navbar {
     font-size: 80%;
     width: 100%;
     left: 10%;
@@ -716,7 +736,7 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
-  #navbar {
+  #navbar, #program_navbar {
     width: 100%;
     left: 10%;
   }
@@ -790,9 +810,9 @@ footer {
     left: -10px;
   }
 
-  #navbar {
+  #navbar, #program_navbar {
     margin-left: 0px;
-    font-size: 73%;
+    font-size: 72%;
     width: 100%;
   }
 

@@ -17,6 +17,12 @@
       <%= yield :about_nav %>
     <% elsif content_for? :home_nav %>
       <!-- No pic on this page -->
+    <% elsif content_for? :program_nav %>
+      <div class = "program_wrapper_blocker">
+      </div>
+      <%=link_to image_tag('sig_pic.png', id:'donpic'), root_path %>
+    <% elsif content_for? :home_nav %>
+      <!-- No pic on this page -->
     <% else %>
       <div class = "wrapper_blocker">
       </div>  
@@ -25,7 +31,19 @@
 
     <% if content_for? :home_nav %>
        <%= yield :home_nav %>
+    <% elsif content_for? :program_nav %>
+      <div class="fixer">
+      <div id="program_navbar">
+        <nav>
+          <div class="links">
+            <%=link_to 'design', designs_path%>
+            <%=link_to 'programming', programs_path%>
+            <%=link_to 'blog', blog_index_path%>
+            <%=link_to 'about',  about_path %>
+          </div>
+        </nav>
       </div><!-- #navbar -->
+    </div>
     <% else %>
     <div class="fixer">
       <div id="navbar">

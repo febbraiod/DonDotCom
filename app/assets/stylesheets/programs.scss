@@ -2,6 +2,32 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.program_wrapper_blocker {
+  position: fixed;
+  top: 0;
+  background-image: image-url('blue_matrix.jpg');
+  height: 97px;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1.5px solid;
+  border-color: #04adcc;
+  -webkit-transition: all, -webkit-transform 2s;
+  transition: all, transform 2s;
+}
+
+#program_navbar nav a {
+  display: inline-block;
+  width: 7%;
+  font: .95em avenir, helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 16px;
+}
+
+#program_navbar {
+  margin: 25px 0 0 10px;
+}
 
 .program_wrapper__index {
   position: relative;
