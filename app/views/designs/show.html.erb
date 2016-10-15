@@ -1,5 +1,10 @@
 <!-- needs responsive css for widths less than 1287px -->
 
+<% content_for :design_show do %>
+  <%=link_to image_tag('sig_pic.png', id:'donpic_down'), root_path %>
+<% end %>
+
+
 <% photos = @design.gallery.photos.sort_by {|pic| pic.pic_file_name} %>
 
 <% if photos.length > 4 %>

@@ -314,6 +314,10 @@ video, audio, iframe, table, form {
   margin-top: -25px;
 }
 
+.show_links{
+   margin-top: 75px;
+}
+
 /*new nav tree */
 #nav_tree__container {
   position: fixed;
@@ -557,6 +561,10 @@ footer {
     top: 1px;
   }
 
+  .show_links{
+    margin-top: 75px;
+  }
+
 }
 
 @media only screen and (max-width: 1280px) {
@@ -583,6 +591,10 @@ footer {
 
   .uplink {
     margin-top: -25px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -648,6 +660,10 @@ footer {
   #donpic {
     top: -6px;
   }
+
+  .show_links{
+    margin-top: 75px;
+  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -699,6 +715,10 @@ footer {
 
   #donpic {
     top: 40px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -756,6 +776,10 @@ footer {
     margin-top: -20px;
     margin-left: 115px;
   }
+
+  .show_links{
+    margin-top: 75px;
+  }
 }
 
 @media only screen and (max-width: 920px){
@@ -768,6 +792,10 @@ footer {
   .uplink {
     margin-top: -20px;
     margin-left: 115px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -786,6 +814,10 @@ footer {
   .uplink {
     margin-top: -20px;
     margin-left: 120px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 }
 
@@ -820,6 +852,10 @@ footer {
   .uplink {
     margin-top: -20px;
     margin-left: 120px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -867,7 +903,9 @@ footer {
     margin-left: 120px;
   }
 
-
+  .show_links{
+    margin-top: 75px;
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -903,6 +941,10 @@ footer {
   .uplink {
     margin-top: -20px;
     margin-left: 125px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -951,6 +993,10 @@ footer {
   .uplink {
     margin-top: -20px;
     margin-left: 110px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
@@ -1010,6 +1056,10 @@ footer {
     margin-left: 37px;
   }
 
+  .show_links{
+    margin-top: 75px;
+  }
+
 }
 
 @media only screen and (max-width: 485px) {
@@ -1043,6 +1093,10 @@ footer {
    #navbar nav a {
     font-size: 1em;
     margin-left: 37px;
+  }
+
+  .show_links{
+    margin-top: 75px;
   }
 
 }
