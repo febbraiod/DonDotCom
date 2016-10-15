@@ -30,7 +30,8 @@ $(function(){
   bind_buttons();
   place_blog_images();
   bind_programming_link();
-  hover_header();
+  // hover_header();
+  // toggleTransparent();
 });
 
 function bind_design_link(){

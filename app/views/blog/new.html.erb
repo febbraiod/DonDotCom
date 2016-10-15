@@ -1,5 +1,7 @@
 <div class="wrapper">
 <h1>Hi Don!</h1>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
 <%=form_for @post, url: blog_index_path, html: { multipart: true } do |f| %>
 

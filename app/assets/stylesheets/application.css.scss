@@ -136,6 +136,8 @@ video, audio, iframe, table, form {
   position: fixed;
   width: 100%;
   z-index : 1;
+  border-bottom: 1.5px solid;
+  border-color: #04adcc;
 }
 
 .wrapper_blocker {
@@ -145,8 +147,14 @@ video, audio, iframe, table, form {
   height: 98px;
   width: 100%;
   z-index: 1;
-  border-bottom: 1.5px solid;
-  border-color: #04adcc;
+  border-bottom: solid 1px #04adcc;
+  transition: opacity .5s;
+  -moz-transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+}
+
+.transparent {
+  opacity: 0;
 }
 
 
@@ -176,10 +184,11 @@ video, audio, iframe, table, form {
 
 #donpic {
   position: fixed;
-  top: 32px;
-  left: 38px;
+  top: 11px;
+  left: 40px;
   width: 120px;
   z-index: 2;
+  transition: all .5s;
 }
 
 #donpic_homepage {
@@ -236,7 +245,7 @@ video, audio, iframe, table, form {
   color: #7a7a7a;
   text-align: center;
   text-decoration: none;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 16px;
 }
 
 #navbar nav a.selected {
@@ -245,7 +254,7 @@ video, audio, iframe, table, form {
 }
 
 #navbar {
-  margin: 25px 0 0 0;
+  margin: 25px 0 0 10px;
 }
 
 #navbar nav a:hover {
@@ -278,7 +287,14 @@ video, audio, iframe, table, form {
 }
 
 .links {
-  margin: 0 0 0 120px;
+  margin-left: 120px;
+  margin-top: 10px;
+  z-index: 9998;
+  transition: all .5s;
+}
+
+.uplink {
+  margin-top: -25px;
 }
 
 /*new nav tree */
@@ -536,11 +552,11 @@ footer {
     font: .90em avenir, helvetica, Arial, sans-serif;
   }
 
-  #program_navbar {
+  #white_navbar {
     width: 100%;
   }
 
-  #program_navbar nav a {
+  #white_navbar nav a {
     font: .90em avenir, helvetica, Arial, sans-serif;
   }
 
@@ -607,7 +623,7 @@ footer {
     height: 92px;
   }
 
-  #program_navbar nav a {
+  #white_navbar nav a {
     font: .85em avenir, helvetica, Arial, sans-serif;
   }
 
@@ -623,7 +639,7 @@ footer {
     margin: 50px auto;
   }
 
-  #navbar, #program_navbar {
+  #navbar, #white_navbar {
     font-size: 90%;
     width: 100%;
   }
@@ -633,7 +649,7 @@ footer {
     width: 10%;
   }
 
-  #program_navbar nav a {
+  #white_navbar nav a {
     display: inline-block;
     width: 10%;
   }
@@ -667,7 +683,7 @@ footer {
 
 
 @media only screen and (max-width: 800px) {
-  #navbar, #program_navbar {
+  #navbar, #white_navbar {
     font-size: 80%;
     width: 100%;
   }
@@ -700,7 +716,7 @@ footer {
     display: none;
   }
 
-  #navbar, #program_navbar {
+  #navbar, #white_navbar {
     font-size: 80%;
     width: 100%;
     left: 10%;
@@ -730,7 +746,7 @@ footer {
 }
 
 @media only screen and (max-width: 700px) {
-  #navbar, #program_navbar {
+  #navbar, #white_navbar {
     width: 100%;
     left: 10%;
   }
@@ -804,7 +820,7 @@ footer {
     left: -10px;
   }
 
-  #navbar, #program_navbar {
+  #navbar, #white_navbar {
     margin-left: 0px;
     font-size: 72%;
     width: 100%;

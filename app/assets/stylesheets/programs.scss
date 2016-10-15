@@ -6,16 +6,14 @@
   position: fixed;
   top: 0;
   background-image: image-url('blue_matrix.jpg');
-  height: 98px;
+  height: 97px;
   width: 100%;
   z-index: 1;
-  border-bottom: 1.5px solid;
-  border-color: #04adcc;
   -webkit-transition: all, -webkit-transform 2s;
   transition: all, transform 2s;
 }
 
-#program_navbar nav a {
+#white_navbar nav a {
   display: inline-block;
   width: 7%;
   font: .95em avenir, helvetica, Arial, sans-serif;
@@ -25,7 +23,7 @@
   margin: 0 0 0 16px;
 }
 
-#program_navbar {
+#white_navbar {
   margin: 25px 0 0 10px;
 }
 

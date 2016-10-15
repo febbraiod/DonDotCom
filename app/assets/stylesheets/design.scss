@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/*/
 
+#dontest {
+  background-color: white;
+  background-image: image-url('blue_matrix.jpg');
+  width: 100%;
+  min-height: 100px;
+}
+
 /* /$$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$  /$$$$$$  /$$   /$$       /$$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$$$  /$$$$$$ 
   | $$__  $$| $$_____/ /$$__  $$|_  $$_/ /$$__  $$| $$$ | $$      | $$__  $$ /$$__  $$ /$$__  $$| $$_____/ /$$__  $$
   | $$  \ $$| $$      | $$  \__/  | $$  | $$  \__/| $$$$| $$      | $$  \ $$| $$  \ $$| $$  \__/| $$      | $$  \__/
@@ -134,7 +141,7 @@ hr {
 
 .design_wrapper__index {
   position: relative;
-  top: 80px;
+  top: 10px;
   width: 39%;
   margin: 50px auto;
 }
