@@ -1,6 +1,20 @@
 <% content_for :about_nav do %>
-  <%=link_to image_tag('don.png', id:'donpic'), root_path %>
+  <%=link_to image_tag('don.png', id:'donpic_about'), root_path %>
 <% end %>
+
+<div id="navbar" style='position: fixed; 
+  width: 100%;
+  top: 40px;
+  left: 0px; z-index: 9998;'>
+    <nav>
+      <div class="links">
+        <%=link_to 'design', designs_path%>
+        <%=link_to 'programming', programs_path%>
+        <%=link_to 'blog', blog_index_path%>
+        <%=link_to 'about',  about_path %>
+      </div>
+    </nav>
+</div>
 
 <div class="logo_type_not_home" id='about_logo'>
   <h1>life</h1>
@@ -11,9 +25,9 @@
 <br>
 <p>Well, hello there world!</p>
 
-<p>I'm an arts lover, designer and full stack web developer. Future ninja. Unashamed lover of jQuery. I'm a great cook and a mediocre guitar player. Game enthusiast. Book junkie.</p>
+<p>I'm an arts lover, designer and full stack web developer. Future code ninja. Unashamed lover of jQuery. Great cook and mediocre guitar player. Game enthusiast. Book junkie.</p>
 
-<p>My passion is creating and improving things. I love to think both creatively and analytically.</p>
+<p>My passion is creating and improving things. I love to think both creatively and analytically to acheive a goal.</p>
 
 <p>Design and Programming are my bread and butter because they use both sides of my brain. I am comfortable leading or working as part of a team as well as tackling projects on my own when the situation calls for it.
 

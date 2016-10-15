@@ -1,12 +1,22 @@
-<% content_for :program_nav do %>
-  <%=link_to image_tag('don.png', id:'donpic'), root_path %>
-<% end %>
+<div id="white_navbar" style='position: fixed; 
+  width: 100%;
+  top: 75px;
+  left: 0px; z-index: 9998;'>
+    <nav>
+      <div class="links">
+        <%=link_to 'design', designs_path%>
+        <%=link_to 'programming', programs_path%>
+        <%=link_to 'blog', blog_index_path%>
+        <%=link_to 'about',  about_path %>
+      </div>
+    </nav>
+</div>
 
+<%= image_tag('blue_matrix.jpg', style: 'width: 100%;') %>
 <div class="logo_type_not_home" id='program_logo'>
   <h1>code</h1> 
   <div id='hr_holder__3'><hr></div>
 </div>
-
 <div class="program_wrapper__index">
   <% @programs.each_with_index do |program, idx| %>
 

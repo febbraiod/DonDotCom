@@ -170,7 +170,7 @@ video, audio, iframe, table, form {
 
 .wrapper {
   position: relative;
-  top: 75px;
+  top: 10px;
   width: 50%;
   margin: 50px auto;
 }
@@ -189,6 +189,23 @@ video, audio, iframe, table, form {
   width: 120px;
   z-index: 2;
   transition: all .5s;
+}
+
+#donpic_down {
+  position: fixed;
+  top: 32px;
+  left: 40px;
+  width: 120px;
+  z-index: 2;
+  transition: all .5s;
+}
+
+#donpic_about{
+  position: fixed;
+  top: 32px;
+  left: 40px;
+  width: 120px;
+  z-index: 2;
 }
 
 #donpic_homepage {
@@ -536,6 +553,38 @@ footer {
     top: 38%;
   }
 
+  #donpic {
+    top: 1px;
+  }
+
+}
+
+@media only screen and (max-width: 1280px) {
+
+  #white_navbar {
+    width: 100%;
+  }
+
+  #white_navbar nav a {
+    font: .90em avenir, helvetica, Arial, sans-serif;
+  }
+
+  #donpic {
+    top: 1px;
+  }
+
+  #donpic_down {
+    top: 30px;
+  }
+
+  .links {
+    margin-top: 0px;
+  }
+
+  .uplink {
+    margin-top: -25px;
+  }
+
 }
 
 @media only screen and (max-width: 1250px) {
@@ -562,7 +611,7 @@ footer {
 
 }
 
-@media only screen and (max-width: 1175px) {
+@media only screen and (max-width: 1180px) {
 
   #navbar_home {
     top: 13%;
@@ -577,7 +626,6 @@ footer {
     font-size: 65%;
   }
 
-
   #logo_type_1 {
     line-height: 100%;
   }
@@ -588,6 +636,18 @@ footer {
     line-height: 100%;
   }
 
+  .links {
+    margin-top: -10px;
+  }
+
+  .uplink {
+    margin-top: -27px;
+    margin-left: 125px;
+  }
+
+  #donpic {
+    top: -6px;
+  }
 }
 
 @media only screen and (max-width: 1080px) {
@@ -627,10 +687,24 @@ footer {
     font: .85em avenir, helvetica, Arial, sans-serif;
   }
 
+  .links {
+    margin-top: -15px;
+    margin-left: 135px;
+  }
+
+  .uplink {
+    margin-top: -27px;
+    margin-left: 130px;
+  }
+
+  #donpic {
+    top: 40px;
+  }
+
 }
 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
 
   .wrapper {
     position: relative;
@@ -670,17 +744,50 @@ footer {
   }
 
   #donpic {
-    position: fixed;
-    top: 33px;
-    left: 40px;
-    z-index: 2;
-    width: 100px;
-
+    top: 30px;
   }
 
+  .links {
+    margin-top: -25px;
+    margin-left: 115px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 115px;
+  }
+}
+
+@media only screen and (max-width: 920px){
+
+  .links {
+    margin-top: -30px;
+    margin-left: 115px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 115px;
+  }
 
 }
 
+@media only screen and (max-width: 850px){
+  
+  #donpic {
+    top: 30px;
+  }
+
+  .links {
+    margin-top: -40px;
+    margin-left: 120px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 120px;
+  }
+}
 
 @media only screen and (max-width: 800px) {
   #navbar, #white_navbar {
@@ -689,10 +796,7 @@ footer {
   }
 
   #donpic {
-    position: fixed;
-    top: 40px;
-    left: 35px;
-    z-index: 2;
+    top: 30px;
     width: 90px;
   }
 
@@ -706,6 +810,16 @@ footer {
     left: 30%;
     top: 175px;
     font-size: 50%;
+  }
+
+  .links {
+    margin-top: -40px;
+    margin-left: 100px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 120px;
   }
 
 }
@@ -743,6 +857,17 @@ footer {
     left: 0%;
   }
 
+  .links {
+    margin-top: -45px;
+    margin-left: 100px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 120px;
+  }
+
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -770,6 +895,16 @@ footer {
     left: 2%;
   }
 
+  .links {
+    margin-top: -50px;
+    margin-left: 100px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 125px;
+  }
+
 }
 
 
@@ -795,6 +930,27 @@ footer {
     position: absolute;
     top: 60px;
     left: -45px;
+  }
+
+  #donpic {
+    top: 15px;
+    width: 90px;
+  }
+
+  #donpic_down {
+    top: 45px;
+    left: 35px;
+    width: 90px;
+  }
+
+  .links {
+    margin-top: -60px;
+    margin-left: 105px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 110px;
   }
 
 }
@@ -830,6 +986,30 @@ footer {
     display: none;
   }
 
+  #donpic_down {
+    display: none;
+  }
+
+  .links {
+    margin-top: -70px;
+    margin-left: 80px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 75px;
+  }
+
+  #white_navbar nav a {
+    font-size: 1em;
+    margin-left: 30px;
+  }
+
+  #navbar nav a {
+    font-size: 1em;
+    margin-left: 37px;
+  }
+
 }
 
 @media only screen and (max-width: 485px) {
@@ -843,6 +1023,26 @@ footer {
     top: 60px;
     font-size: 75%;
     left: -50px;
+  }
+
+  .links {
+    margin-top: -75px;
+    margin-left: 55px;
+  }
+
+  .uplink {
+    margin-top: -20px;
+    margin-left: 55px;
+  }
+
+   #white_navbar nav a {
+    font-size: 1em;
+    margin-left: 37px;
+  }
+
+   #navbar nav a {
+    font-size: 1em;
+    margin-left: 37px;
   }
 
 }

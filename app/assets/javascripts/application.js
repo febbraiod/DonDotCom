@@ -84,8 +84,6 @@ function bind_repeat(){
   });
 }
 
-
-
 function bind_buttons(){
 
   $('.next_link').hover(function(){
@@ -105,4 +103,34 @@ function bind_buttons(){
   });
 
 }
+
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll > 30) {
+      makeOpaque();
+    }
+    else if(scroll < 30){
+      makeTransparent();
+    }
+});
+
+var makeOpaque = function(){
+  if($('.wrapper_blocker').hasClass('transparent')){
+      $('.wrapper_blocker').removeClass('transparent');
+      $('#white_navbar').attr("id","navbar");
+      $('.links').addClass('uplink');
+      $('#donpic').attr("id","donpic_down");
+    }
+};
+
+var makeTransparent = function(){
+  if($('.wrapper_blocker').hasClass('transparent') === false){
+      $('.wrapper_blocker').addClass('transparent');
+      $('#navbar').attr("id","white_navbar");
+      $('.links').removeClass('uplink');
+      $('#donpic_down').attr("id","donpic");
+    }
+};
 

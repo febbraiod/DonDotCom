@@ -14,32 +14,3 @@ function bind_design_thumbs(){
       }
   });
 }
-
-$(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll > 30) {
-      makeOpaque();
-    }
-    else if(scroll < 30){
-      makeTransparent();
-    }
-});
-
-var makeOpaque = function(){
-  if($('.wrapper_blocker').hasClass('transparent')){
-      $('.wrapper_blocker').removeClass('transparent');
-      $('#white_navbar').attr("id","navbar");
-      $('.links').addClass('uplink');
-      $('#donpic').css('top', 32);
-    }
-};
-
-var makeTransparent = function(){
-  if($('.wrapper_blocker').hasClass('transparent') === false){
-      $('.wrapper_blocker').addClass('transparent');
-      $('#navbar').attr("id","white_navbar");
-      $('.links').removeClass('uplink');
-      $('#donpic').css('top', 15);
-    }
-};
