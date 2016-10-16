@@ -10,38 +10,37 @@
 </head>
 <body>
 
-   <header>
-    <% if content_for? :about_nav %>
-      <div class = "wrapper_blocker">
-      </div>
-      <%= yield :about_nav %>
-    <% elsif content_for? :home_nav %>
-      <!-- No pic on this page -->
-    <% elsif content_for? :design_show %>
+<header>
+  <% if content_for? :about_nav %>
     <div class = "wrapper_blocker">
-      <div id="navbar">
-        <nav>
-          <div class="links show_links">
-            <%=link_to 'design', designs_path%>
-            <%=link_to 'programming', programs_path%>
-            <%=link_to 'blog', blog_index_path%>
-            <%=link_to 'about',  about_path %>
-          </div>
-        </nav>
-      </div>
-      </div>
-      <%=link_to image_tag('sig_pic.png', id:'donpic_down'), root_path %>
-    <% else %>
-      <div class = "wrapper_blocker transparent">
-      </div>  
-      <%=link_to image_tag('sig_pic.png', id:'donpic'), root_path %>
-    <%end%>
+    </div>
+    <%= yield :about_nav %>
+  <% elsif content_for? :home_nav %>
+    <!-- No pic on this page -->
+  <% elsif content_for? :design_show %>
+  <div class = "wrapper_blocker">
+    <div id="navbar">
+      <nav>
+        <div class="links show_links">
+          <%=link_to 'design', designs_path%>
+          <%=link_to 'programming', programs_path%>
+          <%=link_to 'blog', blog_index_path%>
+          <%=link_to 'about',  about_path %>
+        </div>
+      </nav>
+    </div>
+  </div>
+    <%=link_to image_tag('sig_pic.png', id:'donpic_down'), root_path %>
+  <% else %>
+    <div class = "wrapper_blocker transparent"></div>  
+    <%=link_to image_tag('sig_pic.png', id:'donpic'), root_path %>
+  <%end%>
 
-    <% if content_for? :home_nav %>
-       <%= yield :home_nav %>
-      </div><!-- #navbar -->
-    <% end %>
-  </header>
+  <% if content_for? :home_nav %>
+     <%= yield :home_nav %>
+    </div><!-- #navbar -->
+  <% end %>
+</header>
 
 <%= yield %>
 

@@ -2,17 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.program_wrapper_blocker {
-  position: fixed;
-  top: 0;
-  background-image: image-url('blue_matrix.jpg');
-  height: 97px;
-  width: 100%;
-  z-index: 1;
-  -webkit-transition: all, -webkit-transform 2s;
-  transition: all, transform 2s;
-}
-
 #white_navbar nav a {
   display: inline-block;
   width: 7%;
@@ -100,9 +89,6 @@
   left: 12px;
 }
 
-#program_logo {
-
-}
 
 /* /$$$$$$$  /$$$$$$$$  /$$$$$$  /$$$$$$$   /$$$$$$  /$$   /$$  /$$$$$$  /$$$$$$ /$$    /$$ /$$$$$$$$
   | $$__  $$| $$_____/ /$$__  $$| $$__  $$ /$$__  $$| $$$ | $$ /$$__  $$|_  $$_/| $$   | $$| $$_____/

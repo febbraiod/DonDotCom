@@ -1,9 +1,8 @@
-<!-- needs responsive css for widths less than 1287px -->
+<!-- needs better responsive css for widths less than 800px -->
 
 <% content_for :design_show do %>
   <%=link_to image_tag('sig_pic.png', id:'donpic_down'), root_path %>
 <% end %>
-
 
 <% photos = @design.gallery.photos.sort_by {|pic| pic.pic_file_name} %>
 
@@ -15,63 +14,63 @@
 
 <%= link_to 'edit', edit_design_path(@design), class: 'edit_link' unless !current_user%> <!-- if admin -->
 
-  <% if photos.length > 4 %>
-    <div class="logo_type_not_home__design_show_2">
-  <% else %>
-    <div class="logo_type_not_home__design_show_1">
-  <% end %>
-      <h1 id='title_headline'><%= @design.title %></h1>
+<% if photos.length > 4 %>
+  <div class="logo_type_not_home__design_show_2">
+<% else %>
+  <div class="logo_type_not_home__design_show_1">
+<% end %>
+    <h1 id='title_headline'><%= @design.title %></h1>
+  </div>
+
+  <div class='design_container'>
+    <div class='short_desc'>
+      <%= @design.description %><br>
+      <% if !@design.client_name.empty?%>
+      <small>Client: <%= @design.client_name %></small>
+      <%end%>
     </div>
 
-    <div class='design_container'>
-      <div class='short_desc'>
-        <%= @design.description %><br>
-        <% if !@design.client_name.empty?%>
-        <small>Client: <%= @design.client_name %></small>
-        <%end%>
-      </div>
-
-      <div class='long_desc'> 
-        <%= @design.long_desc %><br>
-        <% if !@design.client_name.empty?%>
-        <small>Client: <%= @design.client_name %></small>
-        <%end%>
-      </div>
-
-        <div class='design_thumb_container_1'>
-          <% photos.first(4).each do |img| %>
-            <div class='thumb_box'>
-              <%= image_tag img.pic.url, class: 'thumb' %>
-            </div>
-          <%end%>
-        </div>
-
-        <% if photos.length > 4 %>
-          <div class='design_thumb_container_2'>
-          <% photos.last(photos.length - 4).each do |img| %>
-            <div class='thumb_box'>
-              <%= image_tag img.pic.url, class: 'thumb' %>
-            </div>
-          <% end %>
-          <% (8 - photos.length).times do |place_holder| %>
-            <div class='place_holder_thumb'></div>
-          <%end%>
-          </div>
-        <%end%>
-
-      <%if photos.length > 4 %>
-        <div class='design_view_container_2'>
-      <% else %>
-        <div class='design_view_container'>
+    <div class='long_desc'> 
+      <%= @design.long_desc %><br>
+      <% if !@design.client_name.empty?%>
+      <small>Client: <%= @design.client_name %></small>
       <%end%>
-        <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' unless @design.gallery.photos.first.nil?%>
-        </div>
-    </div><!-- container --> 
-  </div><!-- wrapper -->
+    </div>
 
-      <div id='design_buttons' style='width: 75px; position: fixed; top: 190px; left: 60px'>
-        <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
-        <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial; float: right;'), design_path(@next_design), class: 'next_link' if @next_design%>
-        <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
-        <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), design_path(@next_design), style: 'float: right; margin-bottom: 100px;', class: 'next_link' if @next_design%>
+    <div class='design_thumb_container_1'>
+      <% photos.first(4).each do |img| %>
+        <div class='thumb_box'>
+          <%= image_tag img.pic.url, class: 'thumb' %>
+        </div>
+      <%end%>
+    </div>
+
+    <% if photos.length > 4 %>
+      <div class='design_thumb_container_2'>
+      <% photos.last(photos.length - 4).each do |img| %>
+        <div class='thumb_box'>
+          <%= image_tag img.pic.url, class: 'thumb' %>
+        </div>
+      <% end %>
+      <% (8 - photos.length).times do |place_holder| %>
+        <div class='place_holder_thumb'></div>
+      <%end%>
       </div>
+    <%end%>
+
+    <%if photos.length > 4 %>
+      <div class='design_view_container_2'>
+    <% else %>
+      <div class='design_view_container'>
+    <%end%>
+      <%= image_tag @design.gallery.photos.first.pic.url, class: 'highlight_image' unless @design.gallery.photos.first.nil?%>
+      </div>
+  </div><!-- container --> 
+</div><!-- wrapper -->
+
+<div id='design_buttons' style='width: 75px; position: fixed; top: 190px; left: 60px'>
+  <%= link_to image_tag('DonPrevButton.png', size: "30x30", id: 'prev_icon', style: 'display: initial;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
+  <%= link_to image_tag('DonNextButton.png', size: "30x30", id: 'next_icon', style: 'display: initial; float: right;'), design_path(@next_design), class: 'next_link' if @next_design%>
+  <%= link_to image_tag('hoverDonPrevButton.png', size: "30x30", id: 'hover_prev_icon', style:'display: none;'), design_path(@prev_design), class: 'prev_link' if @prev_design%>
+  <%= link_to image_tag('hoverDonNextButton.png', size: "30x30", id: 'hover_next_icon', style:'display: none;'), design_path(@next_design), style: 'float: right; margin-bottom: 100px;', class: 'next_link' if @next_design%>
+</div>

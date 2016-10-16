@@ -132,14 +132,6 @@ video, audio, iframe, table, form {
   box-sizing: border-box;
 }
 
-.fixer {
-  position: fixed;
-  width: 100%;
-  z-index : 1;
-  border-bottom: 1.5px solid;
-  border-color: #04adcc;
-}
-
 .wrapper_blocker {
   position: fixed;
   top: 0;
@@ -315,7 +307,7 @@ video, audio, iframe, table, form {
 }
 
 .show_links{
-   margin-top: 75px;
+  margin-top: 75px;
 }
 
 /*new nav tree */

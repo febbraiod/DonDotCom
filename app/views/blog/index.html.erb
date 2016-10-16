@@ -25,7 +25,6 @@
       <h3 id='index_headline'><%=link_to post.headline, blog_path(post)%></h3>
       <%if post.icon && post.icon.icon.url(:thumb) != '/images/thumb/missing.png' %>
         <%= image_tag post.icon.icon.url, class: 'title_icon', id: 'index_headline_icon' %>
-    <!-- the icon is where i should use paperclip, as its really only meant for one image -->
       <%end%>
       <h4><%=post.date%></h4>
       <p class='post_wrapper__index' id=<%="post_" + "#{post.slug}"%>><%= truncate(post.content, length: 280) {link_to "more", blog_path(post)} %></p>
@@ -33,16 +32,5 @@
     <%end%>
 
     <br>
-
-    <!-- <h3 id = "headline_icon">Don: Episode IV - A New Hope </h3>
-
-    <h4>10.10.15 &ndash; 12.7.15</h4>
-    
-    <p>&nbsp; &nbsp; &nbsp; July 2015 in an office building far far away, I left my comfortable (somewhat)well-paying job due to what may be called a conflict of interests. I call it a moral decision. That's all I'm going to say about it here, but I know I did the right thing. I realized even as I was leaving that I wouldn’t be able to stay in the industry that I was in and not expect to run into the same sort of conflicts I'd been experiencing. I wasn’t too concerned about unemployment, because I had what I thought was a good relationship with a software company and I had been given a wink and a nod that said 'if you need another job call us'.</p>
-    <p>Perhaps needless to say, it didn't work out. After an unnecessarily lengthy interview process (read: months), I received an offer that was nearly 50% of my previous salary with no room for negotiation (alright fine there was room but it was an insultingly small amount of room). Let me also say, I'm not a greedy guy. I don’t need a ton to be happy, but this was not even enough to cover my current living expenses let alone buy a house and start a family.</p>
-    <p>The most positive thing to come out of this experience, however, was that I started to get a clearer picture of what I wanted to be doing. It had been a long time since I had felt that way. I wanted to be doing something with software, or computers, or the web or however you want to put it; I wanted to go digital with my career. I'd been a computer and tech lover all my life and it was only through a very long story that I could explain to myself why I hadn’t already pursued this kind of thing long before.</p>
-    <p>Ultimately, arrangements were made for me to pursue a code school/boot camp. I didn't have a ton of money saved, but it was enough to sustain this pursuit at least for a little while.</p>
-    <p>In October this year, I began to teach myself Ruby and applied to App Academy. At the time I was going through their admissions process (which is no joke by the way), I stumbled upon the "Learn Verified" program offered by the Flatiron school in New York City. I liked their online format and jokingly said to a friend "I kinda hope I get accepted to App Academy so I can turn them down and do Learn". Well no need for that arose as I got insanely nervous and screwed up the App Academy interview, badly. I won't go into the ugly details, but I did not get the honor of considering turning them down. I did however get accepted to Learn Verified, and I'm on my way to a life changing new career (I hope!).</p>
- -->
 
   </div><!--.wrapper-->
