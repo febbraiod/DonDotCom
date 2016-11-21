@@ -30,6 +30,11 @@ $(function(){
   bind_buttons();
   place_blog_images();
   bind_programming_link();
+  WebFont.load({
+    google: {
+      families: ['Muli']
+    }
+  });
 });
 
 function bind_design_link(){
@@ -131,4 +136,6 @@ var makeTransparent = function(){
       $('#donpic_down').attr("id","donpic");
     }
 };
+
+
 

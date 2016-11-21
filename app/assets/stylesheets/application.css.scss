@@ -52,24 +52,25 @@ body {
 }
 
 html {
-  width: 100%
+  width: 100%;
+  font-family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
 }
 
 h1 {
-  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
+  font-family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
   color: #7a7a7a;
   font-size: 570%;
   font-weight: normal;
 }
 
 h2 {
-  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
+  font-family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
   font-size: 1.5em;
 }
 
 
 h3 {
-  font-family: "avenir", "Trebuchet MS", helvetica, sans-serif;
+  font-family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
   font-size: 1.7em;
 }
 
@@ -246,6 +247,27 @@ video, audio, iframe, table, form {
   | $$ \  $$| $$  | $$   \  $/   | $$$$$$$/| $$  | $$| $$  | $$
   |__/  \__/|__/  |__/    \_/    |_______/ |__/  |__/|__/  |__/*/
 
+#white_navbar nav a {
+  display: inline-block;
+  width: 7%;
+  font: .95em avenir, helvetica, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0 0 16px;
+}
+
+#white_navbar {
+  margin: 25px 0 0 10px;
+}
+
+#navbar {
+  margin: 25px 0 0 10px;
+}
+
+#navbar nav a:hover {
+  color: #04adcc;
+}
 
 #navbar nav a {
   display: inline-block;
@@ -260,14 +282,6 @@ video, audio, iframe, table, form {
 #navbar nav a.selected {
   background: #333;
   color: black;
-}
-
-#navbar {
-  margin: 25px 0 0 10px;
-}
-
-#navbar nav a:hover {
-  color: #04adcc;
 }
 
 #navbar_home {
