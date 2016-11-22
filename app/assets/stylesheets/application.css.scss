@@ -128,8 +128,6 @@ video, audio, iframe, table, form {
 
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -142,8 +140,6 @@ video, audio, iframe, table, form {
   z-index: 1;
   border-bottom: solid 1px #04adcc;
   transition: opacity .5s;
-  -moz-transition: opacity .5s;
-  -webkit-transition: opacity .5s;
 }
 
 .transparent {
@@ -245,36 +241,35 @@ video, audio, iframe, table, form {
   | $$ \  $$| $$  | $$   \  $/   | $$$$$$$/| $$  | $$| $$  | $$
   |__/  \__/|__/  |__/    \_/    |_______/ |__/  |__/|__/  |__/*/
 
-#white_navbar nav a {
-  display: inline-block;
-  width: 7%;
-  font: .95em avenir, helvetica, Arial, sans-serif;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 0 0 16px;
-}
 
 #white_navbar {
   margin: 25px 0 0 10px;
+    nav a {
+    display: inline-block;
+    width: 7%;
+    font: .95em avenir, helvetica, Arial, sans-serif;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 0 16px;
+  }
 }
 
 #navbar {
   margin: 25px 0 0 10px;
+  nav a {
+    display: inline-block;
+    width: 7%;
+    font: .95em avenir, helvetica, Arial, sans-serif;
+    color: #7a7a7a;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 0 0 16px;
+  }
 }
 
 #navbar nav a:hover {
   color: #04adcc;
-}
-
-#navbar nav a {
-  display: inline-block;
-  width: 7%;
-  font: .95em avenir, helvetica, Arial, sans-serif;
-  color: #7a7a7a;
-  text-align: center;
-  text-decoration: none;
-  margin: 0 0 0 16px;
 }
 
 #navbar nav a.selected {
@@ -287,15 +282,14 @@ video, audio, iframe, table, form {
   top: 13%;
   left: 6%;
   width: 45%;
-}
-
-#navbar_home nav a {
-  float: left;
-  margin-right: 35px;
-  font: .95em avenir, helvetica, Arial, sans-serif;
-  color: #7a7a7a;
-  text-align: center;
-  text-decoration: none;
+  nav a {
+    float: left;
+    margin-right: 35px;
+    font: .95em avenir, helvetica, Arial, sans-serif;
+    color: #7a7a7a;
+    text-align: center;
+    text-decoration: none;
+  }
 }
 
 #navbar_home nav a.selected {
@@ -345,8 +339,8 @@ video, audio, iframe, table, form {
   vertical-align: middle;
   line-height: 30px;
   margin-bottom: 100px;
-  -moz-box-shadow: 5px 5px 7px 0px #AAA;
-  -webkit-box-shadow: 5px 5px 7px 0px #AAA;
+  box-shadow: 5px 5px 7px 0px #AAA;
+
 }
 
 .link_holder:hover {
@@ -357,8 +351,7 @@ video, audio, iframe, table, form {
 .link_holder:active{
   background-color: #04adcc;
   color: white;
-  -moz-box-shadow: 0px 0px 0px 0px #AAA;
-  -webkit-box-shadow: 0px 0px 0px 0px #AAA;
+  box-shadow: 0px 0px 0px 0px #AAA;
 }
 
 #about_link {
