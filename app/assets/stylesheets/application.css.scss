@@ -252,6 +252,9 @@ video, audio, iframe, table, form {
     text-align: center;
     text-decoration: none;
     margin: 0 0 0 16px;
+    &:hover{
+      color: #04adcc;
+    }
   }
 }
 
@@ -265,16 +268,14 @@ video, audio, iframe, table, form {
     text-align: center;
     text-decoration: none;
     margin: 0 0 0 16px;
+    &:hover{
+      color: #04adcc;
+    }
+    &:selected{
+      background: #333;
+      color: black;
+    }
   }
-}
-
-#navbar nav a:hover {
-  color: #04adcc;
-}
-
-#navbar nav a.selected {
-  background: #333;
-  color: black;
 }
 
 #navbar_home {
@@ -289,16 +290,14 @@ video, audio, iframe, table, form {
     color: #7a7a7a;
     text-align: center;
     text-decoration: none;
+    &:hover {
+      color: #04adcc;
+    }
+    &:selected {
+      background: #333;
+      color: white;
+    }
   }
-}
-
-#navbar_home nav a.selected {
-  background: #333;
-  color: white;
-}
-
-#navbar_home nav a:hover {
-  color: #04adcc;
 }
 
 .links {
@@ -340,18 +339,15 @@ video, audio, iframe, table, form {
   line-height: 30px;
   margin-bottom: 100px;
   box-shadow: 5px 5px 7px 0px #AAA;
-
-}
-
-.link_holder:hover {
-  background-color: #04adcc;
-  color: white;
-}
-
-.link_holder:active{
-  background-color: #04adcc;
-  color: white;
-  box-shadow: 0px 0px 0px 0px #AAA;
+  &:hover{
+    background-color: #04adcc;
+    color: white;
+  }
+  &:active{
+    background-color: #04adcc;
+    color: white;
+    box-shadow: 0px 0px 0px 0px #AAA;
+  }
 }
 
 #about_link {
@@ -359,43 +355,39 @@ video, audio, iframe, table, form {
   position: relative;
   left: 41.5%;
   bottom: 3%;
-}
-
-#about_link:active {
-  position: relative;
-  bottom: 2%;
+  &:active {
+    position: relative;
+    bottom: 2%;
+  }
 }
 
 #design_link {
   position: relative;
   top: 127px;
   left: 6%;
-}
-
-#design_link:active {
-  position: relative;
-  top: 129px;
+  &:active {
+    position: relative;
+    top: 129px;
+  }
 }
 
 #programming_link {
   position: relative;
   left: 72%;
   bottom: 1%;
-}
-
-#programming_link:active {
-  position: relative;
-  bottom: 0%;
+  &:active {
+    position: relative;
+    bottom: 0%;
+  }
 }
 
 #blog_link {
   position: relative;
   left: 72%;
-}
-
-#blog_link:active {
-  position: relative;
-  top: 1%;
+  &:active {
+    position: relative;
+    top: 1%;
+  }
 }
 
 /* /$$        /$$$$$$   /$$$$$$   /$$$$$$ 
@@ -515,22 +507,20 @@ footer {
 
 #rinse_link {
   color: #7a7a7a;
-}
-
-#rinse_link:hover {
-  margin: 17px;
-  text-decoration: none;
-  color: #04adcc;
+  &:hover {
+    margin: 17px;
+    text-decoration: none;
+    color: #04adcc;
+  }
 }
 
 #repeat_link {
   color: #7a7a7a;
-}
-
-#repeat_link:hover {
-  margin: 17px;
-  text-decoration: none;
-  color: #04adcc;
+  &:hover {
+    margin: 17px;
+    text-decoration: none;
+    color: #04adcc;
+  }
 }
 
 #logo_type_2 a:hover{
