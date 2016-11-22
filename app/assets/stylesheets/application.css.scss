@@ -30,6 +30,11 @@ $don-grey: #7a7a7a;
 $sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 $serif-base: "Palatino Linotype", Palatino, "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
+@mixin logo-style{
+  color: $donblue;
+  margin: 17px;
+}
+
 @font-face {
     font-family: avenir;
     src: local(avenir), url('avenir.ttc') format('opentype');
@@ -431,20 +436,10 @@ video, audio, iframe, table, form {
   -letter-kern: -2px 0 0 -2px -1px;
 }
 
-#don_design {
-  color: $donblue;
-  margin: 17px;
-}
-
 .don_program {
   -letter-transform: none none skew(-4deg) none;
   -letter-color: none none $donblue;
   -letter-kern: 0 0 -1px;
-}
-
-#don_program {
-    color: $donblue;
-    margin: 17px;
 }
 
 .don_rinse {
@@ -453,18 +448,12 @@ video, audio, iframe, table, form {
   -letter-kern: 0 0 -2px;
 }
 
-#don_rinse {
-  color: $donblue;
-  margin: 17px;
-}
-
 .don {
   color: $donblue;
 }
 
-#don_repeat {
-  color: $donblue;
-  margin: 17px;
+#don_design, #don_program,  #don_rinse, #don_repeat {
+  @include logo-style;
 }
 
 /* /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$$$ /$$$$$$$ 
