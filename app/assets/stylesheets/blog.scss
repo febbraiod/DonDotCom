@@ -2,6 +2,9 @@
 /*show*/
 
 $donblue: #04adcc;
+$don-grey: #7a7a7a;
+$sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$serif-base: "Palatino Linotype", Palatino, "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
 
 .post_wrapper {
@@ -10,7 +13,7 @@ $donblue: #04adcc;
   left: 50px;
   width: 60%;
   margin: 50px auto;
-  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-family: $serif-base;
   font-size: .90em;
   line-height: 1.55em;
   max-width: 1000px;

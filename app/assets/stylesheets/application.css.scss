@@ -27,28 +27,14 @@
 
 $donblue: #04adcc;
 $don-grey: #7a7a7a;
-$sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
-$serif-base: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino serif;
+$sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$serif-base: "Palatino Linotype", Palatino, "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
 @font-face {
     font-family: avenir;
     src: local(avenir), url('avenir.ttc') format('opentype');
 }
 
-@font-face {
-    font-family: anonymous pro;
-    src: local('anonymous pro'), url('anonymous pro.ttf') format('opentype');
-}
-
-@font-face {
-    font-family: dejavuserif;
-    src: local('dejavuserif'), url('dejavuSerif.ttf') format('opentype');
-}
-
-@font-face {
-    font-family: droidserif;
-    src: local('droidserif-regular'), url('adroidserif-regular.ttf') format('opentype');
-}
 
 body {
   width: 100%;
