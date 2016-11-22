@@ -30,9 +30,20 @@ $don-grey: #7a7a7a;
 $sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 $serif-base: "Palatino Linotype", Palatino, "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
-@mixin logo-style{
+@mixin logo-style {
   color: $donblue;
   margin: 17px;
+}
+
+@mixin don-letters($trans, $color, $kern) {
+  -letter-transform: $trans;
+  -letter-color: $color;
+  -letter-kern: $kern;
+}
+
+@mixin link-margins($top, $left) {
+  margin-top: $top;
+  margin-left: $left;
 }
 
 @font-face {
@@ -131,7 +142,7 @@ video, audio, iframe, table, form {
   |__/      |______/|__/  |__/|________/ \______/ */
 
 
-* {
+html {
   box-sizing: border-box;
 }
 
@@ -306,9 +317,8 @@ video, audio, iframe, table, form {
   }
 }
 
-.links {
-  margin-left: 120px;
-  margin-top: 10px;
+.links {  
+  @include link-margins(10px, 120px);
   z-index: 9998;
   transition: all .5s;
 }
@@ -431,21 +441,15 @@ video, audio, iframe, table, form {
 }
 
 .don_design {
-  -letter-transform: skew(-4deg) none;
-  -letter-color: $donblue;
-  -letter-kern: -2px 0 0 -2px -1px;
+  @include don-letters(skew(-4deg) none, $donblue, 0 0 -1px)
 }
 
 .don_program {
-  -letter-transform: none none skew(-4deg) none;
-  -letter-color: none none $donblue;
-  -letter-kern: 0 0 -1px;
+  @include don-letters(none none skew(-4deg) none, none none $donblue, 0 0 -1px)
 }
 
 .don_rinse {
-  -letter-transform: none none skew(-4deg) none;
-  -letter-color: none none $donblue;
-  -letter-kern: 0 0 -2px;
+  @include don-letters(none none skew(-4deg) none, none none $donblue, 0 0 -2px)
 }
 
 .don {
@@ -569,7 +573,7 @@ footer {
   }
 
   .uplink {
-    margin-top: -25px;
+    margin-top: -28px;
   }
 
   .show_links{
@@ -632,8 +636,7 @@ footer {
   }
 
   .uplink {
-    margin-top: -27px;
-    margin-left: 125px;
+    @include link-margins(-27px, 125px);
   }
 
   #donpic {
@@ -683,13 +686,11 @@ footer {
   }
 
   .links {
-    margin-top: -15px;
-    margin-left: 135px;
+    @include link-margins(-15px, 135px);
   }
 
   .uplink {
-    margin-top: -27px;
-    margin-left: 130px;
+    @include link-margins(-27px, 130px);
   }
 
   #donpic {
@@ -747,13 +748,11 @@ footer {
   }
 
   .links {
-    margin-top: -25px;
-    margin-left: 115px;
+    @include link-margins(-25px, 115px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 115px;
+    @include link-margins(-20px, 115px);
   }
 
   .show_links{
@@ -764,13 +763,11 @@ footer {
 @media only screen and (max-width: 920px){
 
   .links {
-    margin-top: -30px;
-    margin-left: 115px;
+    @include link-margins(-230px, 115px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 115px;
+    @include link-margins(-20px, 115px);
   }
 
   .show_links{
@@ -786,13 +783,11 @@ footer {
   }
 
   .links {
-    margin-top: -40px;
-    margin-left: 120px;
+    @include link-margins(-40px, 120px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 120px;
+    @include link-margins(-20px, 120px);
   }
 
   .show_links{
@@ -824,13 +819,11 @@ footer {
   }
 
   .links {
-    margin-top: -40px;
-    margin-left: 100px;
+    @include link-margins(-40px, 100px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 120px;
+    @include link-margins(-20px, 120px);
   }
 
   .show_links{
@@ -873,13 +866,11 @@ footer {
   }
 
   .links {
-    margin-top: -45px;
-    margin-left: 100px;
+    @include link-margins(-45px, 100px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 120px;
+    @include link-margins(-20px, 120px);
   }
 
   .show_links{
@@ -913,13 +904,11 @@ footer {
   }
 
   .links {
-    margin-top: -50px;
-    margin-left: 100px;
+    @include link-margins(-50px, 100px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 125px;
+    @include link-margins(-20px, 125px);
   }
 
   .show_links{
@@ -965,13 +954,11 @@ footer {
   }
 
   .links {
-    margin-top: -60px;
-    margin-left: 105px;
+    @include link-margins(-60px, 105px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 110px;
+    @include link-margins(-20px, 110px);
   }
 
   .show_links{
@@ -1016,13 +1003,11 @@ footer {
   }
 
   .links {
-    margin-top: -70px;
-    margin-left: 80px;
+    @include link-margins(-70px, 80px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 75px;
+    @include link-margins(-20px, 75px);
   }
 
   #white_navbar nav a {
@@ -1055,13 +1040,11 @@ footer {
   }
 
   .links {
-    margin-top: -75px;
-    margin-left: 55px;
+    @include link-margins(-75px, 55px);
   }
 
   .uplink {
-    margin-top: -20px;
-    margin-left: 55px;
+    @include link-margins(-20px, 55px)
   }
 
    #white_navbar nav a {
