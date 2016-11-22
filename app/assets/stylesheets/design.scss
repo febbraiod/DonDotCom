@@ -24,6 +24,11 @@
   |  $$$$$$/| $$  | $$|  $$$$$$/| $$/   \  $$
    \______/ |__/  |__/ \______/ |__/     \__/*/
 
+$donblue: #04adcc;
+$don-grey: #7a7a7a;
+$sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+$serif-base: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino serif;
+
 
 .design_wrapper {
   position: relative;
@@ -77,12 +82,12 @@
   padding: 0 0 0 5px;
   line-height: 1.55em;
   font: {
-    family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    family: $serif-base;
     size: .85em; 
     }
   border: {
     left: solid;
-    color: #04adcc;
+    color: $donblue;
     width: 2px;
   }
 }
@@ -106,7 +111,7 @@
 #title_headline {
   max-width: 90px; 
   font-size: 3em; 
-  color: #04adcc;
+  color: $donblue;
 }
 
 
@@ -120,7 +125,7 @@
   |______/|__/  \__/|_______/ |________/|__/  |__/ */
 
 hr {
-  border-top: 3px solid #04adcc;
+  border-top: 3px solid $donblue;
 }
 
 #hr_holder__1 {
@@ -164,7 +169,7 @@ hr {
 }
 
 .design_desc {
-  font-family: avenir, helvetica, arial, sans-serif;
+  font-family: $sans-base;
   font-size: 1em;
   padding: 5px;
   margin-bottom: 35px;
@@ -191,7 +196,7 @@ hr {
   #title_headline {
     max-width: 90px; 
     font-size: 2em; 
-    color: #04adcc;
+    color: $donblue;
   }
 
   .logo_type_not_home__design_show_1 {
@@ -246,7 +251,7 @@ hr {
   }
 
   hr {
-    border-top: 2px solid #04adcc;
+    border-top: 2px solid $donblue;
   }
 
   #hr_holder__1 {
@@ -336,7 +341,7 @@ hr {
   }
 
   hr {
-    border-top: 1.5px solid #04adcc;
+    border-top: 1.5px solid $donblue;
   }
 
   #hr_holder__1 {
@@ -376,7 +381,7 @@ hr {
     left: 800px;
     max-width: 150px;
     padding: 0 0 0 5px;
-    font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-family: $serif-base;
     font-size: .85em;
     line-height: 1.55em;
   }
@@ -390,7 +395,7 @@ hr {
   }
 
   hr {
-    border-top: 1.5px solid #04adcc;
+    border-top: 1.5px solid $donblue;
   }
 
   #hr_holder__1 {
@@ -458,7 +463,7 @@ hr {
   }
 
   hr {
-    border-top: 1px solid #04adcc;
+    border-top: 1px solid $donblue;
   }
 
   #hr_holder__1 {

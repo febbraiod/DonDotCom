@@ -25,6 +25,11 @@
   \______/ |________/ \______/ |_______/ |__/  |__/|________/*/
 
 
+$donblue: #04adcc;
+$don-grey: #7a7a7a;
+$sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+$serif-base: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino serif;
+
 @font-face {
     font-family: avenir;
     src: local(avenir), url('avenir.ttc') format('opentype');
@@ -53,13 +58,13 @@ body {
 
 html {
   width: 100%;
-  font-family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+  font-family: $sans-base
 }
 
 h1 {
-  color: #7a7a7a;
+  color: $don-grey;
   font: { 
-    family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+    family: $sans-base
     size: 570%;
     weight: normal;
   }
@@ -67,7 +72,7 @@ h1 {
 
 h2 {
   font: {
-  family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+  family: $sans-base
   size: 1.5em;
   }
 }
@@ -75,21 +80,21 @@ h2 {
 
 h3 {
   font: {
-    family: "avenir", "Muli", "Trebuchet MS", helvetica, sans-serif;
+    family: $sans-base
     size: 1.7em;
     }
 }
 
 h4 {
   font: {
-    family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino serif;
+    family: $serif-base
     font: .95em;
   }
 }
 
 a {
   text-decoration: none;
-  color: #04adcc;
+  color: $donblue;
 }
 
 /*for design and program pages*/
@@ -146,7 +151,7 @@ video, audio, iframe, table, form {
   height: 98px;
   width: 100%;
   z-index: 1;
-  border-bottom: solid 1px #04adcc;
+  border-bottom: solid 1px $donblue;
   transition: opacity .5s;
 }
 
@@ -173,7 +178,7 @@ video, audio, iframe, table, form {
   p {
     line-height: 1.55em;
     font: {
-    family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    family: $serif-base
     size: .90em;
     }
   }
@@ -257,13 +262,13 @@ video, audio, iframe, table, form {
     nav a {
     display: inline-block;
     width: 7%;
-    font: .95em avenir, helvetica, Arial, sans-serif;
+    font: .95em $sans-base
     color: white;
     text-align: center;
     text-decoration: none;
     margin: 0 0 0 16px;
     &:hover{
-      color: #04adcc;
+      color: $donblue;
     }
   }
 }
@@ -273,13 +278,13 @@ video, audio, iframe, table, form {
   nav a {
     display: inline-block;
     width: 7%;
-    font: .95em avenir, helvetica, Arial, sans-serif;
-    color: #7a7a7a;
+    font: .95em $sans-base
+    color: $don-grey;
     text-align: center;
     text-decoration: none;
     margin: 0 0 0 16px;
     &:hover{
-      color: #04adcc;
+      color: $donblue;
     }
     &:selected{
       background: #333;
@@ -296,12 +301,12 @@ video, audio, iframe, table, form {
   nav a {
     float: left;
     margin-right: 35px;
-    font: .95em avenir, helvetica, Arial, sans-serif;
-    color: #7a7a7a;
+    font: .95em $sans-base
+    color: $don-grey;
     text-align: center;
     text-decoration: none;
     &:hover {
-      color: #04adcc;
+      color: $donblue;
     }
     &:selected {
       background: #333;
@@ -340,7 +345,7 @@ video, audio, iframe, table, form {
   background-color: white;
   border: {
     style: solid;
-    color: #04adcc;
+    color: $donblue;
     width: 2px;
   }
   width: 150px;
@@ -352,11 +357,11 @@ video, audio, iframe, table, form {
   margin-bottom: 100px;
   box-shadow: 5px 5px 7px 0px #AAA;
   &:hover{
-    background-color: #04adcc;
+    background-color: $donblue;
     color: white;
   }
   &:active{
-    background-color: #04adcc;
+    background-color: $donblue;
     color: white;
     box-shadow: 0px 0px 0px 0px #AAA;
   }
@@ -436,43 +441,43 @@ video, audio, iframe, table, form {
 
 .don_design {
   -letter-transform: skew(-4deg) none;
-  -letter-color: #04adcc;
+  -letter-color: $donblue;
   -letter-kern: -2px 0 0 -2px -1px;
 }
 
 #don_design {
-  color: #04adcc;
+  color: $donblue;
   margin: 17px;
 }
 
 .don_program {
   -letter-transform: none none skew(-4deg) none;
-  -letter-color: none none #04adcc;
+  -letter-color: none none $donblue;
   -letter-kern: 0 0 -1px;
 }
 
 #don_program {
-    color: #04adcc;
+    color: $donblue;
     margin: 17px;
 }
 
 .don_rinse {
   -letter-transform: none none skew(-4deg) none;
-  -letter-color: none none #04adcc;
+  -letter-color: none none $donblue;
   -letter-kern: 0 0 -2px;
 }
 
 #don_rinse {
-  color: #04adcc;
+  color: $donblue;
   margin: 17px;
 }
 
 .don {
-  color: #04adcc;
+  color: $donblue;
 }
 
 #don_repeat {
-  color: #04adcc;
+  color: $donblue;
   margin: 17px;
 }
 
@@ -495,7 +500,7 @@ footer {
   padding: 10px 0;
   background: #919191;
   border-top: 1px solid;
-  border-color: #04adcc;
+  border-color: $donblue;
 }
 
 /* /$$   /$$  /$$$$$$  /$$      /$$ /$$$$$$$$
@@ -508,35 +513,35 @@ footer {
   |__/  |__/ \______/ |__/     |__/|________/*/
 
 #home_head {
-  color: #7a7a7a;
+  color: $don-grey;
 }
 
 #home_head:hover {
   margin: 17px;
-  color: #04adcc;
+  color: $donblue;
   text-decoration: none;
 }
 
 #rinse_link {
-  color: #7a7a7a;
+  color: $don-grey;
   &:hover {
     margin: 17px;
     text-decoration: none;
-    color: #04adcc;
+    color: $donblue;
   }
 }
 
 #repeat_link {
-  color: #7a7a7a;
+  color: $don-grey;
   &:hover {
     margin: 17px;
     text-decoration: none;
-    color: #04adcc;
+    color: $donblue;
   }
 }
 
 #logo_type_2 a:hover{
-  color: #04adcc;
+  color: $donblue;
 }
 
 
@@ -573,7 +578,7 @@ footer {
   }
 
   #white_navbar nav a {
-    font: .90em avenir, helvetica, Arial, sans-serif;
+    font: .90em $sans-base
   }
 
   #donpic {
@@ -609,7 +614,7 @@ footer {
   }
 
   #navbar nav a {
-    font: .90em avenir, helvetica, Arial, sans-serif;
+    font: .90em $sans-base
   }
 
   #white_navbar {
@@ -617,7 +622,7 @@ footer {
   }
 
   #white_navbar nav a {
-    font: .90em avenir, helvetica, Arial, sans-serif;
+    font: .90em $sans-base
   }
 
 }
@@ -691,7 +696,7 @@ footer {
   }
 
   #navbar nav a {
-    font: .85em avenir, helvetica, Arial, sans-serif;
+    font: .85em $sans-base
   }
 
   .program_wrapper_blocker {
@@ -699,7 +704,7 @@ footer {
   }
 
   #white_navbar nav a {
-    font: .85em avenir, helvetica, Arial, sans-serif;
+    font: .85em $sans-base
   }
 
   .links {

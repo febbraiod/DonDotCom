@@ -1,6 +1,9 @@
 
 /*show*/
 
+$donblue: #04adcc;
+
+
 .post_wrapper {
   position: relative;
   top: 30px;
@@ -22,7 +25,7 @@
 
 #post_headline {
   font-size: 2.3em;
-  color: #04adcc;
+  color: $donblue;
   margin-top: 0;
   line-height: 1.1em; 
 }
@@ -30,7 +33,7 @@
 #post_headline_with_icon {
   display: inline-block;
   font-size: 2.3em;
-  color: #04adcc;
+  color: $donblue;
   margin-top: 0;
   line-height: 1.1em;
 }
