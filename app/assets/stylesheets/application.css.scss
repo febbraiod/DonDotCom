@@ -64,7 +64,7 @@ html {
 h1 {
   color: $don-grey;
   font: { 
-    family: $sans-base
+    family: $sans-base;
     size: 570%;
     weight: normal;
   }
@@ -72,7 +72,7 @@ h1 {
 
 h2 {
   font: {
-  family: $sans-base
+  family: $sans-base;
   size: 1.5em;
   }
 }
@@ -80,14 +80,14 @@ h2 {
 
 h3 {
   font: {
-    family: $sans-base
+    family: $sans-base;
     size: 1.7em;
     }
 }
 
 h4 {
   font: {
-    family: $serif-base
+    family: $serif-base;
     font: .95em;
   }
 }
@@ -178,7 +178,7 @@ video, audio, iframe, table, form {
   p {
     line-height: 1.55em;
     font: {
-    family: $serif-base
+    family: $serif-base;
     size: .90em;
     }
   }
@@ -262,7 +262,7 @@ video, audio, iframe, table, form {
     nav a {
     display: inline-block;
     width: 7%;
-    font: .95em $sans-base
+    font: .95em $sans-base;
     color: white;
     text-align: center;
     text-decoration: none;
@@ -278,7 +278,7 @@ video, audio, iframe, table, form {
   nav a {
     display: inline-block;
     width: 7%;
-    font: .95em $sans-base
+    font: .95em $sans-base;
     color: $don-grey;
     text-align: center;
     text-decoration: none;
@@ -301,7 +301,7 @@ video, audio, iframe, table, form {
   nav a {
     float: left;
     margin-right: 35px;
-    font: .95em $sans-base
+    font: .95em $sans-base;
     color: $don-grey;
     text-align: center;
     text-decoration: none;
