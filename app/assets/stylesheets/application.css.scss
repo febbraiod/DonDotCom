@@ -166,14 +166,12 @@ video, audio, iframe, table, form {
   top: 10px;
   width: 50%;
   margin: 50px auto;
-}
-
-.wrapper p {
-  font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: .90em;
-  line-height: 1.55em;
-}
-
+  p {
+    font-family: 'dejavuserif', 'droidserif-regular', 'anonymous pro', "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: .90em;
+    line-height: 1.55em;
+  }
+} 
 
 #donpic {
   position: fixed;
