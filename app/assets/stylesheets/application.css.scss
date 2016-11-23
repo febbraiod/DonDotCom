@@ -447,6 +447,9 @@ video, audio, iframe, table, form {
 
 .don_in_footer {
   color: complement($donblue);
+  &:hover {
+    color: $donblue;
+  }
 }
 
 %hover-logo-style {
