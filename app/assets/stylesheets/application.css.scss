@@ -30,10 +30,6 @@ $don-grey: #7a7a7a;
 $sans-base: "avenir", "Muli", "Trebuchet MS", helvetica, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 $serif-base: "Palatino Linotype", Palatino, "Palatino LT STD", "Book Antiqua", Georgia, serif; 
 
-@mixin logo-style {
-  color: $donblue;
-  margin: 17px;
-}
 
 @mixin don-letters($trans, $color, $kern) {
   -letter-transform: $trans;
@@ -60,7 +56,8 @@ body {
 
 html {
   width: 100%;
-  font-family: $sans-base
+  font-family: $sans-base;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -141,10 +138,6 @@ video, audio, iframe, table, form {
   | $$       /$$$$$$| $$  \ $$| $$$$$$$$|  $$$$$$/
   |__/      |______/|__/  |__/|________/ \______/ */
 
-
-html {
-  box-sizing: border-box;
-}
 
 .wrapper_blocker {
   position: fixed;
@@ -452,12 +445,17 @@ html {
   @include don-letters(none none skew(-4deg) none, none none $donblue, 0 0 -2px)
 }
 
-.don {
+.don_in_footer {
+  color: complement($donblue);
+}
+
+%hover-logo-style {
   color: $donblue;
+  margin: 17px;
 }
 
 #don_design, #don_program,  #don_rinse, #don_repeat {
-  @include logo-style;
+  @extend %hover-logo-style;
 }
 
 /* /$$$$$$$$ /$$$$$$   /$$$$$$  /$$$$$$$$ /$$$$$$$$ /$$$$$$$ 
@@ -705,6 +703,10 @@ footer {
 
 
 @media only screen and (max-width: 1024px) {
+
+  hr {
+    display: none;
+  }
 
   .wrapper {
     position: relative;
