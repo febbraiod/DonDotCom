@@ -94,6 +94,9 @@ h4 {
 a {
   text-decoration: none;
   color: $donblue;
+  &:hover {
+    color: complement($donblue)
+  }
 }
 
 /*for design and program pages*/
